@@ -1,0 +1,22 @@
+# Cloudflare Pages / Netlify. Upload only if your host reads _headers.
+# The page's own CSP (meta tag in index.html) covers scripts, images (data: and blob: for the share image),
+# the manifest and the service worker. This header adds only frame-ancestors, which a meta tag cannot set.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: frame-ancestors 'self' https://mcbflow.com https://www.mcbflow.com
+
+# Always revalidate the app shell so a new build (and a new service worker) is picked up
+/
+  Cache-Control: no-cache
+/index.html
+  Cache-Control: no-cache
+/sw.js
+  Cache-Control: no-cache
+/manifest.json
+  Cache-Control: no-cache
+  Content-Type: application/manifest+json
+/sitemap.xml
+  Content-Type: application/xml

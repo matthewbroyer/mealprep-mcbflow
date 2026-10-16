@@ -1,9 +1,9 @@
 <!doctype html>
-<!-- mealprep.mcbflow.com v1.6 · Web app. Copyright 2024–2026 Matthew Broyer. Interface icons follow the Feather Icons style (MIT, Copyright (c) 2013-2017 Cole Bemis). See About > License in the app for the full notice. -->
+<!-- mealprep.mcbflow.com v1.7 · Web app. Copyright 2024–2026 Matthew Broyer. Interface icons follow the Feather Icons style (MIT, Copyright (c) 2013-2017 Cole Bemis). See About > License in the app for the full notice. -->
 <html lang="en" data-app-short="Meal Prep" data-app-domain="mealprep.mcbflow.com">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-bDt6eEzi4gxMdomgN/M5AvcysTmGWXIwofMj1qf533Y=' 'sha256-OcLkDEvqM/TLCrmWCumqIrWUSDRrMtVIZsMXgmLmRfo='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://rxvcjdwmvxhwbdwncfhj.supabase.co; manifest-src 'self'; worker-src 'self'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-bDt6eEzi4gxMdomgN/M5AvcysTmGWXIwofMj1qf533Y=' 'sha256-8Lp1ebEd18ML68g+RDVhSPKCfQ65Q2WqoDgMCfmuGYI=' 'sha256-1CB8cpIA1ubpEO7LEqWOpBOivENvRIVSBwpfSwixkwk=' 'sha256-RwpEzFNRYHhJTGwdddkisrDmXGpnxMp796ozPu+Ltn0='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://rxvcjdwmvxhwbdwncfhj.supabase.co; manifest-src 'self'; worker-src 'self'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#E0523D">
@@ -140,8 +140,6 @@ code { background: var(--bg2); padding: .1em .35em; border-radius: 6px; font-siz
 .tab.on { background: var(--accent-soft); color: var(--accent-soft-ink); }
 .bar-actions { display: flex; align-items: center; gap: 6px; }
 main#view { max-width: 1240px; margin: 0 auto; padding: 22px 16px 56px; outline: none; min-height: 70vh; }
-footer { text-align: center; color: var(--ink3); font-size: .8rem; padding: 24px 16px 40px; border-top: 1px solid var(--line); }
-body[data-view="setup"] footer { display: none; }
 
 /* ---------- buttons & fields ---------- */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 40px; padding: 0 16px; border-radius: 12px; border: 1px solid var(--line2); background: var(--surface); color: var(--ink); font: 600 .92rem var(--font); cursor: pointer; text-decoration: none; white-space: nowrap; transition: background .12s, border-color .12s, transform .05s; }
@@ -528,7 +526,7 @@ summary { cursor: pointer; } summary:hover { color: var(--accent); }
   .gcheck { min-height: 44px; } .table select { min-height: 44px; }
   summary { display: flex; align-items: center; } .brand { min-height: 44px; align-items: center; }
   .linkbtn { padding: 12px 4px; }
-  .pslot .pick { min-height: 44px; } footer a { display: inline-block; padding: 12px 4px; }
+  .pslot .pick { min-height: 44px; }
 }
 /* wizard: visible progress + action always in reach */
 .wiz-meta { display: flex; justify-content: space-between; gap: 12px; font-size: .88rem; color: var(--ink2); margin-bottom: 8px; } .wiz-meta b { color: var(--ink); }
@@ -568,7 +566,6 @@ summary { cursor: pointer; } summary:hover { color: var(--accent); }
 .legal h2 { font-size: 1.1rem; margin: 1.4em 0 .3em; }
 .legal-short { background: var(--soft, var(--card2, rgba(127,127,127,.08))); border-radius: 10px; padding: 10px 16px; margin: 10px 0 4px; }
 .legal-short ul { margin: 0; padding-left: 1.2em; } .legal-short li { margin: .25em 0; }
-footer a { padding: 0 2px; }
 .sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 .ritem.on .ru, .ritem.on .upd { color: var(--accent-soft-ink); }
 
@@ -643,7 +640,6 @@ body.menu-open #nav { animation: fadein .12s ease; }
 main#view { padding-top: 20px; padding-bottom: 48px; }
 .page-head { margin-bottom: 14px; }
 .page-head p { font-size: 13.5px; }
-footer { font-size: 12px; background: var(--surface); }
 
 /* --- buttons --- */
 .btn { border-radius: var(--r-sm); min-height: var(--ctl); padding: 0 14px; font: 550 13.5px var(--font); border-color: var(--line2); background: var(--surface); color: var(--ink); box-shadow: none; }
@@ -816,7 +812,7 @@ mark { border-radius: 2px; }
 /* light/dark switch */
 
 /* header actions share one compact height */
-.bar-actions > .btn, .bar-actions > .bk-chip, .datamenu > summary { min-height: var(--ctl-sm); }
+.bar-actions > .btn, .bar-actions > .bk-chip { min-height: var(--ctl-sm); }
 #storageBadge { align-self: center; }
 
 /* "backed up" chip */
@@ -827,19 +823,7 @@ mark { border-radius: 2px; }
 .bk-chip[hidden] { display: none; }
 
 /* Data menu (details dropdown) */
-.datamenu > summary { gap: 6px; position: relative; }
-.datamenu[open] > summary, .datamenu.on > summary { background: var(--accent-soft); border-color: var(--accent-line); color: var(--accent-soft-ink); }
 .bk-dot { position: absolute; top: 4px; right: 4px; width: 8px; height: 8px; border-radius: 2px; background: var(--warn-dot); box-shadow: 0 0 0 2px var(--surface); }
-.moremenu .dm-menu { min-width: 290px; padding: 6px; gap: 2px; }
-.dm-menu .btn { justify-content: flex-start; width: 100%; min-height: var(--ctl); }
-.dm-menu .btn.primary { margin-bottom: 4px; }
-.dm-menu .btn kbd { margin: 0 0 0 auto; background: color-mix(in srgb, var(--accent-ink) 18%, transparent); border-color: color-mix(in srgb, var(--accent-ink) 35%, transparent); color: inherit; }
-.dm-foot { margin-top: 4px; padding: 10px 8px 4px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--ink3); display: grid; gap: 6px; }
-.dm-foot p { margin: 0; display: flex; gap: 6px; align-items: flex-start; } .dm-foot p .ic { margin-top: 2px; }
-.dm-foot p:first-child { color: var(--ink2); font-weight: 600; } .dm-foot .bk-warn { color: var(--warn) !important; }
-.dm-foot b { color: var(--ink); font-weight: 600; overflow-wrap: anywhere; }
-.dm-foot .linkbtn { font-size: inherit; padding: 0; }
-.dm-more { font-size: 12.5px; }
 
 /* Data page: backup card */
 .bk-card { border-left: 3px solid var(--accent); }
@@ -891,10 +875,8 @@ mark { border-radius: 2px; }
   /* compact app bar: logo + name, then actions */
   #appbar { flex-wrap: nowrap; gap: 8px; padding-block: 6px; }
   .brand { flex: 1; min-width: 0; }
-  .datamenu .dm-t { display: inline; }
-  .moremenu .dm-menu { position: fixed; left: 8px; right: 8px; top: 58px; min-width: 0; max-height: calc(100dvh - 58px - var(--bnav-h) - 12px); overflow-y: auto; }
 }
-@media (pointer: coarse) { .dm-menu kbd, .bk-actions kbd { display: none; } }
+@media (pointer: coarse) { .bk-actions kbd { display: none; } }
 @media (max-width: 520px) {
   .bk-chip { display: none !important; }
   .bk-actions .btn { flex: 1 1 100%; }
@@ -939,8 +921,8 @@ mark { border-radius: 2px; }
 }
 
 /* text links and text buttons: plain ink text, quiet neutral underline (coral stays on fills, borders and active states) */
-main a:not(.btn):not(.tab):not(.skip):not(.bn-item), main a.small, footer a, .linkbtn, .notice a:not(.btn), a.dm-more, a.addmeal, label a { color: var(--ink); font-weight: inherit; text-decoration: underline; text-decoration-color: var(--line2); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-main a:not(.btn):not(.tab):not(.skip):not(.bn-item):hover, main a.small:hover, footer a:hover, .linkbtn:hover, .notice a:not(.btn):hover, a.dm-more:hover, a.addmeal:hover, label a:hover { color: var(--ink); text-decoration-color: var(--ink); filter: none; }
+main a:not(.btn):not(.tab):not(.skip):not(.bn-item):not(.mb-foot-links a), main a.small, .linkbtn, .notice a:not(.btn), a.dm-more, a.addmeal, label a { color: var(--ink); font-weight: inherit; text-decoration: underline; text-decoration-color: var(--line2); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+main a:not(.btn):not(.tab):not(.skip):not(.bn-item):not(.mb-foot-links a):hover, main a.small:hover, .linkbtn:hover, .notice a:not(.btn):hover, a.dm-more:hover, a.addmeal:hover, label a:hover { color: var(--ink); text-decoration-color: var(--ink); filter: none; }
 summary:hover { color: var(--ink); }
 /* ==========================================================================
    BETA 4.3: swap button, costs, prices dialog, prep page, leftovers, new week
@@ -1118,7 +1100,7 @@ main a.tile span, main a.tile small, main a.tile b i { text-decoration: none; }
   --ctl:38px; --ctl-sm:32px;
   --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:20px; --sp-6:24px;
   --ease:120ms ease;
-  /* page width: every app's header and content share one container (mbmoney.online's) */
+  /* page width: every app's header and content share one container (the Money app's) */
   --page-max:1280px; --gutter:16px;
   /* neutrals */
   --bg:#f3f4f6; --surface:#ffffff; --surface-2:#f6f7f9; --surface-3:#eceef2;
@@ -1166,7 +1148,6 @@ input[type=checkbox],input[type=radio],input[type=range],progress{accent-color:v
 .tabular,.num,time{font-variant-numeric:tabular-nums}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:1ms!important;animation-iteration-count:1!important;transition-duration:1ms!important;scroll-behavior:auto!important}}
 @media(pointer:coarse),(max-width:700px){:root{--ctl:44px;--ctl-sm:44px}}
-.tld{font-style:normal;color:var(--accent)}
 
 /* ---- MB SUITE v1 · mealprep.mcbflow.com adapter ----
    Keeps the v5 layout (sidebar on desktop, bottom bar on phones) and replaces the
@@ -1215,7 +1196,6 @@ code,kbd{border-radius:3px}
 .logo{background:none!important;border-radius:var(--r)!important;overflow:hidden;box-shadow:none!important;transform:none!important}
 .hero-logo .logo{border-radius:var(--r-lg)!important}
 .beta{border-radius:var(--r-sm);padding:1px 7px;font-size:11px;font-weight:600;background:var(--surface-2);color:var(--muted);border:1px solid var(--border)}
-.brand .nm .tld,.brandmini .tld{color:var(--accent)}
 .brand{font-weight:650;font-size:14.5px;letter-spacing:-.005em}
 
 /* surfaces */
@@ -1286,7 +1266,7 @@ dialog::backdrop{background:var(--scrim);backdrop-filter:none;-webkit-backdrop-f
 #progress i{background:var(--accent);border-radius:0}
 .tab{border-radius:var(--r-sm);font-weight:500}
 .tab:hover{background:var(--surface-2)}
-/* app bar: same title + tab style as mbmoney.online — top bar, tab row underneath (the v5 sidebar is removed) */
+/* app bar: same title + tab style as the Money app — top bar, tab row underneath (the v5 sidebar is removed) */
 #appbar{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:1px solid var(--border);box-shadow:inset 0 3px 0 var(--accent),var(--shadow)}
 #appbar.stuck{box-shadow:inset 0 3px 0 var(--accent),var(--shadow)}
 #progress i{background:var(--accent);border-radius:0}
@@ -1321,7 +1301,7 @@ dialog::backdrop{background:var(--scrim);backdrop-filter:none;-webkit-backdrop-f
   .bn-item{border-radius:var(--r-sm)} .bn-item.on,.bn-item.on:hover{background:var(--surface-2);box-shadow:inset 3px 0 0 var(--accent)}
 }
 @media print{body::before{display:none}}
-/* page width: same container as mbmoney.online (1280px, 16px gutters on every screen size) */
+/* page width: same container as the Money app (1280px, 16px gutters on every screen size) */
 main#view{max-width:var(--page-max);padding-left:max(var(--gutter),env(safe-area-inset-left));padding-right:max(var(--gutter),env(safe-area-inset-right))}
 #appbar{padding-left:max(var(--gutter),calc((100% - var(--page-max)) / 2 + var(--gutter)));padding-right:max(var(--gutter),calc((100% - var(--page-max)) / 2 + var(--gutter)))}
 
@@ -1461,7 +1441,7 @@ body{background:none}
    Markup (see v3-updates/demo/index.html for a working page):
    <body class="mb-shell">
      <aside class="mb-side" aria-label="App">
-       <a class="brand" href="./" aria-label="mbname.online: go to Home"> .logo + .bt(b + span) </a>
+       <a class="brand" href="./" aria-label="Name (name.mcbflow.com): go to Home"> .logo + .bt(b + span) </a>
        <nav class="side-nav" aria-label="Sections"> <button aria-current="page"><svg class="uic"/><span>Home</span></button> … </nav>
        <nav class="side-nav side-end" aria-label="More"> Settings / Help items (optional) </nav>
      </aside>
@@ -1625,7 +1605,6 @@ dialog.mb-share::backdrop{background:var(--scrim)}
 .page-bar #progress{bottom:-1px}
 .page-bar .actions{flex:none}
 a.brand{min-height:0;column-gap:9px}
-a.brand .tld{font-style:normal;color:var(--accent)}
 .brand .bt span{font-weight:400}
 .mb-side a.brand{padding:6px 8px}
 .page-title{color:var(--ink)}
@@ -1689,7 +1668,85 @@ body[data-view="setup"] .notice{left:0}
 }
 /* v1.4 standard top bar (mb-suite-topbar.css): the Data dot shows only when a backup is due */
 .page-bar .actions .datamenu:not(.warn) .tb .tb-dot{display:none}
-.page-bar .actions .bk-chip{box-sizing:border-box;height:var(--tb-h,36px);min-height:var(--tb-h,36px);border-radius:var(--r-sm)}
+/* =====================================================================
+   v1.7 · MB Suite v3.3 adapter (Data menu, welcome screen, Settings, chart labels)
+   ===================================================================== */
+/* Data menu: the .mb-dm panel drops under the Data button on computers; phones get the bottom sheet from mb-suite-topbar.css */
+.datamenu > .mb-dm{position:absolute;right:0;top:calc(100% + 6px)}
+/* footer: last thing in each view; the recipe pane keeps its own height */
+#view > .mb-foot{clear:both}
+/* welcome screen: the app's own setup controls inside the .mbw card */
+body.wiz-open{overflow:hidden}
+.mbw .mbw-q{margin:18px 0 8px;font-size:13px;font-weight:600;color:var(--ink-2)}
+.mbw .mbw-q .mbw-sub{font-weight:400;margin-left:4px}
+.mbw .mbw-sub{font-size:12.5px;color:var(--muted)}
+.mbw .mbw-lead + .mbw-field{margin-top:18px}
+.mbw-choice{position:relative;align-items:center}
+.mbw-choice > span:not(.mbw-ic):not(.mbw-tick){flex:1;min-width:0}
+.mbw-tick{flex:none;width:22px;height:22px;border-radius:var(--r-sm);border:1px solid var(--border-strong);display:grid;place-items:center;color:transparent;background:var(--surface)}
+.mbw-tick .ic{width:14px;height:14px}
+.mbw-choice[aria-pressed="true"] .mbw-tick,.mbw-choice.is-locked .mbw-tick{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.mbw-choice.is-locked{cursor:default;border-style:dashed}
+.mbw-choice.is-locked:hover{background:var(--surface)}
+.mbw-choice:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.mbw .chips{margin:0}
+.mbw .stepper{gap:10px}
+.mbw .form-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px;margin-top:14px}
+.mbw .fld input,.mbw .fld select{min-height:42px}
+.mbw .radio{padding:8px 12px}
+.mbw .goalpick{grid-template-columns:repeat(3,minmax(0,1fr));margin:0}
+.mbw .gcard{border-width:1px;padding:10px 12px}
+.mbw .btypes{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0}
+.mbw .btype{border-width:1px;padding:10px}
+.mbw .btype .body{width:36px;height:72px}
+.mbw .pcts{grid-template-columns:repeat(2,minmax(0,1fr))}
+.mbw .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
+.mbw .mini-results{margin-top:16px}
+.mbw .mbw-sec{margin-top:14px}
+.mbw .mini-results .card{padding:14px;border-radius:var(--r)}
+.mbw-sum{margin-top:18px;border:1px solid var(--border);border-radius:var(--r-sm);padding:0 12px}
+.mbw-sum > summary{min-height:40px;display:flex;align-items:center;cursor:pointer;font-size:13px;font-weight:600;color:var(--ink-2)}
+.mbw-sum .summary{margin:0 0 10px;font-size:13px}
+.mbw-sum .summary div{grid-template-columns:110px 1fr;padding:7px 0}
+@media (max-width:600px){ .mbw .form-grid,.mbw .goalpick,.mbw .kpis{grid-template-columns:1fr} .mbw .form-grid .span2{grid-column:auto} }
+/* Settings */
+.mb-set .set-in{min-height:38px;width:220px;max-width:100%}
+.mb-set .set-in.num{width:120px}
+.mb-set select{min-height:38px}
+.mb-set .chips{margin:0;justify-content:flex-end}
+.mb-set .stepper output{min-width:32px}
+.mb-set-c .btn .uic{width:16px;height:16px}
+.mb-set .imp-card .set-h3{display:flex;align-items:center;gap:8px;margin:0 0 10px;font-size:14px;font-weight:650}
+.mb-set .imp-card .drop{margin-bottom:12px}
+.mb-set .fmt > summary{cursor:pointer;font-size:13.5px;font-weight:600;min-height:28px;display:flex;align-items:center}
+.mb-set .fmt[open] > summary{margin-bottom:8px}
+.mb-set .mb-about{margin-top:0}
+.inst-note{display:none;margin:0;font-size:13px;color:var(--ink-2)}
+[data-mb-install][hidden] + .inst-note{display:block}
+@media (max-width:767px){ .mb-set .chips{justify-content:flex-start} .mb-set .set-in{width:100%} }
+/* chart labels: one floating label for every chart mark (week bars, macro bars, macro rings, progress bars) */
+.ctip{position:fixed;z-index:1100;pointer-events:none;display:flex;flex-direction:column;gap:1px;max-width:260px;padding:6px 10px;background:var(--surface);color:var(--ink);
+  border:1px solid var(--border-strong);border-radius:var(--r-sm);box-shadow:var(--shadow-pop);font-size:12px;line-height:1.35}
+.ctip[hidden]{display:none}
+.ctip b{font-size:14.5px;font-weight:650;font-variant-numeric:tabular-nums}
+.ctip span{color:var(--muted)}
+[data-ctip]{cursor:pointer}
+.wchart .hit{fill:transparent}
+.wchart .wbar{outline:none}
+.wchart .wbar .bar{transition:opacity .12s ease}
+.wchart:has(.tipon) .wbar:not(.tipon) .bar{opacity:.35}
+.wchart .wbar.tipon .bar{fill:var(--accent)}
+.wchart .wbar:focus-visible .hit{stroke:var(--accent);stroke-width:2}
+.wchart .tline{stroke:var(--ink-2);stroke-width:1.5;stroke-dasharray:5 4}
+.wchart .tlab{fill:var(--ink-2);font-weight:600}
+.charthint{margin-left:auto;font-size:11.5px;color:var(--muted)}
+@media (hover:none){ .charthint{font-size:0} .charthint::after{content:"Tap a bar";font-size:11.5px} }
+.mbar > span{transition:opacity .12s ease}
+.mbar:has(.tipon) > span:not(.tipon){opacity:.3}
+.mbar[tabindex]:focus-visible,.donut:focus-visible,.clbar:focus-visible,.gprog .bar:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.donut .seg{transition:opacity .12s ease}
+.donut:has(.tipon) .seg:not(.tipon){opacity:.25}
+.donut{outline:none;border-radius:50%}
 </style>
 <link rel="stylesheet" href="mb-suite-topbar.css">
 
@@ -1699,23 +1756,24 @@ body[data-view="setup"] .notice{left:0}
 <body class="mb-shell">
 <a class="skip" href="#view">Skip to content</a>
 <aside class="mb-side" id="side" aria-label="App">
-  <a class="brand" href="#/home" aria-label="mealprep.mcbflow.com: go to Home"><span class="logo"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><linearGradient id="sb-g" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#e46a58"/><stop offset=".55" stop-color="#E0523D"/><stop offset="1" stop-color="#b34231"/></linearGradient><clipPath id="sb-c"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#sb-c)"><rect width="64" height="64" fill="url(#sb-g)"/><rect x="14.5" y="18.5" width="35" height="27" rx="4" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 33,19 V 45 M 33,32 H 49" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><rect x="16.151796" y="19.755266" width="15.855019" height="24.410162" rx="1.8294252" fill="#ffffff" fill-opacity="0.55" style="stroke-width:1.19065"/></g></svg></span><span class="bt"><b>mealprep<i class="tld">.mcbflow.com</i></b><span>Official Web App · v1.6</span></span></a>
+  <a class="brand" href="#/home" aria-label="Meal Prep (mealprep.mcbflow.com): go to Home"><span class="logo"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><linearGradient id="sb-g" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#e46a58"/><stop offset=".55" stop-color="#E0523D"/><stop offset="1" stop-color="#b34231"/></linearGradient><clipPath id="sb-c"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#sb-c)"><rect width="64" height="64" fill="url(#sb-g)"/><rect x="14.5" y="18.5" width="35" height="27" rx="4" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 33,19 V 45 M 33,32 H 49" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><rect x="16.151796" y="19.755266" width="15.855019" height="24.410162" rx="1.8294252" fill="#ffffff" fill-opacity="0.55" style="stroke-width:1.19065"/></g></svg></span><span class="bt"><b>Meal Prep<i class="tld"><span class="sep" aria-hidden="true">∙</span>mcbflow.com</i></b><span>Official Web App · v1.7</span></span></a>
   <nav class="side-nav" id="sideNav" aria-label="Sections"></nav>
-  <nav class="side-nav side-end" id="sideEnd" aria-label="More"></nav>
+  <nav class="side-nav side-end" id="sideEnd" aria-label="Settings and help"></nav>
 </aside>
 <div class="mb-main">
 <header class="page-bar" id="pagebar">
-  <a class="brand phone-brand" href="#/home" aria-label="mealprep.mcbflow.com: go to Home"><span class="logo"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><linearGradient id="pb-g" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#e46a58"/><stop offset=".55" stop-color="#E0523D"/><stop offset="1" stop-color="#b34231"/></linearGradient><clipPath id="pb-c"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#pb-c)"><rect width="64" height="64" fill="url(#pb-g)"/><rect x="14.5" y="18.5" width="35" height="27" rx="4" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 33,19 V 45 M 33,32 H 49" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><rect x="16.151796" y="19.755266" width="15.855019" height="24.410162" rx="1.8294252" fill="#ffffff" fill-opacity="0.55" style="stroke-width:1.19065"/></g></svg></span><span class="bt"><b>mealprep<i class="tld">.mcbflow.com</i></b><span>Official Web App · v1.6</span></span></a>
+  <a class="brand phone-brand" href="#/home" aria-label="Meal Prep (mealprep.mcbflow.com): go to Home"><span class="logo"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><linearGradient id="pb-g" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#e46a58"/><stop offset=".55" stop-color="#E0523D"/><stop offset="1" stop-color="#b34231"/></linearGradient><clipPath id="pb-c"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#pb-c)"><rect width="64" height="64" fill="url(#pb-g)"/><rect x="14.5" y="18.5" width="35" height="27" rx="4" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 33,19 V 45 M 33,32 H 49" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><rect x="16.151796" y="19.755266" width="15.855019" height="24.410162" rx="1.8294252" fill="#ffffff" fill-opacity="0.55" style="stroke-width:1.19065"/></g></svg></span><span class="bt"><b>Meal Prep<i class="tld"><span class="sep" aria-hidden="true">∙</span>mcbflow.com</i></b><span>Official Web App · v1.7</span></span></a>
   <p class="page-title" id="pageTitle" aria-hidden="true">Home</p>
   <div class="actions bar-actions">
     <button id="searchBtn" type="button" class="tb tb-search" data-act="openSearch" aria-label="Search the site" aria-keyshortcuts="Control+K Meta+K /"></button>
     <span id="storageBadge" class="chip warn" hidden title="Your browser is blocking storage. Save a backup to keep your work.">Storage off</span>
     <button id="bkChip" type="button" class="bk-chip tb-chip" data-act="backupNow" hidden></button>
     <details class="moremenu datamenu" id="dataMenu">
-      <summary class="tb" aria-label="Data: back up, export or import"><span class="dm-ic"></span><span class="dm-t tb-lbl">Data</span><svg class="tb-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg><i class="bk-dot tb-dot" aria-hidden="true"></i></summary>
-      <div class="menu dm-menu" id="dataMenuBody"></div>
+      <summary class="tb" id="dataBtn" aria-haspopup="menu" aria-label="Data: back up, sync, export or import"><svg class="uic" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="12" cy="5.5" rx="7" ry="2.5"/><path d="M5 5.5v13c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-13"/><path d="M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></svg><span class="tb-lbl">Data</span><svg class="tb-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg><i class="bk-dot tb-dot" aria-hidden="true"></i></summary>
+      <div class="mb-dm" id="dataMenuBody" role="menu" aria-label="Data"></div>
     </details>
-    <button id="themeBtn" type="button" class="themesw" data-act="theme" role="switch" aria-checked="false" aria-label="Dark mode"></button>
+    <button id="themeBtn" type="button" class="themesw" data-act="theme" role="switch" aria-checked="false" aria-label="Dark mode"><span class="tk"><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg><i class="th"></i></span></button>
+    <button type="button" class="tb tb-acct" id="acctBtn"></button>
   </div>
   <div id="progress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
 </header>
@@ -1723,16 +1781,17 @@ body[data-view="setup"] .notice{left:0}
 </div>
 <div id="printSheet" aria-hidden="true"></div>
 <button id="toTop" class="totop" data-act="toTop" aria-label="Back to top" hidden></button>
-<aside id="notice" class="notice" role="region" aria-label="Privacy notice" hidden></aside>
 <nav id="bnav" class="bnav" aria-label="Sections"></nav>
 <div id="bnSheet" class="bn-sheet" role="region" aria-label="More pages" hidden></div>
-<input type="file" id="impAny" accept=".json,.csv,.tsv,.txt,application/json,text/csv" hidden data-change="impAny">
+<input type="file" id="impAny" accept=".json,.csv,.tsv,.txt,.zip,application/json,text/csv,application/zip" hidden data-change="impAny">
+<div class="mbw" id="welcome" role="dialog" aria-modal="true" aria-labelledby="mbwTitle" hidden></div>
 <datalist id="ingList"></datalist><datalist id="unitList"></datalist>
 <dialog id="dlg"></dialog>
 <dialog id="searchDlg" class="searchdlg" aria-label="Search"></dialog>
 <div id="toasts" aria-live="polite"></div>
 <div id="tip" role="tooltip" hidden></div>
 <script src="mb-sync.js"></script>
+<script src="mb-files.js"></script>
 <script>
 'use strict';
 
@@ -1880,7 +1939,7 @@ body[data-view="setup"] .notice{left:0}
        sub: 'January to October 2026',              // one supporting line (optional)
        stats: [{ label: 'Months tracked', value: '10' }, { label: 'Savings rate', value: '22%' }],   // 0-3 (optional)
        art: document.querySelector('#share-art svg'),   // an NA-/CU- template <svg> already in the page (optional)
-       fileName: 'mbmoney-milestone.png',
+       fileName: 'money-milestone.png',
        options: [ { id: 'amounts', label: 'Show dollar amounts', value: false } ],   // optional privacy toggles
        build: function (opts) { return { headline: …, stats: … } }                  // re-builds the text when a toggle changes
      });
@@ -1955,8 +2014,9 @@ body[data-view="setup"] .notice{left:0}
       var x = 72, y = 92;
       if (imgs[0]) g.drawImage(imgs[0], x, y - 4, 72, 72);
       g.fillStyle = C.ink; g.font = '650 34px ' + FONT; g.textBaseline = 'middle';
-      var dm = /^([^.]+)(\..+)$/.exec(domain), nm = dm ? dm[1] : domain; g.fillText(nm, x + 92, y + 32);
-      if (dm) { var nw = g.measureText(nm).width; g.fillStyle = C.accent; g.fillText(dm[2], x + 92 + nw, y + 32); }
+      g.fillText(app, x + 92, y + 32);   // v3.4 wordmark: "Money ∙ mcbflow.com" (short name, muted bullet, accent mcbflow.com)
+      var nw = g.measureText(app).width; g.font = '500 30px ' + FONT; g.fillStyle = C.muted; g.fillText('  ∙  ', x + 92 + nw, y + 32);
+      var bw = g.measureText('  ∙  ').width; g.fillStyle = C.accent; g.fillText('mcbflow.com', x + 92 + nw + bw, y + 32);
       // kicker + headline + sub
       g.textBaseline = 'alphabetic'; y = 300;
       if (d.kicker) { g.fillStyle = C.accent; g.font = '700 30px ' + FONT; g.fillText(String(d.kicker).toUpperCase(), x, y); y += 26; }
@@ -1995,7 +2055,7 @@ body[data-view="setup"] .notice{left:0}
       // footer: where it came from (this is what helps the app grow)
       g.fillStyle = C.ink2; g.font = '600 28px ' + FONT;
       g.fillText((d.date ? d.date + '  ·  ' : '') + 'Made with ' + domain, x, W - 64);
-      g.fillStyle = C.muted; g.font = '400 24px ' + FONT; g.fillText('Free · No account · Your data stays on your device', x, W - 30);
+      g.fillStyle = C.muted; g.font = '400 24px ' + FONT; g.fillText('Free · No account needed · No tracking', x, W - 30);   // true with or without the optional sync account
       return c;
     });
   }
@@ -2189,7 +2249,9 @@ const ICONS = {
   thumbup: '<path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/>',
   thumbdown: '<path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"/>',
   dollar: '<path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>',
-  snow: '<path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/>'
+  snow: '<path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/>',
+  settings: '<path d="M19.00 10.32 L21.51 10.72 L21.51 13.28 L19.00 13.68 L18.14 15.76 L19.63 17.82 L17.82 19.63 L15.76 18.14 L13.68 19.00 L13.28 21.51 L10.72 21.51 L10.32 19.00 L8.24 18.14 L6.18 19.63 L4.37 17.82 L5.86 15.76 L5.00 13.68 L2.49 13.28 L2.49 10.72 L5.00 10.32 L5.86 8.24 L4.37 6.18 L6.18 4.37 L8.24 5.86 L10.32 5.00 L10.72 2.49 L13.28 2.49 L13.68 5.00 L15.76 5.86 L17.82 4.37 L19.63 6.18 L18.14 8.24Z"/><circle cx="12" cy="12" r="3"/>',
+  help: '<circle cx="12" cy="12" r="9"/><path d="M9.3 9.3a2.8 2.8 0 1 1 3.9 2.6c-.7.3-1.2 1-1.2 1.8v.6"/><path d="M12 17.3h.01"/>'
 };
 const icon = (n, cls = '') => `<svg class="ic ${cls}" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICONS[n] || ''}</svg>`;
 
@@ -2940,7 +3002,7 @@ zip-top bags|box`;
    Reference data: units, sections, days, ingredient library helpers
    ========================================================================== */
 const DEMO_UPDATED = '2026-09-20T12:00:00.000Z';
-const APP = { name: 'mealprep.mcbflow.com', formerName: 'The Pantry Partner', version: 'v1.6 · Web app', year: 2026, released: '2026-10-15' };
+const APP = { name: 'mealprep.mcbflow.com', short: 'Meal Prep', formerName: 'The Pantry Partner', version: 'v1.7 · Web app', year: 2026, released: '2026-10-16' };
 
 /* Optional support links (leave blank to hide the buttons) */
 const CONFIG = { issueUrl: '', supportUrl: '', siteUrl: '' };
@@ -4090,7 +4152,7 @@ function autoPlan({ rebuild = false, variety = 3, only = 'all', days: daySel = n
    UI core: router, delegated events, shared components
    ========================================================================== */
 const ACTIONS = {}, CHANGES = {}, INPUTS = {}, VIEWS = {};
-const ui = { recipes: { q: '', type: 'all', fav: false, prep: false, sort: 'name' }, mult: {}, ingQ: '', ingSec: 'all', ingLimit: 40, open: {}, finished: false, setupStep: 0, groceryShowHave: false, quiz: null, plannerFrom: null };
+const ui = { recipes: { q: '', type: 'all', fav: false, prep: false, sort: 'name' }, mult: {}, ingQ: '', ingSec: 'all', ingLimit: 40, open: {}, groceryShowHave: false, quiz: null, plannerFrom: null };
 let route = { name: 'home', arg: '' };
 
 const NAV = [
@@ -4101,18 +4163,23 @@ const NAV = [
   { id: 'prep', label: 'Prep', icon: 'pot', feat: 'planner' },
   { id: 'grocery', label: 'Grocery', icon: 'cart', feat: 'grocery' },
   { id: 'ingredients', label: 'Ingredients', icon: 'list' },
-  { id: 'data', label: 'Data', icon: 'db', menu: true },        // reached from the Data menu in the header, not a tab
-  { id: 'about', label: 'About', icon: 'info' }
+  { id: 'settings', label: 'Settings', icon: 'settings' },        // v1.7: one Settings page (was Data + Setup + the About card)
+  { id: 'help', label: 'Help', icon: 'help' }                     // v1.7: how it works, release notes, license (was About)
 ];
+/* old links keep working: #/data opens Settings › Backup & data, #/about opens Help, #/setup opens the welcome screen */
+const ROUTE_ALIAS = { data: 'settings', about: 'help' };
 
 /* Browser tab text: "Meal Prep | <page name>". Page names match the nav labels. */
-const PAGE_TITLES = { home: 'Home', goals: 'Goals', recipes: 'Recipes', planner: 'Planner', prep: 'Prep', grocery: 'Grocery', ingredients: 'Ingredients', data: 'Data', about: 'About', privacy: 'Privacy', terms: 'Terms', setup: 'Setup' };
+const PAGE_TITLES = { home: 'Home', goals: 'Goals', recipes: 'Recipes', planner: 'Planner', prep: 'Prep', grocery: 'Grocery', ingredients: 'Ingredients', settings: 'Settings', help: 'Help', privacy: 'Privacy', terms: 'Terms' };
 function setPageTitle() { MBTitle.set(PAGE_TITLES[route.name] || 'Home'); }
 
 function parseRoute() {
   const m = (location.hash || '#/home').replace(/^#\/?/, '').split('/');
   let arg = ''; try { arg = decodeURIComponent(m[1] || ''); } catch (e) { arg = ''; }     // a malformed link must not break the app
-  route = { name: m[0] || 'home', arg };
+  let name = m[0] || 'home';
+  if (name === 'setup') { openWizard(true); name = 'home'; try { history.replaceState(history.state, '', '#/home'); } catch (e) { } }
+  if (ROUTE_ALIAS[name]) { if (name === 'data') ui.jump = 'setData'; name = ROUTE_ALIAS[name]; }
+  route = { name, arg };
   if (!Object.prototype.hasOwnProperty.call(VIEWS, route.name)) route = { name: 'home', arg: '' };
   const nav = NAV.find(n => n.id === route.name);
   if (nav && nav.feat && !featureOn(nav.feat)) route = { name: 'home', arg: '' };
@@ -4120,60 +4187,93 @@ function parseRoute() {
 const go = path => { if (location.hash === path) renderApp(); else location.hash = path; };
 window.addEventListener('hashchange', () => { parseRoute(); renderApp(true); });
 
-/* Always light unless dark was picked (the <head> script applies the same rule before first paint). */
+/* Always light unless dark was picked (the <head> script applies the same rule before first paint).
+   One setter for the bar switch, the Settings "Theme" control and the welcome screen's "Pick a look". */
 function applyTheme() {
   const dark = state.settings.theme === 'dark';
   document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
   const b = $('#themeBtn');
-  if (b) { b.setAttribute('aria-checked', String(dark)); b.title = dark ? 'Dark mode is on' : 'Dark mode is off'; if (!b.querySelector('.i-sun')) b.innerHTML = '<span class="tk"><svg class="i-sun" viewBox="0 0 20 20" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="10" cy="10" r="3.2"/><path d="M10 2.5v1.8M10 15.7v1.8M2.5 10h1.8M15.7 10h1.8M4.7 4.7l1.3 1.3M14 14l1.3 1.3M4.7 15.3 6 14M14 6l1.3-1.3"/></svg><svg class="i-moon" viewBox="0 0 20 20" width="14" height="14" aria-hidden="true" fill="currentColor"><path d="M16.5 12.2A6.6 6.6 0 0 1 7.8 3.5a6.6 6.6 0 1 0 8.7 8.7Z"/></svg><i class="th"></i></span>'; }
+  if (b) { b.setAttribute('aria-checked', String(dark)); b.title = dark ? 'Dark mode is on' : 'Dark mode is off'; }
+  $$('[data-theme-set]').forEach(x => x.setAttribute('aria-pressed', String((dark ? 'dark' : 'light') === x.dataset.themeSet)));
 }
-ACTIONS.theme = () => { state.settings.theme = state.settings.theme === 'dark' ? 'light' : 'dark'; saveNow(); applyTheme(); };
-ACTIONS.setTheme = el => { state.settings.theme = el.dataset.k === 'dark' ? 'dark' : 'light'; saveNow(); applyTheme(); rerender(); };
+function setTheme(t) { state.settings.theme = t === 'dark' ? 'dark' : 'light'; saveNow(); applyTheme(); }
+ACTIONS.theme = () => setTheme(state.settings.theme === 'dark' ? 'light' : 'dark');
+ACTIONS.setTheme = el => setTheme(el.dataset.themeSet || el.dataset.k);
+
+/* MB Suite v3.3 standard nav icons (suite-nav-icons.html): Home, Settings (gear), Help and More.
+   The app's own tabs use the same outline style: 24 viewBox, stroke 1.8, round caps and joins. */
+const NAV_SVG = {
+  home: '<path d="M3.5 11 12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5.5h4V20"/>',
+  settings: '<path d="M19.00 10.32 L21.51 10.72 L21.51 13.28 L19.00 13.68 L18.14 15.76 L19.63 17.82 L17.82 19.63 L15.76 18.14 L13.68 19.00 L13.28 21.51 L10.72 21.51 L10.32 19.00 L8.24 18.14 L6.18 19.63 L4.37 17.82 L5.86 15.76 L5.00 13.68 L2.49 13.28 L2.49 10.72 L5.00 10.32 L5.86 8.24 L4.37 6.18 L6.18 4.37 L8.24 5.86 L10.32 5.00 L10.72 2.49 L13.28 2.49 L13.68 5.00 L15.76 5.86 L17.82 4.37 L19.63 6.18 L18.14 8.24Z"/><circle cx="12" cy="12" r="3"/>',
+  help: '<circle cx="12" cy="12" r="9"/><path d="M9.3 9.3a2.8 2.8 0 1 1 3.9 2.6c-.7.3-1.2 1-1.2 1.8v.6"/><path d="M12 17.3h.01"/>'
+};
+const navIcon = n => `<svg class="uic ic" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${NAV_SVG[n] || ICONS[n] || ''}</svg>`;
+const MORE_SVG = '<svg class="uic ic" viewBox="0 0 24 24" width="18" height="18" fill="currentColor" stroke="none" aria-hidden="true" focusable="false"><circle cx="5.5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="18.5" cy="12" r="1.7"/></svg>';
 
 /* MB Suite v3 navigation. Computers: left sidebar (240px, a 76px icon rail on tablets) with the main
-   sections on top and Data / About / Setup pinned to the bottom. Phones: bottom bar with the 4 main pages
-   + More (a sheet with the rest). The current page is marked with aria-current="page" everywhere. */
-const BNAV_ORDER = ['home', 'recipes', 'planner', 'grocery', 'prep', 'goals', 'ingredients', 'about'];
-const SIDE_END = ['data', 'about'];
+   sections on top and Settings / Help pinned to the bottom. Phones: bottom bar with Home + 3 main pages
+   + More (a sheet with Settings first, then the rest). The current page is marked with aria-current="page" everywhere. */
+const BNAV_ORDER = ['home', 'recipes', 'planner', 'grocery', 'prep', 'goals', 'ingredients'];
+const SIDE_END = ['settings', 'help'];
 function renderHeader() {
-  const nav = NAV.filter(n => (!n.feat || featureOn(n.feat)) && !n.menu);
+  const nav = NAV.filter(n => !n.feat || featureOn(n.feat));
   const cur = id => route.name === id ? ' aria-current="page"' : '';
   const sideMain = nav.filter(n => !SIDE_END.includes(n.id)), sideEnd = SIDE_END.map(id => NAV.find(n => n.id === id));
-  const sideLink = n => `<a href="#/${n.id}"${cur(n.id)}>${icon(n.icon)}<span>${n.label}</span></a>`;
+  const sideLink = n => `<a href="#/${n.id}"${cur(n.id)}>${navIcon(n.icon)}<span>${n.label}</span></a>`;
   $('#sideNav').innerHTML = sideMain.map(sideLink).join('');
-  $('#sideEnd').innerHTML = sideEnd.map(sideLink).join('') + `<button type="button" data-act="openSetup">${icon('sliders')}<span>Setup</span></button>`;
+  $('#sideEnd').innerHTML = sideEnd.map(sideLink).join('');
   const pt = $('#pageTitle'); if (pt) pt.textContent = PAGE_TITLES[route.name] || 'Home';
-  const prim = BNAV_ORDER.map(id => nav.find(n => n.id === id)).filter(Boolean).slice(0, 4), rest = nav.filter(n => !prim.includes(n));
+  const prim = BNAV_ORDER.map(id => nav.find(n => n.id === id)).filter(Boolean).slice(0, 4);
+  const rest = ['settings'].concat(nav.filter(n => !prim.includes(n) && n.id !== 'settings').map(n => n.id)).map(id => NAV.find(n => n.id === id));
   const moreOn = !prim.some(n => n.id === route.name);
   const open = document.body.classList.contains('menu-open');
   const bn = $('#bnav');
-  if (bn) bn.innerHTML = prim.map(n => `<a href="#/${n.id}"${cur(n.id)}>${icon(n.icon)}<span>${n.label}</span></a>`).join('') +
-    `<button type="button" id="bnMore" class="${moreOn ? 'on' : ''}" data-act="menu" aria-expanded="${open}" aria-controls="bnSheet">${icon('more')}<span>More</span></button>`;
+  if (bn) bn.innerHTML = prim.map(n => `<a href="#/${n.id}"${cur(n.id)}>${navIcon(n.icon)}<span>${n.label}</span></a>`).join('') +
+    `<button type="button" id="bnMore" class="${moreOn ? 'on' : ''}" data-act="menu" aria-expanded="${open}" aria-controls="bnSheet">${MORE_SVG}<span>More</span></button>`;
   const sh = $('#bnSheet');
-  if (sh) sh.innerHTML = rest.map(n => `<a href="#/${n.id}" class="bn-item${route.name === n.id ? ' on' : ''}"${cur(n.id)}>${icon(n.icon)}<span>${n.label}</span></a>`).join('') +
-    `<a href="#/data" class="bn-item${route.name === 'data' ? ' on' : ''}"${cur('data')}>${icon('db')}<span>Data tools</span></a>` +
-    `<button type="button" class="bn-item" data-act="openSetup">${icon('sliders')}<span>Setup</span></button>`;
+  if (sh) sh.innerHTML = rest.map(n => `<a href="#/${n.id}" class="bn-item${route.name === n.id ? ' on' : ''}"${cur(n.id)}>${navIcon(n.icon)}<span>${n.label}</span></a>`).join('');
   renderBackupUI();
+}
+
+/* Re-rendering replaces the view's HTML, so remember which control had focus and put focus back on its twin.
+   Fields carry data-fid; buttons are matched by data-act plus their data-k / data-id / data-theme-set. */
+function focusKey(el) {
+  if (!el || !el.dataset) return null;
+  if (el.dataset.fid) return `[data-fid="${CSS.escape(el.dataset.fid)}"]`;
+  if (!el.dataset.act) return null;
+  return `[data-act="${CSS.escape(el.dataset.act)}"]` + ['k', 'id', 'themeSet', 'd', 'day', 'slot'].filter(k => el.dataset[k] !== undefined).map(k => `[data-${k.replace(/[A-Z]/g, c => '-' + c.toLowerCase())}="${CSS.escape(el.dataset[k])}"]`).join('');
+}
+function restoreFocus(root, key, sel) {
+  if (!key) return; const el = root.querySelector(key); if (!el) return;
+  el.focus({ preventScroll: true }); try { if (sel && el.setSelectionRange) el.setSelectionRange(sel[0], sel[1]); } catch (e) { }
+}
+/* One footer component, last thing in every view except Settings (MB Suite v3.3) */
+function footerHTML() {
+  return `<footer class="mb-foot">
+    <p class="mb-foot-main"><b>Meal Prep</b> v1.7 · Free · No account needed</p>
+    <nav class="mb-foot-links" aria-label="About Meal Prep"><button type="button" data-act="whatsNew">What’s new</button><a href="#/privacy">Privacy</a><a href="#/terms">Terms</a><a href="https://mcbflow.com/">More free apps</a></nav>
+    <p class="mb-foot-copy">© 2024–2026 Matthew Broyer</p>
+    <p class="mb-foot-note">Not medical or nutrition advice.</p></footer>`;
 }
 
 /* keep focus + scroll when a view re-renders in place */
 function renderApp(scrollTop) {
-  if (!state.setup.done && route.name !== 'setup') { location.hash = '#/setup'; return; }
-  if (route.name !== 'setup') ui.finished = false;
-  const y = window.scrollY, ae = document.activeElement, fid = ae && ae.dataset && ae.dataset.fid, sel = ae && ae.selectionStart !== undefined ? [ae.selectionStart, ae.selectionEnd] : null;
+  const view = $('#view'), y = window.scrollY, ae = document.activeElement;
+  const key = ae && view.contains(ae) ? focusKey(ae) : null, sel = ae && ae.selectionStart !== undefined && ae.selectionStart !== null ? [ae.selectionStart, ae.selectionEnd] : null;
   document.body.dataset.view = route.name;
   setPageTitle();
   renderHeader();
   const v = VIEWS[route.name];
-  $('#view').innerHTML = v.render();
+  view.innerHTML = v.render() + (route.name === 'settings' ? '' : footerHTML());
   if (v.after) v.after();
-  const bar = $('#pagebar'); if (bar) bar.hidden = route.name === 'setup';
   MBInstall.render();
   if (scrollTop) window.scrollTo(0, 0); else window.scrollTo(0, y);
-  if (fid) { const el = $(`[data-fid="${CSS.escape(fid)}"]`); if (el) { el.focus(); try { if (sel) el.setSelectionRange(sel[0], sel[1]); } catch (e) { } } }
+  if (!scrollTop) restoreFocus(view, key, sel);
   updateStorageBanner();
   if (scrollTop) animateView();
   queueScrollUI();
+  renderWizard();
+  if (ui.jump) { const j = ui.jump; ui.jump = null; setTimeout(() => revealAndScroll(j), 80); }
 }
 const rerender = () => renderApp(false);
 
@@ -4215,24 +4315,57 @@ document.addEventListener('keydown', e => {
   document.addEventListener('scroll', () => { const b = box(); if (b) b.hidden = true; }, { passive: true });
 })();
 
+/* ---- chart labels (MB Suite charts standard): one floating label for every data mark with data-ctip="Value|what|context".
+   Mouse hover, a tap, or keyboard focus shows it; Esc, scrolling or leaving the chart hides it. The read mark gets .tipon
+   (the others fade through CSS). ---- */
+const chartTip = (() => {
+  let el = null, on = null;
+  const mk = () => { if (!el) { el = document.createElement('div'); el.className = 'ctip'; el.setAttribute('role', 'status'); el.hidden = true; document.body.appendChild(el); } return el; };
+  const show = t => {
+    const parts = String(t.getAttribute('data-ctip') || '').split('|'); if (!parts[0]) return;
+    const tip = mk(); on = t; tip.textContent = '';
+    const b = document.createElement('b'); b.textContent = parts[0]; tip.appendChild(b);
+    parts.slice(1).filter(Boolean).forEach(x => { const sp = document.createElement('span'); sp.textContent = x; tip.appendChild(sp); });
+    tip.hidden = false;
+    const r = (t.querySelector('.bar') || t).getBoundingClientRect(), tw = tip.offsetWidth, th = tip.offsetHeight;
+    let top = r.top - th - 8; if (top < 8) top = r.bottom + 8;
+    tip.style.left = clamp(r.left + r.width / 2 - tw / 2, 8, innerWidth - tw - 8) + 'px'; tip.style.top = top + 'px';
+    $$('.tipon').forEach(x => { if (x !== t) x.classList.remove('tipon'); }); t.classList.add('tipon');
+  };
+  const hide = () => { on = null; if (el) el.hidden = true; $$('.tipon').forEach(x => x.classList.remove('tipon')); };
+  const mark = e => e.target && e.target.closest ? e.target.closest('[data-ctip]') : null;
+  document.addEventListener('pointerover', e => { if (e.pointerType === 'touch') return; const t = mark(e); if (t && t !== on) show(t); else if (!t && on && document.activeElement !== on) hide(); });
+  document.addEventListener('pointerdown', e => { const t = mark(e); if (t) show(t); else if (on) hide(); });
+  document.addEventListener('focusin', e => { const t = mark(e); if (t) show(t); else if (on) hide(); });
+  document.addEventListener('focusout', e => { if (on && e.target === on) setTimeout(() => { if (on && document.activeElement !== on && !on.matches(':hover')) hide(); }, 0); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && on) hide(); });
+  addEventListener('scroll', () => { if (on) hide(); }, { passive: true });
+  return { hide };
+})();
+
 /* ==========================================================================
    Shared components
    ========================================================================== */
 const MACRO = { c: { label: 'Carbs', short: 'C' }, f: { label: 'Fats', short: 'F' }, p: { label: 'Protein', short: 'P' } };
 const MK = ['p', 'c', 'f'];   // the display order everywhere: Protein / Carbs / Fat
 
-function donut(pct, { center = '', sub = '', size = 150 } = {}) {
+/* Charts follow the suite standard: every mark has a hover / tap / focus label (data-ctip="Value|what|context", see chartTip below),
+   the read mark is highlighted and the others fade. */
+function donut(pct, { center = '', sub = '', size = 150, grams = null, per = ' a day' } = {}) {
   const C = 2 * Math.PI * 40; let off = 0;
   const segs = MK.map(k => {
     const len = C * (pct[k] || 0) / 100, dash = Math.max(0, len - 2.2);
-    const s = `<circle class="seg seg-${k}" cx="50" cy="50" r="40" fill="none" stroke-width="10" stroke-dasharray="${dash} ${C - dash}" stroke-dashoffset="${-off}" transform="rotate(-90 50 50)"><title>${MACRO[k].label} ${Math.round(pct[k])}%</title></circle>`;
+    const s = `<circle class="seg seg-${k}" cx="50" cy="50" r="40" fill="none" stroke-width="10" stroke-dasharray="${dash} ${C - dash}" stroke-dashoffset="${-off}" transform="rotate(-90 50 50)" data-ctip="${Math.round(pct[k])}%|${MACRO[k].label}, share of calories${grams ? '|' + round(grams[k], 1) + ' g' + per : ''}"/>`;
     off += len; return s;
   }).join('');
-  return `<svg class="donut" viewBox="0 0 100 100" width="${size}" height="${size}" role="img" aria-label="Macro split: ${MK.map(k => MACRO[k].label + ' ' + Math.round(pct[k]) + '%').join(', ')}"><circle cx="50" cy="50" r="40" fill="none" stroke-width="10" class="track"/>${segs}<text x="50" y="${sub ? 49 : 54}" text-anchor="middle" class="d-main">${esc(center)}</text>${sub ? `<text x="50" y="62" text-anchor="middle" class="d-sub">${esc(sub)}</text>` : ''}</svg>`;
+  const label = MK.map(k => MACRO[k].label + ' ' + Math.round(pct[k]) + '%').join(', ');
+  return `<svg class="donut" viewBox="0 0 100 100" width="${size}" height="${size}" role="img" tabindex="0" aria-label="Macro split: ${label}" data-ctip="${esc(center ? center + ' ' + sub : 'Macro split')}|${MK.map(k => MACRO[k].short + ' ' + Math.round(pct[k]) + '%').join(' · ')}|Hover or tap a ring segment"><circle cx="50" cy="50" r="40" fill="none" stroke-width="10" class="track"/>${segs}<text x="50" y="${sub ? 49 : 54}" text-anchor="middle" class="d-main">${esc(center)}</text>${sub ? `<text x="50" y="62" text-anchor="middle" class="d-sub">${esc(sub)}</text>` : ''}</svg>`;
 }
-function macroBar(pct, cls = '') {
+/* macro bar: one segment per macro. focus=false inside buttons (the body-type cards), where a second tab stop would be confusing. */
+function macroBar(pct, cls = '', { focus = true, what = '' } = {}) {
   if (!pct) return `<div class="mbar empty ${cls}"></div>`;
-  return `<div class="mbar ${cls}" role="img" aria-label="${MK.map(k => MACRO[k].label + ' ' + Math.round(pct[k]) + '%').join(', ')}">${MK.map(k => `<span class="m-${k}" style="flex:${Math.max(pct[k], 0.0001)}" data-tip="${MACRO[k].label} ${Math.round(pct[k])}%"></span>`).join('')}</div>`;
+  const label = MK.map(k => MACRO[k].label + ' ' + Math.round(pct[k]) + '%').join(', ');
+  return `<div class="mbar ${cls}" role="img" aria-label="${esc((what ? what + ': ' : '') + label)}"${focus ? ` tabindex="0" data-ctip="${MK.map(k => MACRO[k].short + ' ' + Math.round(pct[k]) + '%').join(' · ')}|${esc(what || 'Protein · carbs · fat')}|Share of calories"` : ''}>${MK.map(k => `<span class="m-${k}" style="flex:${Math.max(pct[k], 0.0001)}" data-ctip="${Math.round(pct[k])}%|${MACRO[k].label}, share of calories${what ? '|' + esc(what) : ''}"></span>`).join('')}</div>`;
 }
 function macroLegend(pct, grams) {
   return `<ul class="mlegend">${MK.map(k => `<li><i class="dot m-${k}"></i><b>${MACRO[k].label}</b> ${pct ? Math.round(pct[k]) + '%' : ''}${grams ? ' · ' + Math.round(grams[k]) + ' g' : ''}</li>`).join('')}</ul>`;
@@ -4257,9 +4390,9 @@ function bodySVG(kind) {
 function bodyTypeCards() {
   const cur = state.profile.bodyType;
   const card = (k, b) => `<button type="button" class="btype${cur === k ? ' on' : ''}" data-act="pickBodyType" data-k="${k}" aria-pressed="${cur === k}">
-    ${bodySVG(k)}<b>${b.label}</b><small>${b.blurb}</small>${macroBar(macroPctFromSplit(b.pct))}<span class="bt-split">${b.pct.p}% P · ${b.pct.c}% C · ${b.pct.f}% F</span></button>`;
+    ${bodySVG(k)}<b>${b.label}</b><small>${b.blurb}</small>${macroBar(macroPctFromSplit(b.pct), '', { focus: false })}<span class="bt-split">${b.pct.p}% P · ${b.pct.c}% C · ${b.pct.f}% F</span></button>`;
   return `<div class="btypes">${Object.entries(BODY_TYPES).map(([k, b]) => card(k, b)).join('')}
-    <button type="button" class="btype${cur === 'custom' ? ' on' : ''}" data-act="pickBodyType" data-k="custom" aria-pressed="${cur === 'custom'}">${bodySVG('custom')}<b>Custom</b><small>Set your own protein / carb / fat split.</small>${macroBar(macroPctFromSplit(state.profile.pct))}<span class="bt-split">${state.profile.pct.p}% P · ${state.profile.pct.c}% C · ${state.profile.pct.f}% F</span></button></div>`;
+    <button type="button" class="btype${cur === 'custom' ? ' on' : ''}" data-act="pickBodyType" data-k="custom" aria-pressed="${cur === 'custom'}">${bodySVG('custom')}<b>Custom</b><small>Set your own protein / carb / fat split.</small>${macroBar(macroPctFromSplit(state.profile.pct), '', { focus: false })}<span class="bt-split">${state.profile.pct.p}% P · ${state.profile.pct.c}% C · ${state.profile.pct.f}% F</span></button></div>`;
 }
 const macroPctFromSplit = p => ({ c: p.c, f: p.f, p: p.p });
 ACTIONS.pickBodyType = el => {
@@ -4377,7 +4510,7 @@ function resultsHTML() {
   return `<div class="card results">
     <div class="kpis"><div class="kpi"><small>BMR</small><b>${fmtInt(h.bmr)}</b><span>kcal at rest</span></div><div class="kpi"><small>Maintenance (TDEE)</small><b>${fmtInt(h.tdee)}</b><span>kcal / day</span></div><div class="kpi hero"><small>Daily target</small><b>${fmtInt(h.kcal)}</b><span>${p.calorieOverride ? 'manual override' : dTxt}</span></div></div>
     ${h.warnings.map(w => `<div class="note warn">${icon('alert')}<span>${esc(w)}</span></div>`).join('')}
-    <div class="res-macros">${donut(h.pct, { center: fmtInt(h.kcal), sub: 'kcal / day' })}
+    <div class="res-macros">${donut(h.pct, { center: fmtInt(h.kcal), sub: 'kcal / day', grams: h.grams })}
       <table class="mtable"><thead><tr><th><span class="sr">Macro</span></th><th>Split</th><th>Grams</th><th>kcal</th></tr></thead><tbody>
       ${MK.map(k => `<tr><th scope="row"><i class="dot m-${k}"></i>${MACRO[k].label}</th><td>${round(h.pct[k], 1)}%</td><td><b>${fmtInt(h.grams[k])} g</b></td><td>${fmtInt(h.kcal * h.pct[k] / 100)}</td></tr>`).join('')}
       </tbody></table></div>
@@ -4395,15 +4528,17 @@ function pctEditorHTML() {
 }
 
 /* ==========================================================================
-   Setup wizard (first run + re-runnable)  -  the answers reshape the app
+   Welcome + setup (MB Suite v3.3 welcome screen, .mbw): first run and Settings › Run setup again.
+   Welcome → Pick a look → Make it yours → Your targets (when macro targets are on) → Your kitchen.
+   The answers reshape the app, and every change saves as you go.
    ========================================================================== */
 const FEATURES = [
   { k: 'health', t: 'Hit my macro targets', s: 'macro targets', d: 'Turn your body type and goal into daily calories and grams of protein, carbs and fats.', ic: 'target' },
   { k: 'planner', t: 'Plan my week', s: 'weekly planning', d: 'Pick a recipe for each meal and see daily totals against your targets.', ic: 'calendar' },
   { k: 'grocery', t: 'Shop from one list', s: 'grocery list', d: 'Every ingredient merged and sorted by store section.', ic: 'cart' }
 ];
-const STEP_NAMES = { welcome: 'Welcome', about: 'Your stats', goal: 'Goal and body type', kitchen: 'Your kitchen', ready: 'Review' };
-function setupSteps() { const f = state.setup.features; return ['welcome'].concat(f.health ? ['about', 'goal'] : [], ['kitchen', 'ready']); }
+const STEP_NAMES = { welcome: 'Welcome', look: 'Pick a look', you: 'Make it yours', targets: 'Your targets', kitchen: 'Your kitchen' };
+function setupSteps() { const f = state.setup.features; return ['welcome', 'look', 'you'].concat(f.health ? ['targets'] : [], ['kitchen']); }
 
 function setupSummaryHTML() {
   const S = state.setup, h = calcHealth(), rows = [];
@@ -4418,83 +4553,135 @@ function setupSummaryHTML() {
   return `<dl class="summary">${rows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`;
 }
 
-function finishHTML() {
-  const S = state.setup, h = S.features.health ? calcHealth() : null, n = state.recipes.length;
-  const kp = h ? `<div class="done-kpis"><div><b>${fmtInt(h.kcal)}</b><small>kcal / day</small></div>${MK.map(k => `<div><b>${fmtInt(h.grams[k])} g</b><small>${MACRO[k].label.toLowerCase()}</small></div>`).join('')}</div>` : '';
-  const primary = S.features.planner && n ? '<a class="btn primary big" href="#/planner">Plan my week</a>' : n ? '<a class="btn primary big" href="#/recipes">Browse my recipes</a>' : '<button class="btn primary big" data-act="finishAdd">Add my first recipe</button>';
-  return `<div class="wizard"><section class="wiz-card done-card"><div class="done-badge">${icon('check', 'lg')}</div><h1>You’re all set${S.name ? ', ' + esc(S.name) : ''}</h1>
-    <p class="lead">${h ? 'Your daily target' : 'Your meal prep app is ready.'}</p>${kp}
-    <div class="done-actions">${primary}<a class="btn" href="#/home">Go to Home</a></div></section></div>`;
-}
-VIEWS.setup = {
-  render() {
-    if (ui.finished) return finishHTML();
-    const steps = setupSteps(); ui.setupStep = clamp(ui.setupStep, 0, steps.length - 1);
-    const id = steps[ui.setupStep], S = state.setup, last = ui.setupStep === steps.length - 1;
-    const prog = `<div class="wiz-meta"><b>Step ${ui.setupStep + 1} of ${steps.length}</b><span>${STEP_NAMES[id]}</span></div><div class="wiz-progress" role="progressbar" aria-valuemin="1" aria-valuemax="${steps.length}" aria-valuenow="${ui.setupStep + 1}" aria-label="Setup progress">${steps.map((_, i) => `<i class="${i < ui.setupStep ? 'done' : i === ui.setupStep ? 'now' : ''}"></i>`).join('')}</div>`;
-    let body = '';
-    if (id === 'welcome') {
-      body = `<div class="hero-logo hero-wreath">${NA_WREATH_SVG}${logo(52)}</div><h1>Plan your week of meals around your macros</h1>
-        <p class="lead">Answer a few questions and your planner, targets and grocery list set themselves up. About a minute. No account, and everything stays on this device.</p>
-        <label class="fld"><span>What should we call you? <em>optional</em></span><input type="text" maxlength="40" placeholder="First name" value="${esc(S.name)}" data-input="sname" data-fid="f-name" autocomplete="given-name"></label>
-        <h3>What do you want to do?</h3>
-        <div class="feat-grid">${FEATURES.map(f => `<button type="button" class="feat${S.features[f.k] ? ' on' : ''}" data-act="toggleFeat" data-k="${f.k}" aria-pressed="${S.features[f.k]}">${icon(f.ic, 'lg')}<b>${f.t}</b><small>${f.d}</small><span class="tick">${icon('check', 'sm')}</span></button>`).join('')}
-          <div class="feat locked">${icon('book', 'lg')}<b>Keep my recipes</b><small>Always on. Search, scale and print every recipe.</small><span class="tick">${icon('check', 'sm')}</span></div></div>
-        <div class="fld wiz-look"><span>Appearance</span><div class="seg" role="group" aria-label="Appearance">${[['light', 'Light', 'sun'], ['dark', 'Dark', 'moon']].map(([k, l, ic]) => `<button type="button" class="${(state.settings.theme === 'dark' ? 'dark' : 'light') === k ? 'on' : ''}" data-act="setTheme" data-k="${k}" aria-pressed="${(state.settings.theme === 'dark' ? 'dark' : 'light') === k}">${icon(ic, 'sm')} ${l}</button>`).join('')}</div></div>
-        <p class="muted small">Change any of this later from Setup. Turning something off hides it and never deletes data.</p>`;
-    } else if (id === 'about') {
-      body = `<h1>Your stats</h1><p class="lead">Age, height, weight and activity set your calorie target. They never leave this device. Adults 18 and over only.</p>
-        ${unitToggleHTML()}${bodyFormHTML()}<div id="goalResults" class="mini-results">${resultsHTML()}</div>`;
-    } else if (id === 'goal') {
-      body = `<h1>Pick your goal and body type</h1><p class="lead">Body type sets your protein, carb and fat split. Your stats turn it into grams.</p>
-        ${goalFormHTML()}<h3>Body type</h3>${bodyTypeCards()}<div class="row"><button class="btn" data-act="openQuiz">${icon('wand')} Not sure? Take the 4-question quiz</button></div>
-        ${state.profile.bodyType === 'custom' ? pctEditorHTML() : ''}<div id="goalResults" class="mini-results">${resultsHTML()}</div>`;
-    } else if (id === 'kitchen') {
-      body = `<h1>Your kitchen</h1><p class="lead">Set how you cook and the planner and grocery list follow.</p>
-        <h3>Which meals do you plan?</h3><div class="chips">${SLOTS.map(s => `<button type="button" class="chipbtn${S.meals[s] ? ' on' : ''}" data-act="toggleMeal" data-k="${s}" aria-pressed="${!!S.meals[s]}">${icon('check', 'sm')}${s}</button>`).join('')}</div>
-        <h3>How many people are you cooking for?</h3>
-        <div class="stepper"><button class="btn icon" data-act="hh" data-d="-1" aria-label="Fewer people">−</button><output id="hhOut" aria-live="polite">${S.household}</output><button class="btn icon" data-act="hh" data-d="1" aria-label="More people">+</button><span class="muted small">Grocery amounts scale by this. Nutrition is always tracked per person.</span></div>
-        <h3>How do you like to cook?</h3>
-        <div class="two-cards">
-          <button type="button" class="gcard${S.cookStyle === 'batch' ? ' on' : ''}" data-act="cookStyle" data-k="batch" aria-pressed="${S.cookStyle === 'batch'}"><b>Batch prep</b><small>Cook big batches once or twice a week and eat leftovers. The grocery list rounds up to whole batches.</small></button>
-          <button type="button" class="gcard${S.cookStyle === 'fresh' ? ' on' : ''}" data-act="cookStyle" data-k="fresh" aria-pressed="${S.cookStyle === 'fresh'}"><b>Cook fresh</b><small>Cook most meals as you go. The grocery list uses the exact amounts you plan.</small></button></div>
-        <label class="fld"><span>Your week starts on</span><select data-change="weekStart" data-fid="f-ws">${optionsHTML(DAYS.map(d => [d, d]), S.weekStart)}</select></label>`;
-    } else {
-      body = `<h1>Review your setup</h1><p class="lead">Check the details, then save.</p><div id="setupSummary">${setupSummaryHTML()}</div>
-        ${state.recipes.length ? '' : `<h3>Starter recipes</h3><div class="two-cards"><button type="button" class="gcard${ui.starter !== 'demo' ? ' on' : ''}" data-act="starter" data-k="empty" aria-pressed="${ui.starter !== 'demo'}"><b>Start with a blank library</b><small>Add your own recipes, or import a backup.</small></button>
-          <button type="button" class="gcard${ui.starter === 'demo' ? ' on' : ''}" data-act="starter" data-k="demo" aria-pressed="${ui.starter === 'demo'}"><b>Add ${DEMO_RECIPES.length} demo recipes</b><small>Try the whole app with demo recipes. Remove them in one click.</small></button></div>`}`;
-    }
-    return `<div class="wizard"><div class="wiz-top"><span class="brandmini">${logo(22)} ${APP.name} <span class="beta">Official Web App · v1.6</span></span><span class="wiz-acts">${!state.setup.done && SYNC && !SYNC.status().signedIn ? '<button class="btn ghost" data-act="sync" title="Already use Meal Prep on another device? Sign in to bring your data here.">Sign in to sync</button>' : ''}${state.setup.done ? '<a class="btn" href="#/home">Close</a>' : '<button class="btn ghost" data-act="skipSetup">Skip setup</button>'}</span></div>${prog}
-      <section class="wiz-card">${body}</section>
-      <div class="wiz-nav">${ui.setupStep > 0 ? `<button class="btn" data-act="setupBack">${icon('left')} Back</button>` : '<span></span>'}
-      ${id === 'welcome' ? `<span class="muted small">Have a backup? <button class="linkbtn" data-act="setupImport">Import it (JSON or CSV)</button></span>` : ''}
-      <button class="btn primary big" data-act="${last ? 'setupFinish' : 'setupNext'}">${last ? 'Save my setup' : id === 'welcome' ? 'Start my setup' : 'Continue'} ${last ? icon('check') : icon('right')}</button></div></div>`;
-  }
+const WIC = {   // 16px outline icons used on the welcome screen (same style as the nav icons)
+  shield: '<path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6z"/><path d="m9 12 2 2 4-4"/>',
+  sun: '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
+  moon: '<path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/>',
+  back: '<path d="M19 12H5M11 6l-6 6 6 6"/>', next: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+  sync: '<path d="M20 11a8 8 0 0 0-14.7-4.4L4 8"/><path d="M4 3v5h5"/><path d="M4 13a8 8 0 0 0 14.7 4.4L20 16"/><path d="M20 21v-5h-5"/>',
+  upload: '<path d="M12 16V4M7 9l5-5 5 5"/><path d="M5 20h14"/>'
 };
-ACTIONS.setupNext = () => { ui.setupStep++; saveSoon(); renderApp(true); };
-ACTIONS.setupBack = () => { ui.setupStep = Math.max(0, ui.setupStep - 1); renderApp(true); };
+const wic = (n, sz = 16) => `<svg class="uic" viewBox="0 0 24 24" width="${sz}" height="${sz}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${WIC[n]}</svg>`;
+
+ui.wiz = { open: false, step: 0, rerun: false, focus: false };
+function openWizard(rerun) {
+  ui.wiz = { open: true, step: 0, rerun: !!rerun, focus: true, opener: rerun ? document.activeElement : null };
+  setMenu(false); closeMenus();
+}
+function closeWizard() {
+  const op = ui.wiz.opener; ui.wiz = { open: false, step: 0, rerun: false, focus: false };
+  renderWizard();
+  if (op && op.isConnected) op.focus(); else { const m = $('#view'); if (m) m.focus({ preventScroll: true }); }
+}
+function wizBody(id) {
+  const S = state.setup, T = state.settings, dark = T.theme === 'dark';
+  if (id === 'welcome') return `<div class="mbw-hero"><span class="mbw-logo">${logo(52)}</span><div><h2 id="mbwTitle">Welcome to Meal Prep</h2><p class="mbw-lead">Plan your week of meals around your macros, then shop from one list.</p></div></div>
+    <ul class="mbw-feats">
+      <li><span class="mbw-ic">${navIcon('calendar')}</span><div><b>Planner</b><span>Pick a recipe for each meal and see daily totals against your targets.</span></div></li>
+      <li><span class="mbw-ic">${navIcon('target')}</span><div><b>Goals</b><span>Turn your stats and body type into daily calories and macros.</span></div></li>
+      <li><span class="mbw-ic">${navIcon('cart')}</span><div><b>Grocery list</b><span>Every ingredient merged and sorted by store section.</span></div></li>
+      <li><span class="mbw-ic">${navIcon('pot')}</span><div><b>Prep day</b><span>Your week as one cooking session, with containers and leftovers.</span></div></li>
+    </ul>
+    <p class="mbw-privacy">${wic('shield')}<span>No account needed. Everything stays in this browser on this device unless you sign in to sync. No cookies, ads or tracking. <button type="button" data-act="wizPrivacy">Privacy</button></span></p>`;
+  if (id === 'look') return `<h2 id="mbwTitle">Pick a look</h2><p class="mbw-lead">You can switch anytime from the top bar or Settings.</p>
+    <div class="mbw-looks" role="group" aria-label="Theme">
+      <button type="button" class="mbw-look" data-act="setTheme" data-theme-set="light" aria-pressed="${!dark}"><span class="pv l" aria-hidden="true"><b class="a"></b><b></b><b></b></span>${wic('sun')} Light</button>
+      <button type="button" class="mbw-look" data-act="setTheme" data-theme-set="dark" aria-pressed="${dark}"><span class="pv d" aria-hidden="true"><b class="a"></b><b></b><b></b></span>${wic('moon')} Dark</button></div>`;
+  if (id === 'you') return `<h2 id="mbwTitle">Make it yours</h2><p class="mbw-lead">Pick what you want to do and the app sets itself up around it.</p>
+    <label class="mbw-field"><span>What should we call you? (optional)</span><input type="text" maxlength="40" placeholder="First name" value="${esc(S.name)}" data-input="sname" data-fid="w-name" autocomplete="given-name"></label>
+    <p class="mbw-q" id="wFeatQ">What do you want to do?</p>
+    <div class="mbw-choices" role="group" aria-labelledby="wFeatQ">${FEATURES.map(f => `<button type="button" class="mbw-choice" data-act="toggleFeat" data-k="${f.k}" aria-pressed="${!!S.features[f.k]}"><span class="mbw-ic">${navIcon(f.ic)}</span><span><b>${f.t}</b><small>${f.d}</small></span><span class="mbw-tick" aria-hidden="true">${icon('check', 'sm')}</span></button>`).join('')}
+      <div class="mbw-choice is-locked"><span class="mbw-ic">${navIcon('book')}</span><span><b>Keep my recipes</b><small>Always on. Search, scale and print every recipe.</small></span><span class="mbw-tick" aria-hidden="true">${icon('check', 'sm')}</span></div></div>
+    <p class="mbw-sub">Turning something off hides it and never deletes data. Change it later in Settings.</p>`;
+  if (id === 'targets') return `<h2 id="mbwTitle">Your targets</h2><p class="mbw-lead">Your stats, goal and body type set your daily calories and macros. Adults 18 and over only.</p>
+    <div class="mbw-sec">${unitToggleHTML()}</div>${bodyFormHTML()}
+    <p class="mbw-q">Goal</p>${goalFormHTML()}
+    <p class="mbw-q">Body type <span class="mbw-sub">sets your protein, carb and fat split</span></p>${bodyTypeCards()}
+    <p><button type="button" class="mbw-btn sm" data-act="openQuiz">${icon('wand', 'sm')} Not sure? Take the 4-question quiz</button></p>
+    ${state.profile.bodyType === 'custom' ? pctEditorHTML() : ''}<div id="goalResults" class="mini-results">${resultsHTML()}</div>`;
+  /* kitchen (last step) */
+  return `<h2 id="mbwTitle">Your kitchen</h2><p class="mbw-lead">Set how you cook and the planner and grocery list follow.</p>
+    <p class="mbw-q" id="wMealsQ">Which meals do you plan?</p><div class="chips" role="group" aria-labelledby="wMealsQ">${SLOTS.map(s => `<button type="button" class="chipbtn${S.meals[s] ? ' on' : ''}" data-act="toggleMeal" data-k="${s}" aria-pressed="${!!S.meals[s]}">${icon('check', 'sm')}${s}</button>`).join('')}</div>
+    <p class="mbw-q">How many people are you cooking for?</p>
+    <div class="stepper"><button class="btn icon" type="button" data-act="hh" data-d="-1" aria-label="Fewer people">−</button><output id="hhOut" aria-live="polite">${S.household}</output><button class="btn icon" type="button" data-act="hh" data-d="1" aria-label="More people">+</button><span class="mbw-sub">Grocery amounts scale by this. Nutrition is tracked per person.</span></div>
+    <p class="mbw-q" id="wCookQ">How do you like to cook?</p>
+    <div class="mbw-choices" role="group" aria-labelledby="wCookQ">
+      <button type="button" class="mbw-choice" data-act="cookStyle" data-k="batch" aria-pressed="${S.cookStyle === 'batch'}"><span><b>Batch prep</b><small>Cook big batches once or twice a week and eat leftovers. The grocery list rounds up to whole batches.</small></span></button>
+      <button type="button" class="mbw-choice" data-act="cookStyle" data-k="fresh" aria-pressed="${S.cookStyle === 'fresh'}"><span><b>Cook fresh</b><small>Cook most meals as you go. The grocery list uses the exact amounts you plan.</small></span></button></div>
+    <label class="mbw-field"><span>Your week starts on</span><select data-change="weekStart" data-fid="w-ws">${optionsHTML(DAYS.map(d => [d, d]), S.weekStart)}</select></label>
+    ${state.recipes.length ? '' : `<p class="mbw-q" id="wStartQ">Starter recipes</p><div class="mbw-choices" role="group" aria-labelledby="wStartQ"><button type="button" class="mbw-choice" data-act="starter" data-k="empty" aria-pressed="${ui.starter !== 'demo'}"><span><b>Start with a blank library</b><small>Add your own recipes, or import a backup.</small></span></button>
+      <button type="button" class="mbw-choice" data-act="starter" data-k="demo" aria-pressed="${ui.starter === 'demo'}"><span><b>Add ${DEMO_RECIPES.length} demo recipes</b><small>Try the whole app with demo recipes. Remove them in one click.</small></span></button></div>`}
+    <details class="mbw-sum"><summary>Review your setup</summary><div id="setupSummary">${setupSummaryHTML()}</div></details>
+    <div class="mbw-alt"><span>Moving from another device?</span>${SYNC ? `<button class="mbw-btn sm" type="button" data-act="wizSignIn">${wic('sync')}Sign in to sync</button>` : ''}<button class="mbw-btn sm" type="button" data-act="wizImport">${wic('upload')}Import a backup</button></div>`;
+}
+function renderWizard() {
+  const W = $('#welcome'); if (!W) return;
+  const bg = ['#side', '.mb-main', '#bnav', '#bnSheet', '.skip', '#toTop'].map(q => $(q)).filter(Boolean);
+  if (!ui.wiz.open) {
+    if (!W.hidden || W.innerHTML) { W.hidden = true; W.innerHTML = ''; bg.forEach(e => { e.inert = false; }); document.body.classList.remove('wiz-open'); }
+    return;
+  }
+  const steps = setupSteps(); ui.wiz.step = clamp(ui.wiz.step, 0, steps.length - 1);
+  const i = ui.wiz.step, id = steps[i], n = steps.length, last = i === n - 1;
+  const ae = document.activeElement, key = W.contains(ae) ? focusKey(ae) : null, sel = key && ae.selectionStart !== undefined && ae.selectionStart !== null ? [ae.selectionStart, ae.selectionEnd] : null;
+  const ob = W.querySelector('.mbw-body'), st = ob && ob.dataset.step === id ? ob.scrollTop : 0, sumOpen = !!W.querySelector('.mbw-sum[open]');
+  const ss = SYNC ? SYNC.status() : null;
+  const acct = !ss ? '' : ss.signedIn ? '<span class="mbw-signed">Signed in</span>' : '<button class="mbw-link acc" type="button" data-act="wizSignIn">Sign in</button>';
+  W.innerHTML = `<div class="mbw-card">
+    <header class="mbw-head"><span class="mbw-step">Step ${i + 1} of ${n} · ${STEP_NAMES[id]}</span><span class="mbw-head-a">${acct}<button class="mbw-link" type="button" data-act="wizSkip">Skip</button></span>
+      <div class="mbw-prog" aria-hidden="true">${steps.map((_, k) => `<i${k <= i ? ' class="on"' : ''}></i>`).join('')}</div></header>
+    <div class="mbw-body" data-step="${id}">${wizBody(id)}</div>
+    <footer class="mbw-foot">${i ? `<button class="mbw-btn" type="button" data-act="wizBack">${wic('back')}Back</button>` : ''}<button class="mbw-btn pri" type="button" data-act="${last ? 'wizFinish' : 'wizNext'}">${last ? 'Get started' : 'Next'}${wic('next')}</button></footer></div>`;
+  if (sumOpen) { const d = W.querySelector('.mbw-sum'); if (d) d.open = true; }
+  W.hidden = false; bg.forEach(e => { e.inert = true; }); document.body.classList.add('wiz-open');
+  const nb = W.querySelector('.mbw-body'); if (nb && st) nb.scrollTop = st;
+  if (ui.wiz.focus) { ui.wiz.focus = false; const pb = W.querySelector('.mbw-foot .pri'); if (pb) pb.focus({ preventScroll: true }); }
+  else restoreFocus(W, key, sel);
+}
+const wizGo = d => { ui.wiz.step += d; ui.wiz.focus = true; saveSoon(); renderWizard(); };
+ACTIONS.wizNext = () => wizGo(1);
+ACTIONS.wizBack = () => wizGo(-1);
+ACTIONS.wizSignIn = () => { if (SYNC) SYNC.open(); };
+ACTIONS.wizPrivacy = () => openDialog(`<div class="dlg-body"><div class="dlg-head"><h3>Privacy Policy</h3><button type="button" class="btn icon ghost" data-act="closeDlg" aria-label="Close">${icon('x')}</button></div>
+  <div class="prose legal"><p class="muted small">Last updated ${LEGAL_UPDATED}</p><ul>${PRIVACY.short.map(t => `<li>${esc(t)}</li>`).join('')}</ul>${PRIVACY.sections.map(([h, ps]) => `<h4>${esc(h)}</h4>${ps.map(x => `<p class="small">${esc(x)}</p>`).join('')}`).join('')}</div>
+  <div class="dlg-actions"><button type="button" class="btn primary" data-act="closeDlg">Close</button></div></div>`, { wide: true });
 ACTIONS.toggleFeat = el => { const f = state.setup.features; f[el.dataset.k] = !f[el.dataset.k]; saveSoon(); rerender(); };
 INPUTS.sname = el => { state.setup.name = el.value.slice(0, 40); saveSoon(); };
 ACTIONS.toggleMeal = el => { const m = state.setup.meals; m[el.dataset.k] = !m[el.dataset.k]; if (!SLOTS.some(s => m[s])) m[el.dataset.k] = true; saveSoon(); rerender(); };
-ACTIONS.hh = el => { const S = state.setup; S.household = clamp(S.household + parseInt(el.dataset.d, 10), 1, 20); saveSoon(); const o = $('#hhOut'); if (o) o.textContent = S.household; };
+ACTIONS.hh = el => { const S = state.setup; S.household = clamp(S.household + parseInt(el.dataset.d, 10), 1, 20); saveSoon(); $$('#hhOut').forEach(o => { o.textContent = S.household; }); const s = $('#setupSummary'); if (s) s.innerHTML = setupSummaryHTML(); };
 ACTIONS.cookStyle = el => { state.setup.cookStyle = el.dataset.k; state.settings.groceryMode = el.dataset.k === 'batch' ? 'batch' : 'exact'; saveSoon(); rerender(); };
-CHANGES.weekStart = el => { state.setup.weekStart = el.value; saveSoon(); };
+CHANGES.weekStart = el => { state.setup.weekStart = el.value; saveSoon(); const s = $('#setupSummary'); if (s) s.innerHTML = setupSummaryHTML(); };
 ACTIONS.starter = el => { ui.starter = el.dataset.k; rerender(); };
-ACTIONS.skipSetup = () => { state.setup.done = true; saveSoon(); toast('Setup skipped. Open Setup any time to run it.'); go('#/home'); };
-ACTIONS.setupImport = () => { state.setup.done = true; saveSoon(); go('#/data'); pickImportFile(); };
-ACTIONS.setupFinish = () => {
+/* Skip (or Esc) keeps whatever was already answered and marks setup done, like the old "Skip setup". */
+ACTIONS.wizSkip = () => {
+  const first = !ui.wiz.rerun;
+  state.setup.done = true; noticeSet(); saveSoon(); closeWizard();
+  if (first) toast('Setup skipped. Run it again any time from Settings.'); rerender();
+};
+ACTIONS.wizImport = () => { state.setup.done = true; noticeSet(); saveSoon(); closeWizard(); go('#/settings'); ui.jump = 'impCard'; pickImportFile(); };
+ACTIONS.wizFinish = () => {
   const S = state.setup; S.done = true; state.settings.groceryMode = S.cookStyle === 'batch' ? 'batch' : 'exact';
   const p = state.profile; if (p.goal !== 'maintain' && !p.rateKgWk) p.rateKgWk = PACES[p.unit].defaults[p.goal];
   if (ui.starter === 'demo' && !state.recipes.length) loadDemo(true);
-  ui.setupStep = 0; ui.finished = true; saveNow(); renderApp(true);
+  noticeSet(); saveNow(); closeWizard(); go('#/home'); rerender();
+  const h = S.features.health ? calcHealth() : null, n = state.recipes.length;
+  toast(`You’re all set${S.name ? ', ' + S.name : ''}.${h ? ` Daily target: ${fmtInt(h.kcal)} kcal, ${fmtInt(h.grams.p)} g protein.` : ''}`, 'ok',
+    S.features.planner && n ? { label: 'Plan my week', fn: () => go('#/planner') } : n ? null : { label: 'Add a recipe', fn: () => { go('#/recipes'); setTimeout(() => ACTIONS.newRecipe(), 0); } });
 };
-ACTIONS.openSetup = () => { ui.setupStep = 0; ui.finished = false; go('#/setup'); };
-ACTIONS.finishAdd = () => { go('#/recipes'); setTimeout(() => ACTIONS.newRecipe(), 0); };
-document.addEventListener('keydown', e => {                         // Enter moves the wizard forward
-  if (e.key !== 'Enter' || e.isComposing || route.name !== 'setup' || ui.finished) return;
-  const t = e.target; if (!t || t.tagName !== 'INPUT' || t.type === 'checkbox' || t.type === 'radio') return;
-  if ($('#dlg').open) return;
-  const b = $('.wiz-nav .btn.primary'); if (b) { e.preventDefault(); b.click(); }
+ACTIONS.openSetup = () => { openWizard(true); if (route.name !== 'home') go('#/home'); else rerender(); };
+/* keyboard: Enter in a field moves forward, Esc = Skip, Tab stays inside the welcome screen */
+document.addEventListener('keydown', e => {
+  if (!ui.wiz.open || $('dialog[open]')) return;
+  const W = $('#welcome'); if (!W || W.hidden) return;
+  if (e.key === 'Escape') { e.preventDefault(); ACTIONS.wizSkip(); return; }
+  if (e.key === 'Enter' && !e.isComposing && e.target && e.target.tagName === 'INPUT' && !/^(checkbox|radio)$/.test(e.target.type)) { const b = W.querySelector('.mbw-foot .pri'); if (b) { e.preventDefault(); b.click(); } return; }
+  if (e.key !== 'Tab') return;
+  const f = $$('button, [href], input, select, textarea, summary, [tabindex]:not([tabindex="-1"])', W).filter(x => !x.disabled && x.getClientRects().length);
+  if (!f.length) return;
+  const a = f[0], z = f[f.length - 1];
+  if (!W.contains(document.activeElement)) { e.preventDefault(); (e.shiftKey ? z : a).focus(); }
+  else if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); }
+  else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
 });
 
 /* ==========================================================================
@@ -4512,7 +4699,6 @@ const NA_SEED_SVG = `<svg class="cu-art inline sm" viewBox="0 0 160 120" preserv
 VIEWS.home = {
   render() {
     const S = state.setup, t = getTargets(), h = t && t.health;
-    const hr = new Date().getHours(), greet = hr < 12 ? 'Good morning' : hr < 18 ? 'Good afternoon' : 'Good evening';
     const auto = featureOn('grocery') ? buildGrocery() : [], left = auto.filter(i => !state.checked[i.key] && !state.have[i.key]).length + state.manual.filter(m => !m.done).length;
     const tiles = [];
     if (t) tiles.push(`<a class="tile" href="#/goals"><small>Daily target</small>${h ? `<b>${fmtInt(h.kcal)}<i> kcal</i></b><span>${fmtInt(h.grams.p)}P · ${fmtInt(h.grams.c)}C · ${fmtInt(h.grams.f)}F grams</span>` : `<b>Set up</b><span>Add your stats →</span>`}</a>`);
@@ -4528,7 +4714,7 @@ VIEWS.home = {
       const d = todayName(), T = dayTotals(d), st = dayStatus(T, t);
       const meals = activeSlots().map(s => { const e = getSlot(d, s); const r = e && getRecipe(e.rid); return `<li><span class="slot">${s}</span>${r ? `<a href="#/recipes/${r.id}">${esc(r.name)}</a><span class="muted small">${fmtInt(r.cal * nutMult(e))} kcal</span>` : `<a class="addmeal" href="#/planner">+ Add a meal</a>`}</li>`; }).join('');
       todayCard = `<section class="card"><div class="card-head"><h2>Today, ${d}</h2>${T.n && t ? `<span class="chip st-${st.k}">${st.label}</span>` : ''}</div><ul class="today">${meals}</ul>
-        ${T.n ? `<div class="daysum"><b>${fmtInt(T.cal)} kcal</b>${t && t.kcal ? `<span class="muted"> of ${fmtInt(t.kcal)}</span>` : ''}${macroBar(T.pct)}</div>` : ''}
+        ${T.n ? `<div class="daysum"><b>${fmtInt(T.cal)} kcal</b>${t && t.kcal ? `<span class="muted"> of ${fmtInt(t.kcal)}</span>` : ''}${macroBar(T.pct, '', { what: 'Today, ' + d })}</div>` : ''}
         <div class="row"><a class="btn" href="#/planner">Plan my week</a></div></section>`;
     }
 
@@ -4538,9 +4724,9 @@ VIEWS.home = {
     steps.push({ t: 'Add your recipes', done: state.recipes.length > 0, a: `<button class="btn sm" data-act="newRecipe">${icon('plus')} Add recipe</button> <button class="btn sm" data-act="loadDemo">Load demo recipes</button>` });
     if (featureOn('planner')) steps.push({ t: 'Plan your week', done: plannedCount() > 0, a: `<a class="btn sm" href="#/planner">Plan my week</a>${t && state.recipes.length ? ` <button class="btn sm" data-act="autoPlan">${icon('wand')} Auto-plan it</button>` : ''}` });
     if (featureOn('grocery')) steps.push({ t: 'Shop from your grocery list', done: plannedCount() > 0 && (auto.length > 0) && Object.keys(state.checked).length > 0, a: '<a class="btn sm" href="#/grocery">See my list</a>' });
-    steps.push({ t: 'Save a backup file', done: !!state.settings.lastExport, a: '<button class="btn sm" data-act="backupNow">Save backup now</button>' });
+    if (!backupInfo().quiet) steps.push({ t: 'Save a backup file', done: !!state.settings.lastExport, a: '<button class="btn sm" data-act="backupNow">Save backup now</button>' });   // signed in and syncing: no backup nudge
     const doneN = steps.filter(s => s.done).length, nextI = steps.findIndex(s => !s.done), stepsLeft = steps.length - doneN;
-    const list = doneN < steps.length ? `<section class="card"><div class="card-head"><h2>Getting started</h2><span class="muted small">${stepsLeft} step${stepsLeft === 1 ? '' : 's'} left</span></div><div class="clbar" role="progressbar" aria-valuemin="0" aria-valuemax="${steps.length}" aria-valuenow="${doneN}" aria-label="Getting started progress"><span style="width:${Math.max(6, Math.round(100 * doneN / steps.length))}%"></span></div><ol class="checklist">${steps.map((s, i) => `<li class="${s.done ? 'done' : i === nextI ? 'next' : ''}"><span class="cbox">${s.done ? icon('check', 'sm') : ''}</span><span class="ct">${s.t}</span><span class="ca">${s.done ? '' : i === nextI ? s.a.replace('class="btn sm"', 'class="btn sm primary"') : s.a}</span></li>`).join('')}</ol></section>` : '';
+    const list = doneN < steps.length ? `<section class="card"><div class="card-head"><h2>Getting started</h2><span class="muted small">${stepsLeft} step${stepsLeft === 1 ? '' : 's'} left</span></div><div class="clbar" role="progressbar" aria-valuemin="0" aria-valuemax="${steps.length}" aria-valuenow="${doneN}" aria-label="Getting started progress: ${doneN} of ${steps.length} steps done" tabindex="0" data-ctip="${doneN} of ${steps.length}|Getting started steps done|${stepsLeft} to go"><span style="width:${Math.max(6, Math.round(100 * doneN / steps.length))}%"></span></div><ol class="checklist">${steps.map((s, i) => `<li class="${s.done ? 'done' : i === nextI ? 'next' : ''}"><span class="cbox">${s.done ? icon('check', 'sm') : ''}</span><span class="ct">${s.t}</span><span class="ca">${s.done ? '' : i === nextI ? s.a.replace('class="btn sm"', 'class="btn sm primary"') : s.a}</span></li>`).join('')}</ol></section>` : '';
 
     /* best-fit picks */
     let picks = '';
@@ -4548,11 +4734,13 @@ VIEWS.home = {
       const best = state.recipes.map(r => ({ r, fit: recipeNutri(r).fit })).filter(x => x.fit !== null).sort((a, b) => b.fit - a.fit).slice(0, 4);
       picks = `<section class="card"><div class="card-head"><h2>Best fits for your macros</h2></div><ul class="picks">${best.map(({ r, fit }) => `<li><a href="#/recipes/${r.id}">${esc(r.name)}</a><span class="muted small">${r.type}</span>${fitChip(fit)}</li>`).join('')}</ul></section>`;
     }
-    return `<section class="cu-banner">${CU_BANNER_SVG}<div class="cu-txt"><h1 class="cu-t">${greet}${S.name ? ', ' + esc(S.name) : ''}</h1><p class="cu-s">${featureOn('planner') ? `${plannedCount()} of ${activeSlots().length * 7} meals planned this week.` : `${state.recipes.length} recipe${state.recipes.length === 1 ? '' : 's'} saved.`}</p></div></section>
+    return `<section class="cu-banner">${CU_BANNER_SVG}<div class="cu-txt"><p class="mb-greet" id="greet"></p><h1 class="cu-t">Your week of meals</h1><p class="cu-s">${featureOn('planner') ? `${plannedCount()} of ${activeSlots().length * 7} meals planned this week.` : `${state.recipes.length} recipe${state.recipes.length === 1 ? '' : 's'} saved.`}</p></div></section>
       ${backupDue() ? `<div class="note warn bk-note">${icon('shield')}<span>Your data lives in this browser. ${state.settings.lastExport ? 'It has been over a week since your last backup.' : 'You have not made a backup yet.'}</span><button class="btn sm" data-act="backupNow">${icon('save')} Save backup now</button></div>` : ''}
       <div class="tiles">${tiles.join('')}</div>
       <div class="grid-2">${plannedCount() === 0 && list ? list + todayCard : todayCard + list}${picks}</div>`;
-  }
+  },
+  /* greeting line (mb-sync 1.1): "Good morning, Matthew": the account's screen name when signed in, else the name from setup */
+  after() { const g = $('#greet'); if (!g) return; if (SYNC) SYNC.greet(g, { name: () => state.setup.name }); else g.hidden = true; }
 };
 
 /* ==========================================================================
@@ -4685,7 +4873,7 @@ function recipeDetailHTML(r) {
         <button class="btn icon" data-act="printRecipe" data-id="${r.id}" aria-label="Print or save as PDF" data-tip="Print / save PDF">${icon('printer')}</button>
         <details class="moremenu"><summary class="btn icon" aria-label="More actions" data-tip="More">${icon('more')}</summary><div class="menu"><button class="btn ghost" data-act="dupRecipe" data-id="${r.id}">${icon('copy')} Duplicate</button><button class="btn ghost dg" data-act="delRecipe" data-id="${r.id}">${icon('trash')} Delete</button></div></details></div></header>
     <section class="rd-nutri card soft">
-      ${n.pct ? donut(n.pct, { center: fmtInt(r.cal), sub: 'kcal / serving', size: 132 }) : `<div class="kpi"><small>Calories</small><b>${fmtInt(r.cal)}</b></div>`}
+      ${n.pct ? donut(n.pct, { center: fmtInt(r.cal), sub: 'kcal / serving', size: 132, grams: { p: r.p, c: r.c, f: r.f }, per: ' per serving' }) : `<div class="kpi"><small>Calories</small><b>${fmtInt(r.cal)}</b></div>`}
       <div class="rn-body"><table class="mtable"><thead><tr><th>Per serving</th><th>Grams</th><th>Split</th>${t ? '<th>Target</th>' : ''}</tr></thead><tbody>
         ${MK.map(k => `<tr><th scope="row"><i class="dot m-${k}"></i>${MACRO[k].label}</th><td><b>${round(r[k], 1)} g</b></td><td>${n.pct ? Math.round(n.pct[k]) + '%' : '–'}</td>${t ? `<td>${t.pct[k]}%${n.pct ? ` <span class="delta ${Math.abs(delta(k)) <= 5 ? 'ok' : 'off'}">${fmtSigned(delta(k))}</span>` : ''}</td>` : ''}</tr>`).join('')}</tbody></table>
         ${impliedOff ? `<div class="note warn">${icon('alert')}<span>The macros add up to about ${fmtInt(n.implied)} kcal, but the recipe says ${fmtInt(r.cal)}. Check the numbers.</span></div>` : ''}</div></section>
@@ -4831,18 +5019,24 @@ function slotSelectHTML(day, slot, e) {
 function deltaText(v, unit = '', d = 0) { return fmtSigned(v, d) + unit; }
 
 function weekChart(per, t) {
-  const W = 700, H = 210, L = 40, B = 28, top = 18, bw = 52, gap = (W - L - 10 - bw * 7) / 6;
-  const vals = per.map(x => x.T.cal), rawMax = Math.max(...vals, t && t.kcal ? t.kcal * 1.1 : 0, 1000) * 1.08, max = Math.ceil(rawMax / 500) * 500;
-  const y = v => top + (H - top - B) * (1 - v / max);
-  const ticks = [0, max / 2, max];
+  const W = 700, H = 220, L = 44, B = 28, top = 22, bw = 52, gap = (W - L - 10 - bw * 7) / 6, base = H - B;
+  const vals = per.map(x => x.T.cal), hi = Math.max(...vals, t && t.kcal ? t.kcal * 1.08 : 0, 1000) * 1.06;
+  const step = hi > 6000 ? 2000 : hi > 3000 ? 1000 : 500, max = Math.ceil(hi / step) * step;   // round-number gridlines, 3 to 6 of them
+  const y = v => top + (base - top) * (1 - v / max);
+  const ticks = []; for (let v = 0; v <= max + 1e-6; v += step) ticks.push(v);
+  const ax = v => v >= 1000 ? (v / 1000) + 'k' : String(v);
+  const today = todayName();
   const bars = per.map((x, i) => {
-    const bx = L + i * (bw + gap), v = x.T.cal, by = y(v), bh = H - B - by;
-    const tip = x.T.n ? `${x.day}: ${fmtInt(v)} kcal${x.T.pct ? ` · P ${Math.round(x.T.pct.p)}% C ${Math.round(x.T.pct.c)}% F ${Math.round(x.T.pct.f)}%` : ''}` : `${x.day}: nothing planned`;
-    return `<g data-tip="${esc(tip)}" tabindex="0" role="img" aria-label="${esc(tip)}"><rect x="${bx}" y="${H - B - Math.max(bh, 0)}" width="${bw}" height="${Math.max(bh, 0)}" rx="4" class="bar ${x.st.k}"/>${x.T.n ? `<text x="${bx + bw / 2}" y="${by - 5}" text-anchor="middle" class="ax val">${fmtInt(v)}</text>` : `<text x="${bx + bw / 2}" y="${H - B - 6}" text-anchor="middle" class="ax">–</text>`}<text x="${bx + bw / 2}" y="${H - 8}" text-anchor="middle" class="ax">${x.day.slice(0, 3)}</text></g>`;
+    const bx = L + i * (bw + gap), v = x.T.cal, by = y(v), bh = base - by, r = Math.min(4, bh);
+    const shape = bh > 0 ? `<path class="bar" d="M${bx},${base} V${by + r} Q${bx},${by} ${bx + r},${by} H${bx + bw - r} Q${bx + bw},${by} ${bx + bw},${by + r} V${base} Z"/>` : '';
+    const when = x.day + (x.day === today ? ' (today)' : '') + (x.T.n ? ` · ${x.T.n} meal${x.T.n === 1 ? '' : 's'}` : '');
+    const ctx = x.T.n ? [t && t.kcal ? `${deltaText(v - t.kcal)} kcal vs your ${fmtInt(t.kcal)} target` : '', x.T.pct ? `P ${Math.round(x.T.pct.p)}% · C ${Math.round(x.T.pct.c)}% · F ${Math.round(x.T.pct.f)}%` : ''].filter(Boolean) : ['Pick meals in the planner above'];
+    const tip = [x.T.n ? fmtInt(v) + ' kcal' : 'Nothing planned', when].concat(ctx);
+    return `<g class="wbar" data-ctip="${esc(tip.join('|'))}" tabindex="0" role="img" aria-label="${esc(tip.join(', '))}"><rect class="hit" x="${bx - gap / 2}" y="${top}" width="${bw + gap}" height="${base - top}"/>${shape}${x.T.n ? `<text x="${bx + bw / 2}" y="${by - 5}" text-anchor="middle" class="ax val">${fmtInt(v)}</text>` : `<text x="${bx + bw / 2}" y="${base - 6}" text-anchor="middle" class="ax">–</text>`}<text x="${bx + bw / 2}" y="${H - 8}" text-anchor="middle" class="ax">${x.day.slice(0, 3)}</text></g>`;
   }).join('');
-  const grid = ticks.map(v => `<line x1="${L}" x2="${W - 6}" y1="${y(v)}" y2="${y(v)}" class="gl"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end" class="ax">${fmtInt(v)}</text>`).join('');
-  const tl = t && t.kcal ? `<line x1="${L}" x2="${W - 6}" y1="${y(t.kcal)}" y2="${y(t.kcal)}" class="tline"/>` : '';
-  return `<div><svg class="wchart" viewBox="0 0 ${W} ${H}" role="group" aria-label="Calories planned per day">${grid}${bars}${tl}</svg><p class="chartkey"><span><i class="swatch"></i>Calories planned</span>${t && t.kcal ? `<span><i class="dash"></i>Target ${fmtInt(t.kcal)} kcal</span>` : ''}</p></div>`;
+  const grid = ticks.map(v => `<line x1="${L}" x2="${W - 6}" y1="${y(v)}" y2="${y(v)}" class="gl"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end" class="ax">${ax(v)}</text>`).join('');
+  const tl = t && t.kcal ? `<line x1="${L}" x2="${W - 6}" y1="${y(t.kcal)}" y2="${y(t.kcal)}" class="tline"/><text x="${W - 8}" y="${y(t.kcal) - 5}" text-anchor="end" class="ax tlab">Target ${fmtInt(t.kcal)}</text>` : '';
+  return `<div class="wchart-wrap"><svg class="wchart" viewBox="0 0 ${W} ${H}" role="group" aria-label="Calories planned per day${t && t.kcal ? `, target ${fmtInt(t.kcal)} kcal` : ''}">${grid}${tl}${bars}</svg><p class="chartkey"><span><i class="swatch"></i>Calories planned</span>${t && t.kcal ? `<span><i class="dash"></i>Target ${fmtInt(t.kcal)} kcal</span>` : ''}<span class="charthint">Hover or tap a bar</span></p></div>`;
 }
 
 VIEWS.planner = {
@@ -4861,7 +5055,7 @@ VIEWS.planner = {
       if (!T.n) tot = `<div class="ptot empty" data-label="Daily total"><span class="muted">Nothing planned</span></div>`;
       else {
         const dk = t && t.kcal ? T.cal - t.kcal : null;
-        tot = `<div class="ptot" data-label="Daily total"><div class="tk"><b>${fmtInt(T.cal)}</b> kcal${dk !== null ? `<span class="delta ${Math.abs(dk) / t.kcal <= .07 ? 'ok' : 'off'}">${deltaText(dk)}</span>` : ''}</div>${macroBar(T.pct)}
+        tot = `<div class="ptot" data-label="Daily total"><div class="tk"><b>${fmtInt(T.cal)}</b> kcal${dk !== null ? `<span class="delta ${Math.abs(dk) / t.kcal <= .07 ? 'ok' : 'off'}">${deltaText(dk)}</span>` : ''}</div>${macroBar(T.pct, '', { what: d })}
           <div class="tm">${MK.map(k => `<span data-tip="${MACRO[k].label}: ${round(T[k])} g${t && T.pct ? ` (target ${t.pct[k]}%)` : ''}"><i class="dot m-${k}"></i>${MACRO[k].short} ${T.pct ? Math.round(T.pct[k]) + '%' : ''}${t && T.pct ? `<em class="${Math.abs(T.pct[k] - t.pct[k]) <= 5 ? 'ok' : 'off'}">${deltaText(T.pct[k] - t.pct[k])}</em>` : ''}</span>`).join('')}</div>
           ${t && st.label ? `<span class="chip st-${st.k}">${st.k === 'good' ? icon('check', 'sm') : st.k === 'ok' ? icon('target', 'sm') : icon('alert', 'sm')}${st.label}</span>` : ''}</div>`;
       }
@@ -4872,7 +5066,7 @@ VIEWS.planner = {
     const costKpi = pc && pc.priced ? `<div class="kpi"><small>Est. groceries</small><b>${money(pc.total)}</b><span>${pc.perServing !== null ? money(pc.perServing) + ' per serving' : 'this week'}${bud ? ` · ${pc.total <= bud ? money(bud - pc.total) + ' under' : money(pc.total - bud) + ' over'} budget` : ''}${pc.unpriced ? ` · ${pc.unpriced} unpriced` : ''}</span></div>` : '';
     const summary = `<section class="card"><div class="card-head"><h2>Week at a glance</h2><div class="row wk-head-r">${t ? `<span class="chip">${ws.good} of ${ws.days || 0} planned days on target</span>` : ''}${ws.days ? `<button type="button" class="btn sm mb-share-btn noprint" data-act="shareWeek">${icon('share', 'sm')} Share</button>` : ''}</div></div>
       ${ws.days ? `<div class="wk-grid"><div class="wk-kpis"><div class="kpi"><small>Average day</small><b>${fmtInt(avg.cal)}</b><span>${t && t.kcal ? deltaText(avg.cal - t.kcal) + ' vs target' : 'kcal'}</span></div>${costKpi}
-        <div class="kpi"><small>Average split</small>${macroBar(avg.pct, 'big')}${macroLegend(avg.pct, { c: avg.c, f: avg.f, p: avg.p })}</div>${t ? `<div class="kpi"><small>Target split</small>${macroBar(t.pct, 'big')}${macroLegend(t.pct, t.grams)}</div>` : ''}</div>${weekChart(ws.per, t)}</div>${pc && !pc.priced ? '<p class="muted small noprint">To see what this week costs, <a href="#/grocery">add prices on the Grocery page</a>.</p>' : ''}` : '<p class="muted">Pick a recipe for any meal above and your totals appear here.</p>'}</section>`;
+        <div class="kpi"><small>Average split</small>${macroBar(avg.pct, 'big', { what: 'Average planned day' })}${macroLegend(avg.pct, { c: avg.c, f: avg.f, p: avg.p })}</div>${t ? `<div class="kpi"><small>Target split</small>${macroBar(t.pct, 'big', { what: 'Your target' })}${macroLegend(t.pct, t.grams)}</div>` : ''}</div>${weekChart(ws.per, t)}</div>${pc && !pc.priced ? '<p class="muted small noprint">To see what this week costs, <a href="#/grocery">add prices on the Grocery page</a>.</p>' : ''}` : '<p class="muted">Pick a recipe for any meal above and your totals appear here.</p>'}</section>`;
 
     const cl = cookList(), anyCarry = cl.some(x => x.carry > 0.001), batchMode = state.settings.groceryMode === 'batch';
     const cook = cl.length ? `<section class="card"><div class="card-head"><h2>Cook list</h2><span class="muted small">${batchMode ? 'Whole batches' : 'Exact amounts'} · cooking for ${state.setup.household}</span></div>
@@ -5131,7 +5325,7 @@ VIEWS.grocery = {
         <details class="fine gopts" data-keep="gopts"${ui.open.gopts ? ' open' : ''}><summary>Quantities: ${S.groceryMode === 'batch' ? 'whole batches' : 'exact amounts'}, cooking for ${hh}</summary><div class="row between wrap"><div class="seg" role="group" aria-label="Quantity mode"><button class="${S.groceryMode === 'batch' ? 'on' : ''}" data-act="gMode" data-k="batch" data-tip="Round up to whole batches of each recipe (best for meal prep)">Whole batches</button><button class="${S.groceryMode === 'exact' ? 'on' : ''}" data-act="gMode" data-k="exact" data-tip="Buy exactly what the planned servings need">Exact amounts</button></div>
           <div class="stepper"><span class="muted small">Cooking for</span><button class="btn icon" data-act="gHH" data-d="-1" aria-label="Fewer people">−</button><output>${hh}</output><button class="btn icon" data-act="gHH" data-d="1" aria-label="More people">+</button></div></div></details></div>
       ${costLine}
-      ${active.length ? `<div class="gprog${done === active.length ? ' complete' : ''}"><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Shopping progress"><span style="width:${pct}%"></span></div><span>${done === active.length ? `Everything is in the cart (${done} of ${active.length})` : `${done} of ${active.length} in the cart`}</span><span class="row noprint"><button class="btn sm ghost" data-act="gReset">Uncheck all</button>${state.manual.some(m => m.done) ? '<button class="btn sm ghost" data-act="gClearDone">Remove checked extras</button>' : ''}</span></div>` : ''}
+      ${active.length ? `<div class="gprog${done === active.length ? ' complete' : ''}"><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Shopping progress: ${done} of ${active.length} in the cart" tabindex="0" data-ctip="${pct}%|In the cart|${done} of ${active.length} items"><span style="width:${pct}%"></span></div><span>${done === active.length ? `Everything is in the cart (${done} of ${active.length})` : `${done} of ${active.length} in the cart`}</span><span class="row noprint"><button class="btn sm ghost" data-act="gReset">Uncheck all</button>${state.manual.some(m => m.done) ? '<button class="btn sm ghost" data-act="gClearDone">Remove checked extras</button>' : ''}</span></div>` : ''}
       ${active.length ? `<div class="gcols">${secHTML}</div>` : emptyState(planned ? 'Nothing left to buy' : 'Your list is empty', planned ? 'Everything is checked off or marked as already in your pantry.' : 'Add meals in the planner and every ingredient lands here, merged and sorted by store section.', featureOn('planner') ? '<a class="btn primary" href="#/planner">Open planner</a>' : '')}
       ${have.length ? `<details class="card noprint have" ${ui.groceryShowHave ? 'open' : ''}><summary>Already in my pantry (${have.length})</summary><ul class="glist">${have.map(groceryItemHTML).join('')}</ul></details>` : ''}
       <p class="muted small noprint">Store walk order can be changed on the <a href="#/ingredients">Ingredients</a> tab.</p>`;
@@ -5259,8 +5453,18 @@ document.addEventListener('submit', e => {
    Release notes + license text
    ========================================================================== */
 const RELEASES = [
+  { v: 'v1.7', date: 'October 16, 2026', tag: 'One suite', notes: [
+    'New Settings page (gear icon at the bottom of the sidebar, or More on phones): Appearance, Account & sync, your Meal Prep settings (name, what you use the app for, meals, household, cooking style, week start, prep day, units, budget, print ink), Backup & data, Install and About, in the same order as every mcbflow.com app. It replaces the Data page, the About card and the Setup button; “Run setup again” is in Settings, and the old About page is now Help.',
+    'Account button in the top bar: Sign in, or your profile picture with a sync dot. New “Keep me signed in on this device” choice (turn it off on a shared computer). Pick a screen name and one of 28 profile pictures with Edit profile; every mcbflow.com app shows the same ones.',
+    'Home greets you by name (“Good morning, …”): your screen name when signed in, otherwise the name you gave in setup. The first tab is Home with the suite’s house icon, and Settings uses a real gear.',
+    'The same welcome screen as the other apps: Welcome, Pick a look, Make it yours, Your targets and Your kitchen, with Sign in and Import a backup right on it. The separate “Your data stays on this device” bar is now part of the first step.',
+    'Clearer Data menu: every item says what it does, in the same order everywhere. New Export All (ZIP): the JSON backup, a CSV that imports back, and one spreadsheet each for recipes, ingredients, the meal plan, the grocery list, leftovers, prices and past weeks. Import Backup accepts the ZIP too.',
+    'Quieter backup reminders while you are signed in and syncing: no amber chip, no backup step in Getting started, and the Data menu says your data is synced.',
+    'Charts: the week’s calorie bars, macro bars and macro rings show a label on hover, tap or keyboard focus, with round-number gridlines and a labelled target line.',
+    'An even top bar (every control the same height), the new name style “Meal Prep ∙ mcbflow.com”, and the same footer on every page.',
+    'Backups now say “mealprep-backup”. Backups made by earlier versions still import.'] },
   { v: 'v1.6', date: 'October 15, 2026', tag: 'Sync', notes: ['New: optional sync across devices. Data → Sync signs in with a free mcbflow.com account; your recipes, meal plan, grocery list, leftovers, prices, setup, profile and settings then match on every device you sign in on. Your theme stays per device.', 'Everything still saves on this device first and works offline; changes sync when you are back online. Demo recipes never sync.', 'Not signed in: nothing changes, and the app contacts no server.', 'Erase everything and Erase recipes & plans warn when you are signed in, since they also erase your synced data.'] },
-  { v: 'v1.5', date: 'October 14, 2026', tag: 'New address', notes: ["Moved to mealprep.mcbflow.com. Data saved at mbmealprep.online doesn't carry over: export a backup there and import it here.", "Storage names simplified."] },
+  { v: 'v1.5', date: 'October 14, 2026', tag: 'New address', notes: ["Moved to mealprep.mcbflow.com. Data saved at the old address doesn't carry over: export a backup there and import it here.", "Storage names simplified."] },
   { v: 'v1.4', date: 'October 14, 2026', tag: 'Tidier toolbars', notes: ["The top bar matches the other mb apps: logo and name on the left; Search, Data and the light/dark switch as same-size square buttons on phones, with labels on computers.", "Planner, Grocery, Prep and Recipes: the page buttons now sit in one tidy row under the heading. The main action comes first, Print is a labelled button, and Clear week is a clearly marked red button at the end. On phones the buttons line up in an even two-column grid.", "Prep: the prep-day picker and Print sit side by side.", "Your saved data, backups and CSV files are unchanged."] },
   { v: 'v1.3', date: 'October 14, 2026', tag: 'About card', notes: ["New About card at the bottom of the Data page: version, release date, links and copyright in one place. It replaces the line of small print at the bottom of every page.", "Installing from matthewbroyer.com: the hub's Install button opens the app with a short install prompt.", "New \"page not found\" page that matches the app and links back to it.", "Version numbers restart at 1.x with the suite's \"Official Web App\" label; earlier web-app releases were numbered v5.x. Your saved data, backups and CSV files are unchanged."] },
   { v: 'v5.2 · Web app', date: 'October 13, 2026', tag: 'Sidebar and sharing', notes: ["When you install it, the app is now named Meal Prep on your computer and phone.", "Navigation moves to a left sidebar on computers (an icon rail on tablets), with Data, About and Setup at the bottom. Phones keep the bottom bar. The logo and name always take you back to Home.", "Share your week: in the Planner, Week at a glance has a Share button that makes an image of your week (meals planned, recipes used and days on target) right on your device. Save it or share it. Recipe names and body details are never on the image.", "New produce and citrus art on the Home banner, the setup welcome and empty pages, and a refreshed logo and app icons.", "The Install card on the Data page now says \"Installed on this device\" when you are using the installed app.", "Fixed: on small phones the Skip setup button no longer runs off the screen.", "Privacy Policy updated to describe the share image. It is made on your device and nothing is uploaded.", "The version label now reads \"v5.2 · Web app\". Your saved data, backups and CSV files are unchanged."] },
@@ -5309,7 +5513,7 @@ const RELEASES = [
     'Color recipe printouts, the browser bar color and the app icon background follow the new blue.',
   ] },
   { v: 'BETA 4.0', date: 'September 20, 2026', tag: 'Web app release', notes: [
-    'Renamed from The Pantry Partner to mbmealprep.online. Your recipes, plan and settings carry over, and old CSV backups still import.',
+    'Renamed from The Pantry Partner to a web app (now mealprep.mcbflow.com). Your recipes, plan and settings carry over, and old CSV backups still import.',
     'Rebuilt as a web app: no accounts, no formulas to break. Your data saves in your browser and moves anywhere as one CSV, with preview, merge or replace, and paste from Excel or Sheets.',
     'New setup wizard tailors the app to your goals, meals, household size and cooking style.',
     'Health tools: pick a body type (protein / carbs / fats: Ectomorph 25/55/20, Mesomorph 30/40/30, Endomorph 35/25/40), then get your BMR, maintenance calories and daily grams per macro. Includes a 4-question quiz and safety warnings.',
@@ -5358,7 +5562,7 @@ const LICENSE = {
    Content-Security-Policy that blocks all network connections). If the app's
    behavior changes, change this text in the same commit.
    ========================================================================== */
-const LEGAL_UPDATED = 'October 13, 2026';
+const LEGAL_UPDATED = 'October 16, 2026';
 const PRIVACY = {
   short: [
     'No accounts, no sign-in, no ads and no analytics.',
@@ -5367,7 +5571,7 @@ const PRIVACY = {
   sections: [
     ['What the app stores', [
       'Everything you enter: recipes (including thumbs-up or thumbs-down and cooking time), meal plan and saved past weeks, grocery items, ingredient prices, leftovers you log, ingredient edits, and your setup answers and settings such as a budget. If you use the health tools, that includes the age, sex, height, weight, activity level and goal you type in.',
-      'It is saved in your browser’s local storage under the names mealprep (your data) and mealprep.notice (whether you closed the privacy notice). It is stored only on your device and has no expiry. It stays until you erase it or clear your browser’s site data.',
+      'It is saved in your browser’s local storage under the names mealprep (your data) and mealprep.notice (whether you have finished or skipped the welcome screen). It is stored only on your device and has no expiry. It stays until you erase it or clear your browser’s site data.',
       'If you choose where backups are saved, your browser keeps a reference to that one file (its name and your permission to update it, not its contents or folder path) in this site’s IndexedDB storage (a database named mealprep.backup), so Save backup now can update it in one click. Choosing Change location replaces it, and clearing this site’s data removes it.']],
     ['App files kept for offline use', [
       'To work with no signal and to be installable, the app registers a service worker and your browser keeps a copy of the app’s own files (the page, its icons and its manifest) in this site’s cache storage. These are the same files the website serves to everyone. They contain none of your data. They are refreshed from the website on each visit and removed when you clear this site’s data or uninstall the app.',
@@ -5376,11 +5580,12 @@ const PRIVACY = {
       'It does not require an account, set cookies, use analytics or advertising, or load fonts, scripts or images from other sites. Unless you sign in to sync (below), it sends your data nowhere: the page carries a browser security rule that only lets it connect to the mcbflow.com account service.',
       'It does not collect your location, contacts or identity.']],
     ['Optional sync', [
-      'If you sign in with a free mcbflow.com account (Data → Sync), your recipes, meal plan, past weeks, grocery items, leftovers, prices, ingredient edits, setup answers, settings and health profile (age, sex, height, weight, activity and goals, if you entered them) are copied to your account so your other devices match. Your theme and last-backup time stay on each device, and demo recipes are never synced.',
+      'If you sign in with a free mcbflow.com account (Sign in in the top bar, or Settings → Account & sync), your recipes, meal plan, past weeks, grocery items, leftovers, prices, ingredient edits, setup answers, settings and health profile (age, sex, height, weight, activity and goals, if you entered them) are copied to your account so your other devices match. Your theme and last-backup time stay on each device, and demo recipes are never synced.',
       'The account database is run by Supabase (servers in the eastern United States); only your account can read your records. Signing out stops syncing and keeps the data on this device. Export or delete synced data, or delete your account, on the mcbflow.com account page (mcbflow.com/account.html). The mcbflow.com privacy policy has the details.',
-      'While you are signed in, this site keeps a sign-in token (sb-…-auth-token) and a sync record (mealprep.sync) in local storage.']],
+      'If you pick a screen name and a profile picture (Edit profile), they are saved on your mcbflow.com account so every mcbflow.com app shows the same ones. The pictures are built into the app; nothing is uploaded from your device.',
+      'While you are signed in, this site keeps a sign-in token (sb-…-auth-token) and a sync record (mealprep.sync) in local storage, and your “Keep me signed in” choice (mealprep.keepSignedIn). With Keep me signed in turned off, the token is kept in session storage instead and is gone when the browser closes.']],
     ['When information leaves the page', [
-      'Only when you choose it: Save backup now, Export All (JSON) and Export All (CSV) write a file to your device, in the folder you pick (or your Downloads folder in browsers that cannot pick one). Copy to clipboard puts the CSV in your clipboard. Print or Save as PDF hands the page to your browser’s print system.',
+      'Only when you choose it: Save backup now, Export All (JSON), Export All (CSV) and Export All (ZIP) write a file to your device, in the folder you pick (or your Downloads folder in browsers that cannot pick one). Copy to clipboard puts the CSV in your clipboard. Print or Save as PDF hands the page to your browser’s print system.',
       'Share on the Planner makes a picture of your week on this device (meals planned, recipes used and days on target, with no recipe names or body details). Nothing is uploaded. Save image puts it in your Downloads, and Share opens your device’s own share sheet, so you choose where it goes.',
       'If you open a recipe source link you added, that other website opens in a new tab and has its own privacy practices. The app asks your browser not to tell that site where you came from.']],
     ['The website host', [
@@ -5390,7 +5595,7 @@ const PRIVACY = {
       'Anyone who can use your browser profile on this device can open the app and see what is saved. On a shared or public computer, erase your data when you finish or use a private window. Private windows normally discard saved data when they close.',
       'Your backup files (JSON or CSV) contain everything above, including any health details you entered. Store them where you would store any personal file.']],
     ['Your choices: export, erase, back up', [
-      'Data menu, Save backup now or Export All: get a copy of everything. Data page, Erase everything: removes your recipes, plan, profile, settings and custom ingredients from this browser and returns the app to its starting state. A confirmation comes first. Undo is available only until you close or reload the page.',
+      'Data menu, Save backup now or Export All: get a copy of everything. Data menu, Clear all data: removes your recipes, plan, profile, settings and custom ingredients from this browser and returns the app to its starting state. A confirmation comes first. Undo is available only until you close or reload the page.',
       'To remove every trace, including the notice setting, clear this site’s data in your browser settings.',
       'Because the app keeps no copy anywhere else, nobody else can restore, view or delete your data for you. Save a backup now and then.']],
     ['Children', [
@@ -5423,7 +5628,7 @@ function legalPage(kind, title, blurb, data) {
     <section class="card prose legal"><p class="muted small">Last updated ${LEGAL_UPDATED}</p>
       <div class="legal-short"><ul>${data.short.map(t => `<li>${esc(t)}</li>`).join('')}</ul></div>
       ${data.sections.map(([h, ps]) => `<h2>${esc(h)}</h2>${ps.map(p => `<p>${esc(p)}</p>`).join('')}`).join('')}
-      <p class="row noprint"><a class="btn" href="#/data">Go to Data (back up or erase)</a><a class="btn ghost" href="#/${kind === 'privacy' ? 'terms' : 'privacy'}">${kind === 'privacy' ? 'Terms of Use' : 'Privacy Policy'}</a><a class="btn ghost" href="#/about">Release notes &amp; license</a></p></section>`;
+      <p class="row noprint"><a class="btn" href="#/settings">Go to Settings (back up or erase)</a><a class="btn ghost" href="#/${kind === 'privacy' ? 'terms' : 'privacy'}">${kind === 'privacy' ? 'Terms of Use' : 'Privacy Policy'}</a><a class="btn ghost" href="#/help">Release notes &amp; license</a></p></section>`;
 }
 VIEWS.privacy = { render: () => legalPage('privacy', 'Privacy Policy', 'What this app stores, and what it never sends.', PRIVACY) };
 VIEWS.terms = { render: () => legalPage('terms', 'Terms of Use', 'The short version, in plain language.', TERMS) };
@@ -5459,7 +5664,8 @@ ACTIONS.removeDemo = async () => {
      the same file in one click. Browsers only ever expose the file NAME, never its folder.
    - Everywhere else (Firefox, Safari, phones): a normal dated download to Downloads.
    ========================================================================== */
-const BACKUP_FORMAT = 'mbmealprep-backup';
+const BACKUP_FORMAT = 'mealprep-backup';
+const LEGACY_FORMATS = ['mbmealprep-backup'];   // legacy-import: backups made before v1.7 carry the app's old name
 const FS_OK = typeof window.showSaveFilePicker === 'function' && typeof window.showOpenFilePicker === 'function';
 const IS_MAC = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent || '');
 const SAVE_KEYS = IS_MAC ? '⌘S' : 'Ctrl+S';
@@ -5484,7 +5690,7 @@ const handleSet = (k, h) => idbHandles('readwrite', st => st.put(h, k)).catch(()
 async function loadBackupHandles() {
   if (!FS_OK) return;
   backupFile.json = (await handleGet('json')) || null; backupFile.csv = (await handleGet('csv')) || null;
-  renderBackupUI(); if (route.name === 'data') rerender();
+  renderBackupUI(); if (route.name === 'settings') rerender();
 }
 
 function backupJSON() {
@@ -5493,7 +5699,7 @@ function backupJSON() {
 /* A JSON backup becomes the same records a CSV would, so merge / replace / preview work identically. */
 function jsonToRecords(text) {
   let o; try { o = JSON.parse(text); } catch (e) { return { records: [], error: 'That file is not valid JSON. Choose a .json backup made by this app, or a CSV.' }; }
-  const data = o && typeof o === 'object' && !Array.isArray(o) ? (o.format === BACKUP_FORMAT && o.data && typeof o.data === 'object' ? o.data : o) : null;
+  const data = o && typeof o === 'object' && !Array.isArray(o) ? ((o.format === BACKUP_FORMAT || LEGACY_FORMATS.includes(o.format)) && o.data && typeof o.data === 'object' ? o.data : o) : null;
   if (!data || !['recipes', 'settings', 'profile', 'setup', 'plan'].some(k => Object.prototype.hasOwnProperty.call(data, k))) return { records: [], error: 'That JSON file is not a mealprep.mcbflow.com backup.' };
   const st = defaultState(); mergeInto(st, data);
   for (const k of ['plan', 'checked', 'have', 'prices', 'prepDone']) if (data[k] && typeof data[k] === 'object' && !Array.isArray(data[k])) st[k] = data[k];
@@ -5512,8 +5718,10 @@ function agoText(t) {
 function backupInfo() {
   const le = state.settings.lastExport, t = le ? new Date(le).getTime() : 0;
   const hasData = state.recipes.some(r => !isDemo(r)) || state.manual.length > 0 || Object.keys(state.plan).length > 0;
-  const warn = t ? Date.now() - t > 7 * 864e5 : hasData;
-  return { t, hasData, warn, label: t ? 'Backed up ' + agoText(t) : 'Never backed up', exact: t ? new Date(t).toLocaleString() : '' };
+  const quiet = !!(SYNC && SYNC.status().quietBackups);          // signed in and syncing fine: no backup nudges, nothing turns amber
+  const warn = !quiet && (t ? Date.now() - t > 7 * 864e5 : hasData);
+  return { t, hasData, warn, quiet, label: t ? 'Backed up ' + agoText(t) : 'Never backed up', exact: t ? new Date(t).toLocaleString() : '',
+    short: t ? new Date(t).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }) : '' };
 }
 function backupWhereHTML() {
   if (!FS_OK) return 'This browser saves backups to your Downloads folder.';
@@ -5521,30 +5729,70 @@ function backupWhereHTML() {
   return h ? `Saves to <b>${esc(h.name)}</b> in the folder you chose. <button type="button" class="linkbtn" data-act="exportJson">Change location…</button>`
     : 'The first save asks where to put the file. After that, one click updates it.';
 }
+/* ---- the Data list (MB Suite v3.3 .mb-dm): the top-bar Data menu and Settings › Backup & data show the same items ---- */
+const DM_IC = {
+  save: '<path d="M5 3h11l3 3v15H5z"/><path d="M8 3v5h7V3M8 21v-7h8v7"/>',
+  sync: '<path d="M20 11a8 8 0 0 0-14.7-4.4L4 8"/><path d="M4 3v5h5"/><path d="M4 13a8 8 0 0 0 14.7 4.4L20 16"/><path d="M20 21v-5h-5"/>',
+  json: '<path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4"/><path d="M10 12c-1 0-1 .5-1 1.5S8.5 15 8 15c.5 0 1 .5 1 1.5s0 1.5 1 1.5M14 12c1 0 1 .5 1 1.5s.5 1.5 1 1.5c-.5 0-1 .5-1 1.5s0 1.5-1 1.5"/>',
+  csv: '<rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 10h18M3 15h18M9 4v16"/>',
+  zip: '<path d="M4 7h16v13H4z"/><path d="M3 4h18v3H3zM10 11h4"/>',
+  imp: '<path d="M12 16V4M7 9l5-5 5 5"/><path d="M5 20h14"/>',
+  clear: '<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/>'
+};
+const dmIc = k => `<svg class="uic" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${DM_IC[k]}</svg>`;
+function dataStatus() {
+  const b = backupInfo(), ss = SYNC ? SYNC.status() : null;
+  if (ss && ss.signedIn && b.quiet) return { cls: 'ok', text: `Synced to your account · last file backup ${b.t ? b.short : 'none yet'}` };
+  return { cls: b.warn ? 'warn' : b.t ? 'ok' : '', text: b.t ? `Last backup ${b.short} · ${agoText(b.t)}` : 'Never backed up' };
+}
+function dataListHTML(menu) {
+  const ss = SYNC ? SYNC.status() : null, inn = !!(ss && ss.signedIn), role = menu ? ' role="menuitem"' : '', pres = menu ? ' role="presentation"' : '';
+  const it = (act, ic, t, d, cls = '', extra = '') => `<button type="button" class="mb-dm-it${cls}"${role} data-act="${act}">${dmIc(ic)}<span class="t"><b>${t}</b><small>${d}</small></span>${extra}</button>`;
+  const st = dataStatus(), first = FS_OK && !backupFile.json;
+  return it('backupNow', 'save', 'Save backup now', first ? 'Choose where to keep your backup file. After that it’s one click.' : 'Updates your backup file in one click. Best for regular backups.', ' is-key', `<kbd>${SAVE_KEYS}</kbd>`) +
+    (ss ? it('sync', 'sync', inn ? 'Sync: ' + esc(ss.label) : 'Sync across devices…', inn ? 'Signed in as ' + esc(ss.email) : 'Free, optional account. Keeps your phone and computer the same.') : '') +
+    `<div class="mb-dm-sec"${pres}>Export</div>` +
+    it('exportJson', 'json', 'Export All (JSON)…', 'Complete backup of everything. Best for restoring or moving to another browser.') +
+    it('exportCsv', 'csv', 'Export All (CSV)…', 'Spreadsheet copy for Excel, Numbers or Google Sheets. Best for totals and reports. Can be imported back.') +
+    it('exportZip', 'zip', 'Export All (ZIP)…', 'Backup and spreadsheets together in one file. Best for archiving.') +
+    `<div class="mb-dm-sec"${pres}>Import</div>` +
+    it('importBackup', 'imp', 'Import Backup…', 'Restore from a JSON, CSV or ZIP file. You choose Merge or Replace first.') +
+    `<div class="mb-dm-status ${st.cls}"${pres}><span class="sq"></span><span>${esc(st.text)}</span></div>` +
+    `<p class="mb-dm-note">${inn ? 'Synced to your mcbflow.com account. A file backup now and then is still a good idea.' : 'Your data is stored in this browser on this device. Clearing your browser data deletes it, so keep a backup.'}</p>` +
+    `<hr class="mb-dm-sep">` +
+    it('clearAll', 'clear', 'Clear all data…', inn ? 'Deletes everything here and your synced copy.' : 'Deletes everything in this browser. You can save a backup first.', ' danger');
+}
+/* replace a block's HTML without losing keyboard focus inside it (the list re-paints on every sync status change) */
+function paintKeep(el, html) {
+  if (!el || el._html === html) return;
+  const ae = document.activeElement, key = el.contains(ae) ? focusKey(ae) : null;
+  el.innerHTML = html; el._html = html; restoreFocus(el, key);
+}
 function renderBackupUI() {
   if (!state) return;
   const b = backupInfo(), chip = $('#bkChip'), dm = $('#dataMenu');
   if (chip) {
     chip.hidden = !state.setup.done;
     chip.classList.toggle('warn', b.warn);
-    chip.innerHTML = `${icon(b.warn ? 'alert' : 'shield', 'sm')}<span>${esc(b.label)}</span>`;
-    chip.title = (b.t ? `Last backup ${b.exact}. ` : '') + `Click to save a backup now (${SAVE_KEYS}).`;
-    chip.setAttribute('aria-label', `${b.label}. Save backup now`);
+    const lbl = b.quiet ? 'Synced' : b.label;
+    chip.innerHTML = `<span>${esc(lbl)}</span>`;
+    chip.title = (b.quiet ? 'Synced to your account. ' : '') + (b.t ? `Last file backup ${b.exact}. ` : '') + `Click to save a backup now (${SAVE_KEYS}).`;
+    chip.setAttribute('aria-label', `${lbl}. Save backup now`);
   }
   if (dm) {
-    dm.classList.toggle('warn', b.warn); dm.classList.toggle('on', route.name === 'data');
-    const sum = dm.querySelector('summary'); if (sum) sum.setAttribute('aria-label', `Data: back up, export or import. ${b.label}`);
-    const body = $('#dataMenuBody');
-    const ss = SYNC ? SYNC.status() : null;
-    if (body) body.innerHTML = `<button class="btn primary" data-act="backupNow">${icon('save')}<span>Save backup now</span><kbd>${SAVE_KEYS}</kbd></button>
-      ${ss ? `<button class="btn ghost" data-act="sync" title="${esc(ss.signedIn ? 'Signed in as ' + ss.email : 'Optional free account. Your data stays on this device too')}">${icon('refresh')}<span>${esc(ss.signedIn ? 'Sync: ' + ss.label : 'Sync across devices…')}</span></button>` : ''}
-      <button class="btn ghost" data-act="exportJson">${icon('download')}<span>Export All (JSON)…</span></button>
-      <button class="btn ghost" data-act="importBackup">${icon('upload')}<span>Import Backup (JSON or CSV)…</span></button>
-      <button class="btn ghost" data-act="exportCsv">${icon('download')}<span>Export All (CSV)…</span></button>
-      <div class="dm-foot"><p class="${b.warn ? 'bk-warn' : ''}">${icon(b.warn ? 'alert' : 'shield', 'sm')}<span>${esc(b.label)}${b.t ? ` · ${esc(new Date(b.t).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }))}` : ''}</span></p><p>${backupWhereHTML()}</p><a href="#/data" class="dm-more">More data tools: merge or replace, demo recipes, erase</a></div>`;
+    dm.classList.toggle('warn', b.warn); dm.classList.toggle('on', route.name === 'settings');
+    const sum = dm.querySelector('summary'); if (sum) { sum.setAttribute('aria-label', `Data: back up, sync, export or import. ${b.quiet ? 'Synced' : b.label}`); sum.setAttribute('aria-expanded', String(dm.open)); }
+    paintKeep($('#dataMenuBody'), dataListHTML(true));
   }
+  paintKeep($('#setDataList'), dataListHTML(false));
 }
 const closeMenus = () => $$('details.moremenu[open]').forEach(d => { d.open = false; });
+/* Data menu (a <details>): keep aria-expanded in step, move focus into the menu when it opens from the keyboard */
+document.addEventListener('toggle', e => {
+  if (e.target.id !== 'dataMenu') return;
+  const d = e.target, s = d.querySelector('summary'); if (s) s.setAttribute('aria-expanded', String(d.open));
+  if (d.open) { renderBackupUI(); if (document.activeElement === s && s.matches(':focus-visible')) { const f = d.querySelector('.mb-dm-it'); if (f) f.focus(); } }
+}, true);
 
 /* ---- optional account sync (mb-sync.js) ----
    One record per recipe, grocery item and leftover; the plan, pantry, prices, history, checklists, setup, profile and settings are one record each.
@@ -5570,11 +5818,23 @@ function syncApply(m) {
   if (!$('#rform')) rerender(); else renderBackupUI();   // don't wipe a recipe being edited
 }
 let syncWasIn = false;
-function syncEraseNote() { return SYNC && SYNC.status().signedIn ? ' You’re signed in to sync, so this also erases it from your account and your other devices. To erase only this device, sign out first (Data → Sync).' : ''; }
+function syncEraseNote() { return SYNC && SYNC.status().signedIn ? ' You’re signed in to sync, so this also erases it from your account and your other devices. To erase only this device, sign out first (Settings → Account & sync).' : ''; }
+let quietWas = false;
 ACTIONS.sync = () => { closeMenus(); if (SYNC) SYNC.open(); };
-if (window.MBSync) SYNC = MBSync.create({ app: 'mealprep', label: 'Meal Prep', toRecords: syncRecords, fromRecords: syncApply,
+if (window.MBSync) SYNC = MBSync.create({ app: 'mealprep', label: 'Meal Prep',
+  what: 'your recipes, meal plan, grocery list, leftovers, prices and goals', note: 'Your theme and last-backup time stay on each device.',
+  toRecords: syncRecords, fromRecords: syncApply,
   hasData: () => state.recipes.some(r => !isDemo(r)) || state.manual.length > 0 || Object.keys(state.plan).length > 0 || state.setup.done,
-  onStatus: s => { renderBackupUI(); if (s.signedIn !== syncWasIn) { syncWasIn = s.signedIn; if (route.name === 'setup') rerender(); } } });
+  onStatus: s => {
+    if (!state) return;
+    renderBackupUI();
+    const q = !!s.quietBackups, changed = s.signedIn !== syncWasIn || q !== quietWas;
+    if (s.signedIn && !syncWasIn && ui.wiz.open && !ui.wiz.rerun) { noticeSet(); closeWizard(); }   // signed in from the welcome screen: this device gets the account's data
+    syncWasIn = s.signedIn; quietWas = q;
+    if (changed && !$('#rform')) rerender(); else renderWizard();
+  } });
+window.addEventListener('mbsync:status', () => renderBackupUI());
+(function acct() { const b = $('#acctBtn'); if (!b) return; if (SYNC) SYNC.button(b); else b.style.display = 'none'; })();
 function markBackedUp() { state.settings.lastExport = new Date().toISOString(); saveNow(); rerender(); }
 
 async function writeHandle(h, text) { const w = await h.createWritable(); await w.write(text); await w.close(); }
@@ -5601,6 +5861,42 @@ async function exportTo(kind) {
 }
 ACTIONS.exportJson = () => exportTo('json');
 ACTIONS.exportCsv = () => exportTo('csv');
+/* Export All (ZIP): the JSON backup (exactly the Export All JSON text), the full CSV (imports back), one spreadsheet per kind of record, and a README */
+function zipSheets() {
+  const yn = b => b ? 'Yes' : 'No', st = state;
+  const recipes = st.recipes.map(r => ({ name: r.name, meal_type: r.type, servings: r.servings, calories: r.cal, protein_g: r.p, carbs_g: r.c, fats_g: r.f, minutes: r.mins ?? '', prep_friendly: yn(r.prep), favorite: yn(r.fav), rating: r.rate || '', ingredients: r.ingredients.length, steps: r.steps.length, notes: r.notes || '', updated: r.updated, demo: yn(isDemo(r)) }));
+  const lines = []; for (const r of st.recipes) for (const g of r.ingredients) lines.push({ recipe: r.name, item: g.item, qty: g.qty ?? '', unit: g.unit });
+  const plan = []; for (const d of orderedDays()) for (const sl of SLOTS) { const e = getSlot(d, sl); if (e) { const r = getRecipe(e.rid); plan.push({ day: d, meal: sl, recipe: r.name, servings: e.servings, kcal_per_serving: r.cal }); } }
+  const grocery = featureOn('grocery') || st.manual.length ? fullGroceryList().map(i => ({ section: i.section, item: i.name, qty: i.qty ?? '', unit: i.unit, status: i.manual ? (i.done ? 'in cart' : 'to get') : gHave(i) ? 'already have' : gDone(i) ? 'in cart' : 'to get', added_by_you: yn(!!i.manual), recipes: (i.from || []).join('; ') })) : [];
+  const stock = st.stock.map(x => ({ recipe: (getRecipe(x.rid) || {}).name || '', servings: x.servings, where: x.loc, made: x.made.slice(0, 10) }));
+  const prices = Object.keys(st.prices).map(k => ({ item: k, price: st.prices[k].p, per: st.prices[k].u }));
+  const history = []; for (const h of st.history) for (const m of h.meals) history.push({ week_of: h.date, day: m.d, meal: m.s, recipe: m.n, servings: m.sv });
+  return [['recipes', recipes], ['recipe-ingredients', lines], ['meal-plan', plan], ['grocery-list', grocery], ['leftovers', stock], ['prices', prices], ['past-weeks', history]];
+}
+ACTIONS.exportZip = async el => {
+  closeMenus();
+  if (typeof MBFiles === 'undefined') { toast('ZIP export is not available here. Use Export All (JSON).', 'err'); return; }
+  setBusy(el, true);
+  try {
+    const sheets = zipSheets().filter(([, rows]) => rows.length);
+    const readme = `Meal Prep (mealprep.mcbflow.com) backup, ${new Date().toLocaleString()}\r\n\r\n` +
+      `mealprep-backup.json   Complete backup. Restore it with Data > Import Backup (this ZIP works too).\r\n` +
+      `mealprep-all.csv       The same data as one spreadsheet (record column). It imports back too.\r\n` +
+      sheets.map(([n]) => `mealprep-${n}.csv`.padEnd(23) + 'Spreadsheet for reading and totals.').join('\r\n') +
+      `\r\n\r\nThe files contain everything you entered, including any health details. Keep them somewhere private.\r\n`;
+    const blob = await MBFiles.zip([{ name: 'mealprep-backup.json', data: backupJSON() }, { name: 'mealprep-all.csv', data: exportCSV() }]
+      .concat(sheets.map(([n, rows]) => ({ name: `mealprep-${n}.csv`, data: MBFiles.csv(rows) })), [{ name: 'README.txt', data: readme }]));
+    const name = `mealprep-backup-${today()}.zip`;
+    if (FS_OK) {
+      let h = null;
+      try { h = await window.showSaveFilePicker({ suggestedName: name, types: [{ description: 'ZIP archive', accept: { 'application/zip': ['.zip'] } }], startIn: backupFile.json || 'documents' }); }
+      catch (e) { if (e && e.name === 'AbortError') return; h = await window.showSaveFilePicker({ suggestedName: name }); }
+      await writeHandle(h, blob); markBackedUp(); toast(`ZIP saved to ${h.name}`, 'ok');
+    } else { MBFiles.download(blob, name); markBackedUp(); toast('ZIP downloaded to your Downloads folder', 'ok'); }
+  } catch (e) { toast('Could not make the ZIP. Try Export All (JSON) instead.', 'err'); }
+  finally { setBusy(el, false); }
+};
+ACTIONS.clearAll = () => { closeMenus(); ACTIONS.resetAll(); };
 ACTIONS.backupNow = async () => {
   closeMenus();
   const h = backupFile.json;
@@ -5616,11 +5912,11 @@ document.addEventListener('keydown', e => {                          // Ctrl/Cmd
   if (state && state.setup.done) ACTIONS.backupNow();
 });
 
-/* ---- import: pick a file (opens in the backup folder), then preview on the Data page ---- */
+/* ---- import: pick a file (opens in the backup folder), then preview in Settings › Backup & data ---- */
 async function pickImportFile() {
   closeMenus();
   if (!FS_OK) { const inp = $('#impAny'); if (inp) { inp.value = ''; inp.click(); } return; }
-  const opts = { multiple: false, types: [{ description: 'Backup (JSON or CSV)', accept: { 'application/json': ['.json'], 'text/csv': ['.csv', '.tsv', '.txt'] } }],
+  const opts = { multiple: false, types: [{ description: 'Backup (JSON, CSV or ZIP)', accept: { 'application/json': ['.json'], 'text/csv': ['.csv', '.tsv', '.txt'], 'application/zip': ['.zip'] } }],
     startIn: backupFile.json || backupFile.csv || 'documents' };
   let hs;
   try { hs = await window.showOpenFilePicker(opts); }
@@ -5635,7 +5931,7 @@ ACTIONS.importBackup = () => pickImportFile();
 CHANGES.impAny = el => { if (el.files[0]) readImportFile(el.files[0]); el.value = ''; };
 function openImportText(text, name) {
   ui.pendingImport = { text, name };
-  if (route.name === 'data') applyPendingImport(); else go('#/data');
+  if (route.name === 'settings') applyPendingImport(); else go('#/settings');
 }
 function applyPendingImport() {
   const p = ui.pendingImport, area = $('#impText'); if (!p || !area) return;
@@ -5645,50 +5941,78 @@ function applyPendingImport() {
   const card = $('#impCard'); if (card) card.scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth', block: 'start' });
 }
 
-VIEWS.data = {
+/* ==========================================================================
+   Settings (MB Suite v3.3, same order in every app): Appearance → Account & sync → Meal Prep settings →
+   Backup & data (the Data list plus the import tool, demo recipes and erase) → Install → About.
+   It replaces the old Data page, the About card and the sidebar's Setup button (now "Run setup again").
+   ========================================================================== */
+const CSV_FORMAT_ROWS = [['recipe', 'One row per recipe', 'name, meal_type, servings, calories, protein_g, carbs_g, fats_g, prep_friendly, favorite, text (notes / source URL), updated (optional date), rating (up or down, optional), minutes (optional)'],
+  ['ingredient', 'One row per recipe ingredient', 'name (recipe name), item, qty, unit'], ['step', 'One row per instruction step, in order', 'name (recipe name), text'],
+  ['plan', 'One row per planned meal', 'name (day), meal_type (Breakfast / Lunch / Dinner / Snacks), item (recipe name), qty (servings)'],
+  ['grocery', 'Extra grocery items you added', 'item, qty, unit, section, text ("done" if checked)'], ['pantry', 'Your custom or edited ingredients', 'item, unit, section'],
+  ['price', 'What you pay for an ingredient', 'item, qty (the price), unit (what the price is per, such as pound)'], ['stock', 'Leftovers and freezer servings', 'name (recipe name), qty (servings), unit (fridge or freezer), updated (date cooked), text ("counted" if already used in this week’s shopping)'],
+  ['history', 'Past weeks, one row per meal', 'name (week start date, YYYY-MM-DD), meal_type, item (recipe name), qty (servings), text (day)'],
+  ['profile / setting', 'Your body details, goals, and app choices', 'name (field), text (value)'], ['checked / have', 'Grocery list check marks and pantry items', 'item (list key)']];
+VIEWS.settings = {
   render() {
-    const nDemo = state.recipes.filter(isDemo).length, b = backupInfo();
-    const rows = [['recipe', 'One row per recipe', 'name, meal_type, servings, calories, protein_g, carbs_g, fats_g, prep_friendly, favorite, text (notes / source URL), updated (optional date), rating (up or down, optional), minutes (optional)'],
-      ['ingredient', 'One row per recipe ingredient', 'name (recipe name), item, qty, unit'], ['step', 'One row per instruction step, in order', 'name (recipe name), text'],
-      ['plan', 'One row per planned meal', 'name (day), meal_type (Breakfast / Lunch / Dinner / Snacks), item (recipe name), qty (servings)'],
-      ['grocery', 'Extra grocery items you added', 'item, qty, unit, section, text ("done" if checked)'], ['pantry', 'Your custom or edited ingredients', 'item, unit, section'],
-      ['price', 'What you pay for an ingredient', 'item, qty (the price), unit (what the price is per, such as pound)'], ['stock', 'Leftovers and freezer servings', 'name (recipe name), qty (servings), unit (fridge or freezer), updated (date cooked), text ("counted" if already used in this week’s shopping)'],
-      ['history', 'Past weeks, one row per meal', 'name (week start date, YYYY-MM-DD), meal_type, item (recipe name), qty (servings), text (day)'],
-      ['profile / setting', 'Your body details, goals, and app choices', 'name (field), text (value)'], ['checked / have', 'Grocery list check marks and pantry items', 'item (list key)']];
-    return `<div class="page-head"><h1 class="ph-dup">Data</h1><p>Your data lives in this browser. Save a backup file to keep it safe or move it to another device.</p></div>
-      <section class="card bk-card"><div class="card-head"><h2>${icon('save')} Back up &amp; restore</h2><span class="bk-status${b.warn ? ' warn' : ''}">${icon(b.warn ? 'alert' : 'shield', 'sm')}${esc(b.label)}${b.t ? `<span class="muted"> · ${esc(b.exact)}</span>` : ''}</span></div>
-        <div class="bk-actions"><button class="btn primary" data-act="backupNow">${icon('save')} Save backup now <kbd>${SAVE_KEYS}</kbd></button><button class="btn" data-act="exportJson">Export All (JSON)…</button><button class="btn" data-act="importBackup">${icon('upload')} Import Backup (JSON or CSV)…</button><button class="btn" data-act="exportCsv">Export All (CSV)…</button></div>
-        <p class="bk-where">${icon('folder', 'sm')}<span>${backupWhereHTML()}</span></p>
-        <p class="muted small">JSON is the recommended backup: it restores everything exactly. The CSV holds the same data in a spreadsheet-friendly form and can be imported too. Both include any health details you entered, so keep them somewhere private. <a href="#/privacy">Privacy Policy</a></p>
-        <div class="row bk-extra"><button class="btn ghost sm" data-act="copyCsv">${icon('copy')} Copy CSV to clipboard</button><button class="btn ghost sm" data-act="templateCsv">Blank CSV template</button></div></section>
-      <div class="grid-2 data-grid">
-        <section class="card" id="impCard"><h2>${icon('upload')} Import</h2>
-          <label class="drop" id="drop" for="impFile">${icon('upload', 'lg')}<b>Drop a backup file here</b><span>JSON or CSV · or click to choose a file</span></label><input type="file" id="impFile" accept=".json,.csv,.tsv,.txt,application/json,text/csv" hidden data-change="impFile">
+    const S = state.setup, T = state.settings, nDemo = state.recipes.filter(isDemo).length, dark = T.theme === 'dark';
+    const row = (label, desc, ctl, cls = '') => `<div class="mb-set-row${cls}"><div class="mb-set-l"><b>${label}</b>${desc ? `<small>${desc}</small>` : ''}</div><div class="mb-set-c">${ctl}</div></div>`;
+    const seg = (label, act, cur, opts) => `<div class="mb-seg" role="group" aria-label="${label}">${opts.map(([k, l]) => `<button type="button" data-act="${act}" data-k="${k}" aria-pressed="${cur === k}">${l}</button>`).join('')}</div>`;
+    const sel = (label, chg, fid, list, cur) => `<select data-change="${chg}" data-fid="${fid}" aria-label="${label}">${optionsHTML(list.map(d => [d, d]), cur)}</select>`;
+    return `<div class="page-head"><h1 class="ph-dup">Settings</h1></div>
+    <div class="mb-set">
+      <section class="mb-set-sec" aria-labelledby="setA"><h2 class="mb-set-h" id="setA">Appearance</h2>
+        <div class="mb-set-card">${row('Theme', 'Light or dark. Saved on this device.', `<div class="mb-seg" role="group" aria-label="Theme"><button type="button" data-act="setTheme" data-theme-set="light" aria-pressed="${!dark}">${wic('sun')}Light</button><button type="button" data-act="setTheme" data-theme-set="dark" aria-pressed="${dark}">${wic('moon')}Dark</button></div>`)}</div></section>
+      <section class="mb-set-sec" aria-labelledby="setS"><h2 class="mb-set-h" id="setS">Account &amp; sync</h2>
+        <div class="mb-set-card pad" id="syncCard">${SYNC ? '' : '<p class="muted small">Sync is not available in this copy of the app. Everything stays in this browser.</p>'}</div></section>
+      <section class="mb-set-sec" aria-labelledby="setP"><h2 class="mb-set-h" id="setP">Meal Prep settings</h2>
+        <div class="mb-set-card">
+          ${row('Your name', 'Optional. Used in the Home greeting when you’re not signed in.', `<input type="text" class="set-in" maxlength="40" placeholder="First name" value="${esc(S.name)}" data-input="sname" data-fid="s-name" aria-label="Your name" autocomplete="given-name">`)}
+          ${row('What you use it for', 'Turning something off hides it and never deletes data.', `<div class="chips" role="group" aria-label="Features">${FEATURES.map(f => `<button type="button" class="chipbtn${S.features[f.k] ? ' on' : ''}" data-act="toggleFeat" data-k="${f.k}" aria-pressed="${!!S.features[f.k]}">${icon('check', 'sm')}${cap(f.s)}</button>`).join('')}</div>`)}
+          ${row('Meals you plan', 'The planner shows these meals for each day.', `<div class="chips" role="group" aria-label="Meals you plan">${SLOTS.map(s => `<button type="button" class="chipbtn${S.meals[s] ? ' on' : ''}" data-act="toggleMeal" data-k="${s}" aria-pressed="${!!S.meals[s]}">${icon('check', 'sm')}${s}</button>`).join('')}</div>`)}
+          ${row('Cooking for', 'Grocery amounts scale by this. Nutrition is tracked per person.', `<div class="stepper"><button class="btn icon" type="button" data-act="hh" data-d="-1" aria-label="Fewer people">−</button><output id="hhOut" aria-live="polite">${S.household}</output><button class="btn icon" type="button" data-act="hh" data-d="1" aria-label="More people">+</button></div>`)}
+          ${row('Cooking style', 'Batch prep rounds the grocery list up to whole batches. Cook fresh buys the exact amounts.', seg('Cooking style', 'cookStyle', S.cookStyle, [['batch', 'Batch prep'], ['fresh', 'Cook fresh']]))}
+          ${row('Servings mean', state.settings.nutritionMode === 'eaten' ? 'Nutrition is multiplied by the servings you plan.' : 'Nutrition counts one portion per meal; servings only drive the grocery list.', seg('What servings mean', 'nutMode', T.nutritionMode, [['eaten', 'Portions I eat'], ['cooked', 'Portions I cook']]))}
+          ${row('Week starts on', '', sel('Week starts on', 'weekStart', 's-ws', DAYS, S.weekStart))}
+          ${row('Prep day', 'The Prep page splits fridge and freezer portions from this day.', sel('Prep day', 'prepDay', 's-pd', DAYS, S.prepDay))}
+          ${row('Units', 'For your height and weight.', seg('Units', 'setUnit', state.profile.unit, [['imperial', 'lb, ft'], ['metric', 'kg, cm']]))}
+          ${row('Weekly grocery budget', 'Optional. Auto-plan and the grocery total compare against it.', `<input type="number" class="set-in num" min="0" step="5" inputmode="decimal" placeholder="e.g. 90" value="${T.budget ? esc(String(T.budget)) : ''}" data-change="budget" data-fid="s-budget" aria-label="Weekly grocery budget in dollars">`)}
+          ${row('Printed recipes', 'Ink for the one-page recipe printout.', seg('Printed recipes', 'printMode', T.printMode, [['bw', 'Black &amp; white'], ['color', 'Color']]))}
+          ${row('Setup', 'Walk through the welcome steps again: goals, body stats and kitchen.', `<button type="button" class="btn" data-act="openSetup">${navIcon('settings')} Run setup again</button>`)}
+        </div></section>
+      <section class="mb-set-sec" aria-labelledby="setD" id="setData"><h2 class="mb-set-h" id="setD">Backup &amp; data</h2>
+        <div class="mb-set-card" id="setDataList" style="padding:8px 16px"></div>
+        <div class="mb-set-card pad imp-card" id="impCard"><h3 class="set-h3">${icon('upload')} Import</h3>
+          <label class="drop" id="drop" for="impFile">${icon('upload', 'lg')}<b>Drop a backup file here</b><span>JSON, CSV or ZIP · or click to choose a file</span></label><input type="file" id="impFile" accept=".json,.csv,.tsv,.txt,.zip,application/json,text/csv,application/zip" hidden data-change="impFile">
           <p id="impName" class="muted small" hidden></p>
-          <label class="fld"><span>…or paste a backup, CSV or spreadsheet cells</span><textarea id="impText" rows="5" placeholder="record,name,meal_type,servings,calories,..." data-input="impText" spellcheck="false"></textarea></label>
+          <label class="fld"><span>…or paste a backup, CSV or spreadsheet cells</span><textarea id="impText" rows="4" placeholder="record,name,meal_type,servings,calories,..." data-input="impText" spellcheck="false"></textarea></label>
           <div class="row"><label class="check"><input type="radio" name="impMode" value="merge" checked data-change="impMode"> Merge with what I have</label><label class="check"><input type="radio" name="impMode" value="replace" data-change="impMode"> Replace my data</label></div>
           <p class="muted small">Merging matches recipes by name and grocery items by name and unit, so importing the same file twice never doubles anything.</p>
-          <div id="impPreview"></div></section>
-        <div class="stack">
-        <section class="card"><h2>${icon('layers')} Demo data</h2><p class="muted">${DEMO_RECIPES.length} demo recipes to try the app with. ${nDemo ? `<b>${nDemo}</b> loaded now.` : ''} Removing them never touches your ingredient library.</p>
-          <div class="row"><button class="btn" data-act="loadDemo">Load demo recipes</button><button class="btn" data-act="removeDemo" ${nDemo ? '' : 'disabled'}>Remove demo recipes</button></div></section>
-        <section class="card"><h2>${icon('shield')} Storage &amp; reset</h2><p class="muted">${storageOK ? 'Changes save automatically in this browser only. Nothing is sent to a server.' : 'This browser is blocking storage, so changes will be lost when you close the page. Save a backup to keep your work.'}</p>
-          <div class="row"><button class="btn danger-o" data-act="resetRecipes">Erase recipes &amp; plans</button><button class="btn danger-o" data-act="resetAll">Erase everything</button></div></section></div></div>
-      <details class="card fmt"><summary>CSV format reference</summary><p class="muted">The first row is a header. The first column, <code>record</code>, says what each row is. Headers are case-insensitive and the columns can be in any order. Only the columns you need must be present.</p>
-        <div class="tablewrap"><table class="table"><thead><tr><th>record</th><th>What it holds</th><th>Columns used</th></tr></thead><tbody>${rows.map(r => `<tr><td><code>${esc(r[0])}</code></td><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`).join('')}</tbody></table></div>
-        <p class="muted small">All columns: <code>${CSV_COLS.join(', ')}</code></p></details>
-      <div data-mb-install data-app-name="Meal Prep" data-note="Opens in its own window with its own icon. Works offline after the first visit." data-ios-note="The installed app keeps its own saved data, separate from Safari. Save a backup here first, then import it in the installed app." hidden></div>
-      <div class="mb-about" role="group" aria-label="About this app">
-        <svg class="uic" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9.5"/><path d="M12 11v6M12 7.5v.01"/></svg>
-        <div>
-          <b>mealprep.mcbflow.com™</b>
-          <p>Version 1.5 · Oct 14, 2026</p>
-          <p class="mb-about-links"><button type="button" data-act="whatsNew">What's new</button><a href="#/privacy">Privacy</a><a href="#/terms">Terms</a><a href="https://mcbflow.com/">More free apps at mcbflow.com</a></p>
-          <p class="mb-about-copy">© 2024–2026 Matthew Broyer. All rights reserved.</p>
+          <div id="impPreview"></div></div>
+        <div class="mb-set-card">
+          ${row('Where backups go', backupWhereHTML(), '')}
+          ${row('Demo recipes', `${DEMO_RECIPES.length} demo recipes to try the app with.${nDemo ? ` <b>${nDemo}</b> loaded now.` : ''} Removing them never touches your ingredient library.`, `<button class="btn sm" type="button" data-act="loadDemo">Load</button><button class="btn sm" type="button" data-act="removeDemo" ${nDemo ? '' : 'disabled'}>Remove</button>`)}
+          ${row('Spreadsheet tools', 'Copy everything as CSV, or get a blank template to fill in.', `<button class="btn sm" type="button" data-act="copyCsv">${icon('copy', 'sm')} Copy CSV</button><button class="btn sm" type="button" data-act="templateCsv">Blank template</button>`)}
+          ${row('Storage', storageOK ? 'Changes save automatically in this browser.' : 'This browser is blocking storage, so changes will be lost when you close the page. Save a backup to keep your work.', storageOK ? `<span class="chip">${icon('check', 'sm')}Saving</span>` : '<span class="chip warn">Storage off</span>')}
+          ${row('Erase recipes &amp; plans', 'Recipes, plans, past weeks, leftovers and grocery items. Keeps your profile, settings, prices and ingredient library.', '<button class="btn sm danger-o" type="button" data-act="resetRecipes">Erase…</button>', ' danger')}
         </div>
-      </div>`;
+        <details class="mb-set-card pad fmt"><summary>CSV format reference</summary><p class="muted small">The first row is a header. The first column, <code>record</code>, says what each row is. Headers are case-insensitive and the columns can be in any order. Only the columns you need must be present. JSON is the recommended backup: it restores everything exactly. Both formats include any health details you entered, so keep them somewhere private.</p>
+          <div class="tablewrap"><table class="table"><thead><tr><th>record</th><th>What it holds</th><th>Columns used</th></tr></thead><tbody>${CSV_FORMAT_ROWS.map(r => `<tr><td><code>${esc(r[0])}</code></td><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`).join('')}</tbody></table></div>
+          <p class="muted small">All columns: <code>${CSV_COLS.join(', ')}</code></p></details></section>
+      <section class="mb-set-sec" aria-labelledby="setI"><h2 class="mb-set-h" id="setI">Install</h2>
+        <div data-mb-install data-app-name="Meal Prep" data-note="Opens in its own window with its own icon. Works offline after the first visit." data-ios-note="The installed app keeps its own saved data, separate from Safari. Save a backup here first, then import it in the installed app." hidden></div>
+        <p class="mb-set-card pad inst-note">In Chrome or Edge, use Install in the address bar or the browser menu. On iPhone or iPad, tap Share, then Add to Home Screen. It opens in its own window and works offline after the first visit.</p></section>
+      <section class="mb-set-sec" aria-labelledby="setAb"><h2 class="mb-set-h" id="setAb">About</h2>
+        <div class="mb-about" role="group" aria-label="About this app">
+          <svg class="uic" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+          <div><b>mealprep.mcbflow.com™</b><p>Version 1.7 · Oct 16, 2026</p>
+            <p class="mb-about-links"><button type="button" data-act="whatsNew">What’s new</button><a href="#/privacy">Privacy</a><a href="#/terms">Terms</a><a href="#/help">Help</a><a href="https://mcbflow.com/">More free apps at mcbflow.com</a></p>
+            <p class="mb-about-copy">© 2024–2026 Matthew Broyer. All rights reserved.</p></div></div></section>
+    </div>`;
   },
   after() {
+    $('#setDataList')._html = ''; renderBackupUI();
+    if (SYNC) SYNC.card($('#syncCard'));
     const drop = $('#drop'); if (!drop) return;
     ['dragenter', 'dragover'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('over'); }));
     ['dragleave', 'drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('over'); }));
@@ -5696,10 +6020,21 @@ VIEWS.data = {
     applyPendingImport();
   }
 };
+CHANGES.budget = el => { const v = numOrNull(el.value); state.settings.budget = v > 0 ? clamp(v, 1, 100000) : null; saveSoon(); };
+ACTIONS.printMode = el => { state.settings.printMode = el.dataset.k === 'color' ? 'color' : 'bw'; saveSoon(); rerender(); };
 ACTIONS.copyCsv = async () => { const ok = await copyText(exportCSV()); if (ok) { state.settings.lastExport = new Date().toISOString(); saveSoon(); renderBackupUI(); } toast(ok ? 'CSV copied to clipboard' : 'Could not copy. Use Export All (CSV) instead.', ok ? 'ok' : 'err'); };
 ACTIONS.templateCsv = () => downloadText('mealprep-template.csv', templateCSV());
 function readImportFile(f) {
   if (f.size > 20 * 1024 * 1024) { toast('That file is too large.', 'err'); return; }
+  if (/\.zip$/i.test(f.name || '') || /zip/.test(f.type || '')) {      // a ZIP from Export All (ZIP): its JSON backup goes through the normal import
+    if (typeof MBFiles === 'undefined') { toast('This browser cannot open ZIP files here. Import the JSON backup instead.', 'err'); return; }
+    MBFiles.unzip(f).then(async list => {
+      const js = list.filter(x => /\.json$/i.test(x.name)), pick = js.find(x => /(^|\/)[^/]*-backup\.json$/i.test(x.name)) || (js.length === 1 ? js[0] : null);
+      if (!pick) { toast('That ZIP has no Meal Prep backup (a …-backup.json file) inside.', 'err'); return; }
+      openImportText(await pick.text(), f.name + ' › ' + pick.name);
+    }).catch(() => toast('Could not read that ZIP file.', 'err'));
+    return;
+  }
   const rd = new FileReader(); rd.onload = () => openImportText(String(rd.result), f.name); rd.onerror = () => toast('Could not read that file.', 'err'); rd.readAsText(f);
 }
 CHANGES.impFile = el => { if (el.files[0]) readImportFile(el.files[0]); el.value = ''; };
@@ -5729,26 +6064,27 @@ ACTIONS.resetRecipes = async () => {
 };
 ACTIONS.resetAll = async () => {
   if (!await confirmDialog('Erase everything, including your profile, settings and custom ingredients? Save a backup first if you might want it back.' + syncEraseNote(), { ok: 'Erase everything', danger: true })) return;
-  undoable('Everything erased', () => { state = defaultState(); invalidatePantry(); ui.setupStep = 0; saveNow(); applyTheme(); refreshIngLists(); go('#/setup'); rerender(); }, { after: () => go('#/home') });
+  undoable('Everything erased', () => { state = defaultState(); invalidatePantry(); saveNow(); applyTheme(); refreshIngLists(); openWizard(false); go('#/home'); rerender(); }, { after: () => { if (ui.wiz.open && !ui.wiz.rerun) closeWizard(); go('#/home'); rerender(); } });
 };
 
-/* ---- About ---- */
-VIEWS.about = {
+/* ---- Help (was About): how it works, install, privacy, release notes and license ---- */
+VIEWS.help = {
   render() {
-    return `<div class="page-head"><h1 class="about-h">${logo(40)} ${APP.name}</h1></div>
-      <div class="chips noprint"><button class="chipbtn" data-act="scrollTo" data-t="ab-about">About</button><button class="chipbtn" data-act="scrollTo" data-t="ab-notes">Release notes</button><button class="chipbtn" data-act="scrollTo" data-t="ab-license">License</button></div>
+    return `<div class="page-head"><h1 class="about-h">${logo(40)} Help</h1><p>How ${esc(APP.name)} works, what’s new, and the license.</p></div>
+      <div class="chips noprint"><button class="chipbtn" data-act="scrollTo" data-t="ab-about">How it works</button><button class="chipbtn" data-act="scrollTo" data-t="ab-notes">Release notes</button><button class="chipbtn" data-act="scrollTo" data-t="ab-license">License</button></div>
       <section class="card prose" id="ab-about"><h2>About</h2>
         <p>${esc(APP.name)} plans your week of meals, hits your macro targets and builds a grocery list you can shop from. It started in 2024 as a spreadsheet called The Pantry Partner and was used for years before becoming this web app.</p>
         <h3>The method</h3><ol><li><b>Pick your body type.</b> It sets your target protein, carb and fat split.</li><li><b>Get your numbers.</b> Your stats and goal become daily calories and grams of each macro.</li><li><b>Plan to hit them.</b> The planner checks every day against your targets, and the grocery list builds itself.</li><li><b>Prep it once.</b> The Prep page turns the week into one cooking session, and your leftovers, prices and past weeks make next week faster.</li></ol>
-        <h3>Install it like an app</h3><p>On Chrome, Edge and Android, use the Install button on the <a href="#/data">Data page</a> (or the install icon in the address bar). On iPhone and iPad, tap Share, then Add to Home Screen. It opens full screen and works with no signal once it has loaded. On iPhone, the installed app keeps its own saved data, separate from Safari, so export a backup in one and import it in the other to move your data.</p>
-        <h3>Privacy</h3><p>There are no accounts. Your recipes, plan and health details stay in your browser and in the backup files you save. <a href="#/privacy">Read the Privacy Policy</a> · <a href="#/terms">Terms of Use</a></p></section>
+        <h3>Install it like an app</h3><p>On Chrome, Edge and Android, use the Install button on the <a href="#/settings">Settings page</a> (or the install icon in the address bar). On iPhone and iPad, tap Share, then Add to Home Screen. It opens full screen and works with no signal once it has loaded. On iPhone, the installed app keeps its own saved data, separate from Safari, so export a backup in one and import it in the other to move your data.</p>
+        <h3>Back up and sync</h3><p>Use the Data menu in the top bar: Save backup now (${esc(SAVE_KEYS)}) updates one backup file, Export All saves JSON, CSV or a ZIP of both, and Import Backup restores any of them. To keep your phone and computer the same, sign in with a free mcbflow.com account (the Sign in button in the top bar). All your settings are on the <a href="#/settings">Settings page</a>.</p>
+        <h3>Privacy</h3><p>No account is needed. Your recipes, plan and health details stay in your browser and in the backup files you save, unless you sign in to sync. <a href="#/privacy">Read the Privacy Policy</a> · <a href="#/terms">Terms of Use</a></p></section>
       <section class="card prose" id="ab-notes"><h2>Release notes</h2>${RELEASES.map((r, i) => `<details class="release" id="rel-${i}" data-keep="rel-${i}"${i === 0 || ui.open['rel-' + i] ? ' open' : ''}><summary><h3>${esc(r.name || APP.name)} © ${esc(r.date.slice(-4))} · ${esc(r.v)} · ${esc(r.date)}${r.tag ? ` <span class="chip">${esc(r.tag)}</span>` : ''}</h3></summary><ul>${r.notes.map(n => `<li>${esc(n)}</li>`).join('')}</ul></details>`).join('')}</section>
       <section class="card prose" id="ab-license"><h2>License</h2><h3>${esc(LICENSE.title)}</h3><p class="muted small">Last updated ${esc(LICENSE.updated)}</p><details class="licbox" data-keep="lic"${ui.open.lic ? ' open' : ''}><summary>Read the full license (${LICENSE.sections.length} sections)</summary>${LICENSE.sections.map(([h, ps], i) => `<h4 id="lic-${i}">${esc(h)}</h4>${ps.map(p => `<p>${esc(p)}</p>`).join('')}`).join('')}</details>
         <details class="licbox" data-keep="tp"${ui.open.tp ? ' open' : ''}><summary>${esc(THIRD_PARTY.title)}</summary><p class="muted small">Some interface icons follow the Feather Icons style. The app loads no fonts, scripts or images from other sites.</p><p class="small" style="white-space:pre-line">${esc(THIRD_PARTY.text)}</p></details></section>`;
   }
 };
 ACTIONS.scrollTo = el => revealAndScroll(el.dataset.t);
-ACTIONS.whatsNew = () => aboutJump('rel-0');   // About card "What's new": the newest release notes on the About page
+ACTIONS.whatsNew = () => aboutJump('rel-0');   // "What’s new" (footer and Settings › About): the newest release notes on the Help page
 
 /* ==========================================================================
    Site chrome: mobile menu, scroll progress, back-to-top, site search,
@@ -5821,25 +6157,17 @@ function revealAndScroll(id) {
 document.addEventListener('toggle', e => { const d = e.target; if (d && d.dataset && d.dataset.keep) ui.open[d.dataset.keep] = d.open; }, true);
 document.addEventListener('click', e => {                                    // close the "more" menu on outside click or after choosing
   if (!e.target.isConnected) return;
-  $$('details.moremenu[open]').forEach(d => { if (!d.contains(e.target) || e.target.closest('.menu button')) d.open = false; });
+  $$('details.moremenu[open]').forEach(d => { if (!d.contains(e.target) || e.target.closest('.menu button, .mb-dm .mb-dm-it')) d.open = false; });
 });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') $$('details.moremenu[open]').forEach(d => { d.open = false; const s = d.querySelector('summary'); s && s.focus(); }); });
 
-/* ---------- privacy notice ---------- */
+/* ---------- privacy notice ----------
+   v1.7: the separate "Your data stays on this device" bar is folded into the welcome screen's privacy line.
+   The flag is kept (set when the welcome screen is finished or skipped) so the old bar never comes back. */
 const NOTICE_KEY = 'mealprep.notice';
 let noticeSeen = false;
 const noticeGet = () => { try { return localStorage.getItem(NOTICE_KEY) === '1'; } catch (e) { return noticeSeen; } };
 const noticeSet = () => { noticeSeen = true; try { localStorage.setItem(NOTICE_KEY, '1'); } catch (e) { } };
-function showNotice() {
-  const n = $('#notice'); if (!n || noticeGet()) return;
-  n.innerHTML = `<div class="notice-in"><div class="notice-txt"><b>Your data stays on this device.</b> <span class="nt-more">${esc(APP.name)} saves everything in your browser. </span>The app sets no cookies and sends nothing to a server. <a href="#/privacy" data-act="noticeMore">Privacy policy</a></div><button class="btn primary" data-act="noticeOk">Got it</button></div>`;
-  n.hidden = false; document.body.classList.add('has-notice'); sizeNotice();
-}
-function sizeNotice() { const n = $('#notice'); document.documentElement.style.setProperty('--notice-h', n && !n.hidden ? n.offsetHeight + 'px' : '0px'); }
-function hideNotice() { const n = $('#notice'); if (n) n.hidden = true; document.body.classList.remove('has-notice'); sizeNotice(); }
-ACTIONS.noticeOk = () => { noticeSet(); hideNotice(); };
-ACTIONS.noticeMore = () => { noticeSet(); hideNotice(); };
-window.addEventListener('resize', sizeNotice, { passive: true });
 
 /* ==========================================================================
    Site search  (Ctrl/Cmd+K, "/" or the header button)
@@ -5847,7 +6175,7 @@ window.addEventListener('resize', sizeNotice, { passive: true });
 const norm = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 const PAGE_HINTS = {
   home: 'dashboard today overview', goals: 'body type macros calories bmr tdee target ectomorph mesomorph endomorph weight goal health', recipes: 'recipe library meals cookbook',
-  planner: 'meal plan week calendar auto-plan swap new week repeat last week budget', prep: 'prep day batch cooking containers freezer fridge leftovers storage steps cook', grocery: 'shopping list store groceries', ingredients: 'ingredient library store sections aisles units', data: 'install app home screen offline csv import export backup demo reset', about: 'release notes license version'
+  planner: 'meal plan week calendar auto-plan swap new week repeat last week budget', prep: 'prep day batch cooking containers freezer fridge leftovers storage steps cook', grocery: 'shopping list store groceries', ingredients: 'ingredient library store sections aisles units', settings: 'settings preferences theme dark light account sync install app home screen offline csv zip import export backup demo reset erase units budget household meals', help: 'help about how it works release notes what’s new license version'
 };
 function hl(text, terms) {
   const t = String(text); if (!terms.length) return esc(t);
@@ -5864,7 +6192,7 @@ function snippet(text, terms, len = 120) {
 function searchDocs() {
   const docs = [];
   for (const n of NAV.filter(n => !n.feat || featureOn(n.feat))) docs.push({ g: 'Pages', title: n.label, sub: 'Page', hay: norm(n.label + ' ' + (PAGE_HINTS[n.id] || '')), icon: n.icon, run: () => go('#/' + n.id) });
-  docs.push({ g: 'Pages', title: 'Setup', sub: 'Change your goals, meals and preferences', hay: norm('setup onboarding wizard preferences features units household'), icon: 'sliders', run: () => ACTIONS.openSetup() });
+  docs.push({ g: 'Actions', title: 'Run setup again', sub: 'Change your goals, meals and preferences step by step', hay: norm('setup onboarding wizard welcome preferences features units household'), icon: 'settings', run: () => ACTIONS.openSetup() });
   docs.push({ g: 'Actions', title: 'Add a recipe', sub: 'Open the recipe editor', hay: norm('add new create recipe'), icon: 'plus', run: () => { go('#/recipes'); setTimeout(() => ACTIONS.newRecipe(), 0); } });
   if (featureOn('planner')) {
     if (getTargets()) docs.push({ g: 'Actions', title: 'Auto-plan my week', sub: 'Build meals around your targets', hay: norm('auto plan automatic meal planning generate week budget'), icon: 'wand', run: () => { go('#/planner'); setTimeout(() => ACTIONS.autoPlan(), 60); } });
@@ -5873,7 +6201,9 @@ function searchDocs() {
   if (featureOn('grocery')) docs.push({ g: 'Actions', title: 'Set ingredient prices', sub: 'Cost per serving and grocery total', hay: norm('prices cost budget money dollars spend estimate'), icon: 'dollar', run: () => { go('#/grocery'); setTimeout(() => ACTIONS.setPrices(), 60); } });
   docs.push({ g: 'Actions', title: 'Save backup now', sub: SAVE_KEYS + ' · JSON backup', hay: norm('save backup now json export download'), icon: 'download', run: () => ACTIONS.backupNow() });
   docs.push({ g: 'Actions', title: 'Export All (CSV)', sub: 'Spreadsheet copy of everything', hay: norm('export download backup csv spreadsheet'), icon: 'download', run: () => ACTIONS.exportCsv() });
-  docs.push({ g: 'Actions', title: 'Import Backup (JSON or CSV)', sub: 'Open the import tool', hay: norm('import upload paste csv json restore backup'), icon: 'upload', run: () => go('#/data') });
+  docs.push({ g: 'Actions', title: 'Export All (ZIP)', sub: 'Backup and spreadsheets in one file', hay: norm('export download backup zip archive'), icon: 'download', run: () => ACTIONS.exportZip() });
+  docs.push({ g: 'Actions', title: 'Import Backup (JSON, CSV or ZIP)', sub: 'Open the import tool in Settings', hay: norm('import upload paste csv json zip restore backup'), icon: 'upload', run: () => { ui.jump = 'impCard'; go('#/settings'); } });
+  if (SYNC) docs.push({ g: 'Actions', title: 'Sync across devices', sub: 'Sign in with a free mcbflow.com account', hay: norm('sync account sign in login devices phone computer profile'), icon: 'refresh', run: () => SYNC.open() });
   docs.push({ g: 'Actions', title: 'Switch light / dark theme', sub: 'Appearance', hay: norm('theme dark light mode appearance'), icon: 'moon', run: () => ACTIONS.theme() });
   for (const r of state.recipes) {
     const ing = r.ingredients.map(g => g.item).join(' ');
@@ -5888,7 +6218,7 @@ function searchDocs() {
   docs.push({ g: 'Help & info', title: 'Terms of Use', sub: 'Plain-language terms', hay: norm('terms of use disclaimer medical advice warranty'), body: norm(TERMS.sections.map(x => x[0] + ' ' + x[1].join(' ')).join(' ')), raw: { notes: TERMS.sections.map(x => x[1].join(' ')).join(' ') }, icon: 'info', run: () => go('#/terms') });
   return docs;
 }
-function aboutJump(id) { go('#/about'); setTimeout(() => revealAndScroll(id), 80); }
+function aboutJump(id) { go('#/help'); setTimeout(() => revealAndScroll(id), 80); }
 const GROUP_ORDER = ['Recipes', 'Pages', 'Actions', 'Meal plan', 'Grocery list', 'Ingredients', 'Help & info'], GROUP_CAP = { Recipes: 8, Pages: 8, Actions: 5, 'Meal plan': 4, 'Grocery list': 5, Ingredients: 6, 'Help & info': 5 };
 function runSearch(q, docs) {
   const terms = norm(q).split(/\s+/).filter(Boolean);
@@ -6046,14 +6376,14 @@ function boot() {
   state = loadState();
   invalidatePantry(); applyTheme(); refreshIngLists();
   matchMedia('(prefers-color-scheme: dark)').addEventListener && matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
-  const sb = $('#setupBtn'); if (sb) sb.innerHTML = icon('sliders') + ' Setup';
   const sr = $('#searchBtn'); if (sr) sr.innerHTML = icon('search') + '<span class="tb-lbl">Search…</span><kbd>/</kbd>';
   const tt = $('#toTop'); if (tt) tt.innerHTML = icon('up');
-  const di = $('#dataMenu .dm-ic'); if (di) di.outerHTML = icon('db');
   const fu = $('#ftUpdated'); if (fu) { fu.textContent = new Date(APP.released + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }); fu.dateTime = APP.released; }
   loadBackupHandles();
   setInterval(renderBackupUI, 60000);                                   // keep "Backed up 5 min ago" current
-  setMenu(false); showNotice();
+  setMenu(false);
+  /* first visit: the welcome screen (not when this browser already holds a sign-in: the account brings the setup along) */
+  if (!state.setup.done && !(window.MBSync && MBSync.hasSavedSignIn())) openWizard(false);
   parseRoute(); renderApp(true);
 
 }
@@ -6065,7 +6395,7 @@ function showFatal() {
   v.innerHTML = '<div class="empty"><h2>Something went wrong</h2><p>The app could not load your saved data. Your data is still in this browser. You can download a raw copy first, then reset the app to start fresh.</p>' +
     '<div class="row center"><button class="btn" data-act="fatalDownload">Download my saved data</button><button class="btn danger" data-act="fatalReset">Reset the app</button></div></div>';
 }
-/* ---- Install as app (PWA): MB Suite v3 install card (MBInstall, inlined above) fills [data-mb-install] on the Data page ---- */
+/* ---- Install as app (PWA): MB Suite v3 install card (MBInstall, inlined above) fills [data-mb-install] on the Settings page ---- */
 MBInstall.registerSW('sw.js');
 
 ACTIONS.fatalDownload = () => { let raw = ''; try { raw = localStorage.getItem(LS_KEY) || ''; } catch (e) { } downloadText('mealprep-saved-data.json', raw, 'application/json'); };

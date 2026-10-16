@@ -1,6 +1,23 @@
 # Release notes: mealprep.mcbflow.com
 
-Newest first. The same notes appear in the app under About > Release notes.
+Newest first. The same notes appear in the app under Help > Release notes.
+
+## 1.7 · 2026-10-16
+- New Settings page (the gear at the bottom of the sidebar; on phones, More > Settings), in the same order as every mcbflow.com app: Appearance, Account & sync, Meal Prep settings (name, what you use the app for, meals, household, cooking style, servings, week start, prep day, units, budget, print ink), Backup & data, Install, About. It replaces the Data page, the About card and the sidebar's Setup button. "Run setup again" is in Settings, and the old About page is now Help. Old links (#/data, #/about, #/setup) still work.
+- Account button in the top bar: "Sign in", or your profile picture with a sync dot when signed in. New "Keep me signed in on this device" choice (turn it off on a shared computer: the sign-in then ends when the browser closes).
+- Profile picture and screen name: Edit profile in the account dialog (or Settings > Account & sync) lets you pick a screen name and one of 28 profile pictures, saved on your account so every app shows the same ones.
+- Greeting: Home says "Good morning, <first name>" (your screen name when signed in, otherwise the name you gave in setup). The banner's own "Good morning" title is now "Your week of meals", so there is only one greeting.
+- Home tab and gear: the first tab is Home with the suite's house icon, Settings uses a real toothed gear, Help a question mark, More three dots.
+- The same welcome screen as the other apps: Welcome, Pick a look, Make it yours, Your targets (when macro targets are on) and Your kitchen, with Sign in in its header and "Sign in to sync" / "Import a backup" on the last step. The separate "Your data stays on this device" bar is folded into the first step (its saved flag is kept). Esc or Skip closes it.
+- Clearer Data menu: every item has a one-line description, in the same order everywhere (Save backup now, Sync, Export JSON / CSV / ZIP, Import Backup, Clear all data), with the backup status underneath.
+- New Export All (ZIP): the JSON backup, the full CSV (imports back) and one spreadsheet each for recipes, recipe ingredients, the meal plan, the grocery list, leftovers, prices and past weeks, plus a README. Import Backup accepts the ZIP too (it restores the JSON inside, with the same Merge or Replace choice).
+- Quieter backup reminders while you are signed in and syncing: the backup chip reads "Synced" and never turns amber, the "Your data lives in this browser" banner and the "Save a backup file" step in Getting started are hidden, and the Data menu says "Synced to your account".
+- Charts: the Planner's calorie bars, the macro bars and the macro rings show a label on hover, tap or keyboard focus (value, then day or macro, then context such as the difference from your target), the other marks fade, gridlines fall on round numbers, and the target line is labelled.
+- Even top bar: every control is the same height, including the light/dark switch. New name style "Meal Prep ∙ mcbflow.com" (phones show "Meal Prep").
+- One footer on every page: version, What's new, Privacy, Terms, More free apps, copyright and "Not medical or nutrition advice."
+- Photos and files now open inside the mcbflow.com apps instead of downloading; Meal Prep has no photos or attachments, so nothing changes here.
+- New backups say "mealprep-backup" inside. Backups from earlier versions still import.
+- Privacy Policy updated for the ZIP export, profile picture and screen name, and "Keep me signed in".
 
 ## 1.6 · 2026-10-15
 - New: optional sync across devices. Data → Sync signs in with a free mcbflow.com account; recipes, meal plan, grocery list, leftovers, prices, setup, profile and settings then match on every device you sign in on. Theme stays per device; demo recipes never sync.
@@ -8,7 +25,7 @@ Newest first. The same notes appear in the app under About > Release notes.
 - Erase actions warn when you're signed in, since they also erase synced data.
 
 ## 1.5 · 2026-10-14
-- Moved to mealprep.mcbflow.com. Data saved at mbmealprep.online doesn't carry over: export a backup there and import it here.
+- Moved to mealprep.mcbflow.com. Data saved at the old address doesn't carry over: export a backup there and import it here.
 - Storage names simplified.
 
 ## 1.4 · 2026-10-14

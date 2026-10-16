@@ -3,8 +3,8 @@
    It never touches user data (that lives in localStorage/IndexedDB, which this code never reads)
    and ignores every non-GET and cross-origin request. Only deletes its own "mealprep-" caches.
    BUMP VERSION ON EVERY RELEASE so old cached files are dropped. */
-const VERSION = 'mealprep-1.6.0-20261015-sync';
-const SHELL = ['./', 'index.html', 'manifest.json', 'favicon.ico', 'favicon.svg', 'apple-touch-icon.png', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'mb-suite-topbar.css', 'mb-sync.js', 'vendor/supabase.js'];
+const VERSION = 'mealprep-1.7.0-20261016';
+const SHELL = ['./', 'index.html', 'manifest.json', 'favicon.ico', 'favicon.svg', 'apple-touch-icon.png', 'icon-192.png', 'icon-512.png', 'icon-maskable-512.png', 'mb-suite-topbar.css', 'mb-sync.js', 'mb-files.js', 'vendor/supabase.js'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));

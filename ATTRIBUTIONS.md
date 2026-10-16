@@ -1,4 +1,4 @@
-# Attributions and third-party notices: mbmealprep.online v5.2 · Web app
+# Attributions and third-party notices: mealprep.mcbflow.com (written for v5.2 · Web app)
 
 Last updated October 13, 2026.
 

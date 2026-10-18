@@ -1,9 +1,9 @@
 <!doctype html>
-<!-- mealprep.mcbflow.com v1.7 · Web app. Copyright 2024–2026 Matthew Broyer. Interface icons follow the Feather Icons style (MIT, Copyright (c) 2013-2017 Cole Bemis). See About > License in the app for the full notice. -->
+<!-- mealprep.mcbflow.com v1.9 · Web app. Copyright 2024–2026 Matthew Broyer. Interface icons follow the Feather Icons style (MIT, Copyright (c) 2013-2017 Cole Bemis). See the Terms page in the app for the full notice. -->
 <html lang="en" data-app-short="Meal Prep" data-app-domain="mealprep.mcbflow.com">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-bDt6eEzi4gxMdomgN/M5AvcysTmGWXIwofMj1qf533Y=' 'sha256-8Lp1ebEd18ML68g+RDVhSPKCfQ65Q2WqoDgMCfmuGYI=' 'sha256-1CB8cpIA1ubpEO7LEqWOpBOivENvRIVSBwpfSwixkwk=' 'sha256-RwpEzFNRYHhJTGwdddkisrDmXGpnxMp796ozPu+Ltn0='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://rxvcjdwmvxhwbdwncfhj.supabase.co; manifest-src 'self'; worker-src 'self'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-bDt6eEzi4gxMdomgN/M5AvcysTmGWXIwofMj1qf533Y=' 'sha256-QQfkpPptlii/6e4RIOpNvwxXtOxrNAmbDTpIkmHUTPY=' 'sha256-rMRmboqpoxdgO5QqOsAobMjTwu4gy3QpIRueEiaB9hE=' 'sha256-8+HJWmnsBX0wcvLW///lDnORa0wWay4DcilvalqjBRo=' 'sha256-73NBq1Q7eyb3+o9N57z05acDWm/kF1VpK7uHa/DFty8=' 'sha256-8Lp1ebEd18ML68g+RDVhSPKCfQ65Q2WqoDgMCfmuGYI=' 'sha256-1CB8cpIA1ubpEO7LEqWOpBOivENvRIVSBwpfSwixkwk=' 'sha256-RwpEzFNRYHhJTGwdddkisrDmXGpnxMp796ozPu+Ltn0='; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src https://rxvcjdwmvxhwbdwncfhj.supabase.co; manifest-src 'self'; worker-src 'self'; font-src 'none'; media-src 'none'; object-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'">
 <meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#E0523D">
@@ -325,14 +325,14 @@ details.have { padding: 12px 18px; } details.have .gitem { grid-template-columns
 .route li::before { content: none; }
 .data-grid .card h2 { display: flex; gap: 8px; align-items: center; } .drop { display: grid; place-items: center; gap: 2px; text-align: center; padding: 22px; border: 2px dashed var(--line2); border-radius: 14px; cursor: pointer; background: var(--bg2); margin-bottom: 12px; color: var(--ink2); } .drop.over, .drop:hover { border-color: var(--accent); background: var(--accent-soft); } .drop span { color: var(--ink3); font-size: .84rem; }
 .warns { margin: 6px 0; padding-left: 1.2em; font-size: .84rem; color: var(--warn); } details.fmt { margin-top: 18px; }
-.prose { max-width: 820px; } .prose h3 { margin-top: 1.2em; } .prose h4 { margin: 1.1em 0 .25em; } .release { border-top: 1px solid var(--line); padding-top: 6px; margin-top: 12px; } .release h3 { font-size: 1rem; } .release ul, .prose ol { padding-left: 1.25em; } .release li, .prose li { margin-bottom: .35em; }
+.prose { max-width: 820px; } .prose h3 { margin-top: 1.2em; } .prose h4 { margin: 1.1em 0 .25em; }    .prose ol { padding-left: 1.25em; }  .prose li { margin-bottom: .35em; }
 
 /* ---------- dialog / toast / tip ---------- */
 dialog { border: 0; padding: 0; border-radius: 20px; width: min(520px, 94vw); background: var(--surface); color: var(--ink); box-shadow: 0 24px 80px rgba(0, 0, 0, .35); } dialog.wide { width: min(780px, 96vw); } dialog::backdrop { background: rgba(10, 14, 11, .55); backdrop-filter: blur(2px); }
 .dlg-body { padding: 22px 24px; max-height: 88vh; overflow-y: auto; } .dlg-body h3:first-child { margin-top: 0; } .dlg-head { display: flex; justify-content: space-between; align-items: center; } .dlg-head h3 { margin: 0; }
 .dlg-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 18px; flex-wrap: wrap; position: sticky; bottom: -22px; background: var(--surface); padding: 10px 0 2px; }
-#toasts { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); display: grid; gap: 8px; z-index: 200; width: min(92vw, 460px); pointer-events: none; }
-.toast { background: var(--ink); color: var(--bg); padding: 11px 16px; border-radius: 12px; font-weight: 600; font-size: .9rem; box-shadow: 0 8px 30px rgba(0, 0, 0, .3); animation: tin .2s ease; } .toast.err { background: var(--bad); color: #fff; } .toast.out { opacity: 0; transition: opacity .4s; }
+
+  
 @keyframes tin { from { transform: translateY(10px); opacity: 0; } }
 #tip { position: fixed; z-index: 300; background: var(--ink); color: var(--bg); padding: 6px 10px; border-radius: 8px; font-size: .78rem; font-weight: 600; max-width: 280px; pointer-events: none; }
 
@@ -357,7 +357,7 @@ dialog { border: 0; padding: 0; border-radius: 20px; width: min(520px, 94vw); ba
 /* ---------- print ---------- */
 @media print {
   :root { --bg: #fff; --surface: #fff; --ink: #000; --line: #ccc; --shadow: none; }
-  #appbar, footer, .noprint, .backbtn, #toasts, #tip, .rlist-wrap, .rfilters, .page-head .btn, .gtools, .gprog .row, .chips.noprint { display: none !important; }
+  #appbar, footer, .noprint, .backbtn, #tip, .rlist-wrap, .rfilters, .page-head .btn, .gtools, .gprog .row, .chips.noprint { display: none !important; }
   body { background: #fff; font-size: 11pt; } main#view { padding: 0; max-width: none; }
   .card, .gsec, .rdetail, .pgrid, .prow { box-shadow: none !important; break-inside: avoid; }
   .rv { display: block; } .rv:not(.has-detail) .rdetail-wrap { display: block; }
@@ -391,12 +391,12 @@ html { scroll-padding-top: 76px; }
   .brand { min-width: 0; } .brand .beta { display: none; } .brand span.nm { display: inline; font-size: .98rem; overflow: hidden; text-overflow: ellipsis; }
   .bar-actions { margin-left: auto; flex: none; } #setupBtn { display: none; } .btn.searchbtn { font-size: 0; gap: 0; padding-inline: 10px; } .btn.searchbtn svg { font-size: 1rem; }
   #nav { display: none; position: absolute; top: 100%; left: 0; right: 0; order: 0; flex-basis: auto; flex-direction: column; gap: 2px; padding: 10px 12px 14px; background: var(--surface); border-bottom: 1px solid var(--line); box-shadow: 0 18px 40px rgba(0, 0, 0, .2); max-height: calc(100vh - 62px); max-height: calc(100dvh - 62px); overflow-y: auto; overflow-x: hidden; z-index: 31; }
-  body.menu-open #nav { display: flex; animation: menuin .18s ease; }
+  
   #nav .tab { padding: 12px 14px; font-size: 1rem; min-height: 46px; border-radius: 12px; width: 100%; background: none; border: 0; font-family: inherit; cursor: pointer; text-align: left; }
   #nav .tab.on { background: var(--accent-soft); color: var(--accent-soft-ink); }
   #nav .tab:hover { background: var(--bg2); } #nav .tab.on:hover { background: var(--accent-soft); }
   .only-mobile { display: inline-flex; border-top: 1px solid var(--line) !important; border-radius: 0 !important; margin-top: 6px; padding-top: 14px !important; }
-  body.menu-open::before { content: ''; position: fixed; inset: 0; background: rgba(0, 0, 0, .38); z-index: 29; animation: fadein .18s ease; }
+  
   html { scroll-padding-top: 64px; }
 }
 @keyframes menuin { from { opacity: 0; transform: translateY(-8px); } }
@@ -412,28 +412,28 @@ html { scroll-padding-top: 76px; }
 .notice { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: var(--surface); border-top: 1px solid var(--line2); box-shadow: 0 -10px 30px rgba(0, 0, 0, .12); animation: noticein .3s ease; }
 .notice-in { max-width: 1240px; margin: 0 auto; display: flex; gap: 16px; align-items: center; justify-content: space-between; }
 .notice-txt { font-size: .9rem; color: var(--ink2); } .notice-txt b { color: var(--ink); } .notice-in .btn { flex: none; }
-body.has-notice { padding-bottom: var(--notice-h, 0px); } body.has-notice #toasts { bottom: calc(18px + var(--notice-h, 0px)); }
+body.has-notice { padding-bottom: var(--notice-h, 0px); } 
 @keyframes noticein { from { transform: translateY(100%); } }
 @media (max-width: 720px) { .notice-in { flex-direction: column; align-items: stretch; gap: 10px; } .notice-in .btn { width: 100%; } }
 
 /* search */
-dialog.searchdlg { width: min(660px, 94vw); margin: min(11vh, 96px) auto auto; padding: 0; overflow: hidden; }
-dialog.searchdlg[open] { display: block; }
-.sbox { display: flex; flex-direction: column; max-height: min(78vh, 660px); }
-.sbar { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--line); } .sbar > svg { color: var(--ink3); flex: none; }
-.sbar input { flex: 1; min-width: 0; border: 0 !important; outline: 0 !important; box-shadow: none !important; background: transparent !important; font: 500 1.05rem var(--font); color: var(--ink); padding: 8px 0; } .sbar input::-webkit-search-cancel-button { display: none; }
-.sresults { overflow-y: auto; padding: 6px 8px 10px; flex: 1; overscroll-behavior: contain; }
-.sgroup { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink3); padding: 12px 10px 4px; } .sgroup .muted { text-transform: none; letter-spacing: 0; font-weight: 500; }
-.sitem { display: flex; gap: 12px; align-items: flex-start; width: 100%; text-align: left; border: 0; background: transparent; color: var(--ink); padding: 9px 10px; border-radius: 10px; cursor: pointer; font: inherit; transition: background .12s ease; }
-.sitem > svg { flex: none; margin-top: 3px; color: var(--ink3); }
-.sitem:hover, .sitem.on { background: var(--accent-soft); color: var(--accent-soft-ink); } .sitem.on > svg, .sitem:hover > svg { color: var(--accent); }
-.st { display: grid; gap: 1px; min-width: 0; } .st b { font-weight: 650; overflow-wrap: anywhere; } .ss { font-size: .82rem; color: var(--ink3); } .sm { font-size: .82rem; color: var(--ink2); overflow-wrap: anywhere; }
-.sitem.on .ss, .sitem:hover .ss { color: inherit; opacity: .8; }
-mark { background: color-mix(in srgb, var(--accent) 24%, var(--surface)); color: var(--ink); border-radius: 3px; padding: 0 1px; }
-.sempty { display: grid; gap: 4px; padding: 30px 18px; text-align: center; color: var(--ink2); } .sempty span { font-size: .88rem; color: var(--ink3); }
-.shint { display: flex; gap: 16px; padding: 8px 14px; border-top: 1px solid var(--line); color: var(--ink3); font-size: .76rem; }
+
+
+
+ 
+ 
+
+ 
+
+
+ 
+   
+
+
+ 
+
 kbd { font: 600 .72rem var(--font); border: 1px solid var(--line2); border-bottom-width: 2px; border-radius: 5px; padding: 1px 6px; background: var(--bg2); color: var(--ink2); margin-right: 3px; }
-@media (max-width: 720px) { .shint { display: none; } dialog.searchdlg { margin-top: 8px; width: 96vw; } .sbox { max-height: 88vh; max-height: 88dvh; } }
+
 
 /* loading + motion */
 .skel { display: grid; gap: 14px; padding-top: 6px; }
@@ -473,7 +473,7 @@ kbd { font: 600 .72rem var(--font); border: 1px solid var(--line2); border-botto
 #printSheet { display: none; }
 @media print {
   :root, :root[data-theme="dark"] { --bg: #fff; --bg2: #f4f4f4; --surface: #fff; --ink: #111; --ink2: #333; --ink3: #555; --line: #ccc; --line2: #bbb; --shadow: none; color-scheme: light; }
-  #progress, #toTop, #notice, #menuBtn, #searchBtn, #searchDlg { display: none !important; }
+  #progress, #toTop, #notice, #menuBtn, #searchBtn { display: none !important; }
   body.has-notice { padding-bottom: 0; }
   @page { margin: 14mm 14mm 16mm; }
   body.printing-recipe > *:not(#printSheet) { display: none !important; }
@@ -513,7 +513,7 @@ summary { cursor: pointer; } summary:hover { color: var(--accent); }
 /* logo: a steaming bowl */
 .logo { flex: none; display: inline-block; vertical-align: middle; }
 .brand .logo { transition: transform .2s ease; } .brand:hover .logo { transform: rotate(-12deg) scale(1.08); }
-.hero-logo { margin: 0 0 14px; } .about-h { display: flex; align-items: center; gap: 12px; } .brandmini { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; }
+.hero-logo { margin: 0 0 14px; }  .brandmini { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; }
 
 /* ===== UX pass: hit targets, progress, undo, menus ===== */
 .btn.sm { min-height: 36px; } .btn.icon.sm { width: 36px; } .chipbtn { min-height: 36px; } .seg button { min-height: 34px; } .linkbtn { padding: 6px 2px; }
@@ -550,12 +550,12 @@ summary { cursor: pointer; } summary:hover { color: var(--accent); }
 .moremenu .menu .btn { justify-content: flex-start; width: 100%; }
 .rmore { margin: 10px 0 0; } .rmore > .chips { margin-bottom: 8px; }
 /* release notes + license chunks */
-.release > summary { list-style: none; } .release > summary::-webkit-details-marker { display: none; } .release > summary h3 { display: inline; margin: 0; } .release > summary::before { content: '▸'; display: inline-block; width: 1.1em; color: var(--ink3); transition: transform .15s; } .release[open] > summary::before { transform: rotate(90deg); }
-.licbox { margin-top: 10px; } .licbox > summary { font-weight: 650; }
+    
+ 
 /* undo toast */
-.toast { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
-.toast .tundo { pointer-events: auto; flex: none; min-height: 36px; padding: 0 14px; border-radius: 8px; border: 1px solid color-mix(in srgb, var(--bg) 55%, transparent); background: transparent; color: var(--bg); font: 700 .85rem var(--font); cursor: pointer; }
-.toast .tundo:hover { background: color-mix(in srgb, var(--bg) 22%, transparent); } .toast .tundo:focus-visible { outline: 2px solid var(--bg); outline-offset: 2px; }
+
+
+ 
 /* grocery done */
 .gprog.complete { color: var(--accent-soft-ink); font-weight: 650; } .gprog.complete .bar span { background: var(--accent); }
 .note .btn svg { color: inherit; }
@@ -570,8 +570,8 @@ summary { cursor: pointer; } summary:hover { color: var(--accent); }
 .ritem.on .ru, .ritem.on .upd { color: var(--accent-soft-ink); }
 
 @media (max-width: 400px) { .mtable th, .mtable td { padding: 7px 4px; } .mtable { font-size: .84rem; } }
-.about-h { flex-wrap: wrap; overflow-wrap: anywhere; } .about-h svg { flex: none; }
-@media (max-width: 400px) { .about-h { font-size: 1.5rem; } }
+ 
+
 
 
 /* =====================================================================
@@ -592,7 +592,7 @@ code, kbd { border-radius: 3px; }
 .tile b, .kpi b, .tk b, .pctsum b, .done-kpis b, .table .num, .table td, .mtable td, .gamt, .stepper output, .target-strip b { font-variant-numeric: tabular-nums; }
 
 /* --- motion: no lifts, no bounce, no entrance choreography --- */
-.btn, .tab, .chipbtn, .seg button, .btype, .gcard, .feat, .ritem, .tile, .sitem, .totop, .radio, input, select, textarea {
+.btn, .tab, .chipbtn, .seg button, .btype, .gcard, .feat, .ritem, .tile, .totop, .radio, input, select, textarea {
   transition: background-color var(--ease), border-color var(--ease), color var(--ease), box-shadow var(--ease);
 }
 .btn:active, .tab:active, .totop:hover, .totop:active, .brand:hover .logo { transform: none; }
@@ -604,10 +604,10 @@ code, kbd { border-radius: 3px; }
 .linkbtn:hover { color: var(--accent-hover); }
 #view.view-in { animation: fadein .12s ease backwards; }
 .tiles > * { animation: none; }
-.toast { animation: fadein .12s ease; } .toast.out { transition: opacity .15s; }
+ 
 .notice { animation: fadein .15s ease; }
 .done-badge { animation: fadein .15s ease backwards; }
-body.menu-open #nav { animation: fadein .12s ease; }
+
 .moremenu .menu { animation: none; }
 .clbar span { transition: width .15s ease; }
 
@@ -633,7 +633,7 @@ body.menu-open #nav { animation: fadein .12s ease; }
   #nav { box-shadow: var(--shadow-pop); border-bottom-color: var(--line2); padding: 6px 8px 10px; }
   #nav .tab { border-radius: var(--r-sm); font-size: 15px; font-weight: 500; }
   #nav .tab.on, #nav .tab.on:hover { background: var(--accent-soft); color: var(--accent-soft-ink); font-weight: 600; box-shadow: inset 3px 0 0 var(--accent); }
-  body.menu-open::before { background: rgba(10, 12, 16, .4); }
+  
 }
 
 /* --- page structure --- */
@@ -662,7 +662,7 @@ main#view { padding-top: 20px; padding-bottom: 48px; }
 .btn[disabled], .btn[disabled]:hover { opacity: 1; background: var(--bg2); border-color: var(--line); color: var(--ink3); cursor: not-allowed; }
 .btn.primary[disabled], .btn.primary[disabled]:hover { background: color-mix(in srgb, var(--accent) 35%, var(--bg2)); border-color: transparent; color: color-mix(in srgb, var(--accent-ink) 85%, transparent); }
 .btn.left { border-radius: var(--r-sm); }
-.toast .tundo { border-radius: var(--r-sm); min-height: 32px; }
+
 
 /* toggle chips & segmented controls */
 .chip { border-radius: 3px; font-size: 11.5px; font-weight: 600; padding: 2px 7px; }
@@ -722,7 +722,7 @@ input::placeholder, textarea::placeholder { color: var(--ink3); opacity: .85; }
 .cbox { border-radius: var(--r-sm); width: 20px; height: 20px; }
 .gcheck .box { border-radius: var(--r-sm); }
 .gitem:hover { background: var(--hover-band); }
-.slot, .phead, .sgroup { font-size: 11px; font-weight: 600; }
+.slot, .phead{ font-size: 11px; font-weight: 600; }
 
 /* --- macro bars & progress: flat, squared --- */
 .dot { border-radius: 2px; }
@@ -772,17 +772,17 @@ dialog::backdrop { background: rgba(10, 12, 16, .45); backdrop-filter: none; -we
 .dlg-body { padding: 20px; }
 .dlg-head h3 { font-size: 17px; }
 .dlg-actions { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 16px; }
-.sbar { padding: 8px 14px; }
-.sitem { border-radius: var(--r-sm); padding: 8px 10px; }
-.sitem:hover, .sitem.on { box-shadow: inset 2px 0 0 var(--accent); }
+
+
+
 .moremenu .menu { border-radius: var(--r); box-shadow: var(--shadow-pop); padding: 4px; }
-.toast { border-radius: var(--r); box-shadow: var(--shadow-pop); font-size: 13.5px; }
+
 #tip { border-radius: var(--r-sm); }
 .totop { border-radius: var(--r); width: 40px; height: 40px; box-shadow: var(--shadow-pop); }
 .totop:hover { background: var(--bg2); color: var(--ink); border-color: var(--line2); box-shadow: var(--shadow-pop); }
 .notice { box-shadow: 0 -4px 16px rgba(20, 24, 31, .1); }
 .sk { border-radius: var(--r-sm); }
-mark { border-radius: 2px; }
+
 
 /* keep the original layouts that the .card padding reset above would flatten */
 .card.step { padding-left: 64px; } .stepno { left: 16px; top: 16px; }
@@ -805,7 +805,7 @@ mark { border-radius: 2px; }
    ===================================================================== */
 /* logo badge: --r square, accent fill, white bowl + gold steam (steam falls back to accent-ink in dark, where gold on light blue disappears) */
 .logo { display: inline-grid; place-items: center; flex: none; width: 28px; height: 28px; border-radius: var(--r); background: var(--accent); color: var(--accent-ink); vertical-align: middle; }
-.logo > svg, :is(.brand, .brandmini, .about-h, .hero-logo, .wiz-top) .logo > svg { width: 64%; height: 64%; display: block; color: inherit; }
+.logo > svg, :is(.brand, .brandmini, .hero-logo, .wiz-top) .logo > svg { width: 64%; height: 64%; display: block; color: inherit; }
 .brand .logo, .brand:hover .logo { transform: none; transition: none; }
 .hero-logo .logo { border-radius: 8px; }
 
@@ -849,28 +849,28 @@ mark { border-radius: 2px; }
 :root[data-theme="dark"] .chip.type { color: var(--ink2); } :root[data-theme="dark"] .chip.prep { color: var(--accent-soft-ink); }
 
 /* phone bottom nav + "More" sheet (v3: same <768px breakpoint as the sidebar) */
-.bnav, .bn-sheet { display: none; }
+.bnav{ display: none; }
 @media (max-width: 767px) {
   :root { --bnav-h: calc(55px + env(safe-area-inset-bottom)); }
   body[data-view="setup"] { --bnav-h: 0px; }
   body, body.has-notice { padding-bottom: calc(var(--bnav-h, 0px) + var(--notice-h, 0px)); }
-  #nav, body.menu-open #nav { display: none !important; }
+  #nav{ display: none !important; }
   .bnav { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 35; background: var(--surface); border-top: 1px solid var(--line2); padding: 0 max(4px, env(safe-area-inset-right)) env(safe-area-inset-bottom) max(4px, env(safe-area-inset-left)); gap: 2px; }
-  body[data-view="setup"] .bnav, body[data-view="setup"] .bn-sheet { display: none; }
+  body[data-view="setup"] .bnav{ display: none; }
   .bnav > a, .bnav > button { position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 54px; padding: 6px 2px 4px; border: 0; border-radius: 0; background: none; color: var(--ink2); font: 500 11px var(--font); letter-spacing: -.01em; text-decoration: none; cursor: pointer; transition: background-color var(--ease), color var(--ease); }
   .bnav > a:hover, .bnav > button:hover { background: var(--bg2); color: var(--ink); }
   .bnav > .on, .bnav > .on:hover { color: var(--accent); font-weight: 600; background: none; box-shadow: inset 0 2px 0 var(--accent); }
   .bnav > a:focus-visible, .bnav > button:focus-visible { outline-offset: -3px; border-radius: 0; }
-  .bn-sheet { display: grid; gap: 2px; position: fixed; left: 8px; right: 8px; bottom: calc(var(--bnav-h) + 8px); z-index: 36; padding: 4px; background: var(--surface); border: 1px solid var(--line2); border-radius: var(--r); box-shadow: var(--shadow-pop); max-height: calc(100dvh - var(--bnav-h) - 80px); overflow-y: auto; }
-  .bn-sheet[hidden] { display: none; }
-  .bn-item { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 48px; padding: 0 12px; border: 0; border-radius: var(--r-sm); background: none; color: var(--ink); font: 500 15px var(--font); text-align: left; text-decoration: none; cursor: pointer; }
-  .bn-item:hover { background: var(--bg2); }
-  .bn-item .ic { color: var(--ink3); }
-  .bn-item.on, .bn-item.on:hover { background: var(--accent-soft); color: var(--accent-soft-ink); font-weight: 600; box-shadow: inset 3px 0 0 var(--accent); }
-  .bn-item.on .ic { color: var(--accent); }
-  body.menu-open::before { z-index: 34; }
+  
+  
+  
+  
+  
+  
+  
+  
   .notice { bottom: var(--bnav-h); }
-  #toasts, body.has-notice #toasts { bottom: calc(14px + var(--bnav-h) + var(--notice-h, 0px)); }
+  
   .totop { bottom: calc(14px + var(--bnav-h) + var(--notice-h, 0px)); }
   /* compact app bar: logo + name, then actions */
   #appbar { flex-wrap: nowrap; gap: 8px; padding-block: 6px; }
@@ -885,7 +885,7 @@ mark { border-radius: 2px; }
 @media (max-width: 1180px) and (min-width: 721px) { #appbar { flex-wrap: wrap; row-gap: 0; } #nav { order: 3; flex-basis: 100%; border-top: 1px solid var(--line); } }
 @media (max-width: 1180px) { .bar-actions { margin-left: auto; } }
 @media (max-width: 960px) and (min-width: 561px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media print { .bnav, .bn-sheet, #bkChip, #dataMenu { display: none !important; } }
+@media print { .bnav, #bkChip, #dataMenu { display: none !important; } }
 
 /* recipe list rows: one fixed layout so every label has a home */
 .ritem { display: grid; gap: 5px; padding: 10px 12px 10px 13px; }
@@ -921,8 +921,8 @@ mark { border-radius: 2px; }
 }
 
 /* text links and text buttons: plain ink text, quiet neutral underline (coral stays on fills, borders and active states) */
-main a:not(.btn):not(.tab):not(.skip):not(.bn-item):not(.mb-foot-links a), main a.small, .linkbtn, .notice a:not(.btn), a.dm-more, a.addmeal, label a { color: var(--ink); font-weight: inherit; text-decoration: underline; text-decoration-color: var(--line2); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-main a:not(.btn):not(.tab):not(.skip):not(.bn-item):not(.mb-foot-links a):hover, main a.small:hover, .linkbtn:hover, .notice a:not(.btn):hover, a.dm-more:hover, a.addmeal:hover, label a:hover { color: var(--ink); text-decoration-color: var(--ink); filter: none; }
+main a:not(.btn):not(.tab):not(.skip):not(.bn-item):not(.tile):not(.mb-foot-links a), main a.small, .linkbtn, .notice a:not(.btn), a.dm-more, a.addmeal, label a { color: var(--ink); font-weight: inherit; text-decoration: underline; text-decoration-color: var(--line2); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+main a:not(.btn):not(.tab):not(.skip):not(.bn-item):not(.tile):not(.mb-foot-links a):hover, main a.small:hover, .linkbtn:hover, .notice a:not(.btn):hover, a.dm-more:hover, a.addmeal:hover, label a:hover { color: var(--ink); text-decoration-color: var(--ink); filter: none; }
 summary:hover { color: var(--ink); }
 /* ==========================================================================
    BETA 4.3: swap button, costs, prices dialog, prep page, leftovers, new week
@@ -1035,9 +1035,9 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--a
 /* ---------- overlays ---------- */
 dialog { border-radius: 24px; box-shadow: var(--shadow-pop); border: 1px solid var(--line); }
 dialog::backdrop { background: rgba(30, 12, 6, .55); backdrop-filter: blur(5px); }
-.toast { border-radius: var(--r); background: color-mix(in srgb, var(--ink) 94%, transparent); backdrop-filter: blur(10px); }
+
 .moremenu .menu { border-radius: var(--r); box-shadow: var(--shadow-pop); padding: 6px; }
-.sitem { border-radius: var(--r-sm); } .sitem:hover, .sitem.on { background: var(--grad-soft); }
+ 
 .totop { border-radius: var(--r); }
 .notice { background: var(--glass); backdrop-filter: blur(14px) saturate(1.4); border-top-color: var(--line); }
 
@@ -1070,16 +1070,15 @@ dialog::backdrop { background: rgba(30, 12, 6, .55); backdrop-filter: blur(5px);
   .bnav > a:hover, .bnav > button:hover { background: var(--bg2); }
   .bnav > .on, .bnav > .on:hover { background: var(--grad-soft); color: var(--accent-soft-ink); box-shadow: inset 0 0 0 1px var(--accent-line); }
   .bnav > .on svg { color: var(--accent); }
-  .bn-sheet { border-radius: 22px; left: 12px; right: 12px; padding: 5px; box-shadow: var(--shadow-pop); }
-  .bn-item { border-radius: 14px; } .bn-item.on, .bn-item.on:hover { background: var(--grad-soft); box-shadow: inset 0 0 0 1px var(--accent-line); }
+  
+   
   
 }
 @media (prefers-reduced-motion: reduce) { .tile:hover, .btn.primary:hover { transform: none; } }
 @media print { html::before { display: none; } html { background: #fff; } body { padding-left: 0 !important; } main#view { max-width: none; padding: 0; } .logo { box-shadow: none; } }
-/* tiles are links: keep text color and drop the link underline */
-main a.tile:not(.btn):not(.tab):not(.skip):not(.bn-item) { color: var(--ink); text-decoration: none; }
-main a.tile:first-child:not(.btn):not(.tab):not(.skip):not(.bn-item) { color: var(--hero-ink); }
-main a.tile span, main a.tile small, main a.tile b i { text-decoration: none; }
+/* Home stat tiles are links: no link underline (the text-link rule above skips .tile); hover = border + lift, keyboard = the standard focus ring */
+main a.tile { color: var(--ink); text-decoration: none; }
+main a.tile:first-child { color: var(--hero-ink); }
 @media (min-width: 900px) { .prow { grid-template-columns: 104px repeat(var(--cols), minmax(132px, 1fr)) minmax(182px, 1.05fr); } }
 @media (max-width: 720px) { .seg { display: flex; width: 100%; } .seg button { flex: 1 1 0; padding: 7px 8px; font-size: 12.5px; } }
 
@@ -1251,10 +1250,10 @@ input,select,textarea{border-color:var(--border-strong)}
 /* overlays */
 dialog{border-radius:var(--r-lg);box-shadow:var(--shadow-pop);border:1px solid var(--border)}
 dialog::backdrop{background:var(--scrim);backdrop-filter:none;-webkit-backdrop-filter:none}
-.toast{border-radius:var(--r);background:var(--ink);color:var(--surface);backdrop-filter:none}
-:root[data-theme="dark"] .toast{background:#2d3238;color:var(--ink)}
+
+
 .moremenu .menu{border-radius:var(--r);padding:4px}
-.sitem{border-radius:var(--r-sm)} .sitem:hover,.sitem.on{background:var(--surface-2);box-shadow:inset 2px 0 0 var(--accent)}
+ 
 .totop{border-radius:var(--r)}
 .notice{background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none;border-top:1px solid var(--border-strong)}
 
@@ -1297,8 +1296,8 @@ dialog::backdrop{background:var(--scrim);backdrop-filter:none;-webkit-backdrop-f
   .bnav>a,.bnav>button{min-height:56px;border-radius:0}
   .bnav>a:hover,.bnav>button:hover{background:var(--surface-2)}
   .bnav>.on,.bnav>.on:hover{background:none;color:var(--accent);box-shadow:inset 0 2px 0 var(--accent)}
-  .bn-sheet{border-radius:var(--r);left:8px;right:8px}
-  .bn-item{border-radius:var(--r-sm)} .bn-item.on,.bn-item.on:hover{background:var(--surface-2);box-shadow:inset 3px 0 0 var(--accent)}
+  
+   
 }
 @media print{body::before{display:none}}
 /* page width: same container as the Money app (1280px, 16px gutters on every screen size) */
@@ -1386,7 +1385,7 @@ body{background:none}
 .cu-art .b{fill:var(--cu-b,var(--cut-butter))}
 .cu-art .r{fill:var(--cu-r,var(--cut-blush))}
 .cu-art .sd{fill:none;stroke:var(--cu-d,var(--cut-deep));stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
-.cu-art .sm{fill:none;stroke:var(--cu-m,var(--cut-mid));stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+
 
 /* ---- palettes: put on the svg or any ancestor ---- */
 .cu-p-mono{--cu-n:color-mix(in srgb,var(--accent) 78%,#000);--cu-b:color-mix(in srgb,var(--accent) 14%,var(--surface));--cu-r:color-mix(in srgb,var(--accent) 38%,var(--surface))}
@@ -1635,13 +1634,13 @@ body[data-view="setup"] .notice{left:0}
 .hero-wreath{position:relative;width:150px;margin:0 0 10px}
 .hero-wreath .cu-art{width:100%}
 .hero-wreath .logo{position:absolute;inset:0;margin:auto;width:52px!important;height:52px!important}
-.empty-art{width:120px;margin:0 auto 4px}
+
 /* setup header on small phones: keep Skip setup on screen (it overflowed at 390px) */
 .wiz-top{gap:8px}
 .wiz-acts{display:flex;gap:8px;justify-content:flex-end;margin-left:auto}
 @media (max-width:520px){.wiz-top .brandmini{display:none}}
 @media (max-width:440px){.wiz-top .brandmini .beta{display:none}}
-.empty-art .cu-art{width:100%}
+
 @media print{.page-bar,.mb-shell::before{display:none!important}body.mb-shell{padding:0!important}}
 /* v1.4 page toolbar: heading + intro, then one row of actions under it.
    Primary first (accent), the rest equal-height outline buttons with icon + label, destructive (red text) at the right end.
@@ -1721,8 +1720,8 @@ body.wiz-open{overflow:hidden}
 .mb-set .fmt > summary{cursor:pointer;font-size:13.5px;font-weight:600;min-height:28px;display:flex;align-items:center}
 .mb-set .fmt[open] > summary{margin-bottom:8px}
 .mb-set .mb-about{margin-top:0}
-.inst-note{display:none;margin:0;font-size:13px;color:var(--ink-2)}
-[data-mb-install][hidden] + .inst-note{display:block}
+
+
 @media (max-width:767px){ .mb-set .chips{justify-content:flex-start} .mb-set .set-in{width:100%} }
 /* chart labels: one floating label for every chart mark (week bars, macro bars, macro rings, progress bars) */
 .ctip{position:fixed;z-index:1100;pointer-events:none;display:flex;flex-direction:column;gap:1px;max-width:260px;padding:6px 10px;background:var(--surface);color:var(--ink);
@@ -1747,6 +1746,36 @@ body.wiz-open{overflow:hidden}
 .donut .seg{transition:opacity .12s ease}
 .donut:has(.tipon) .seg:not(.tipon){opacity:.25}
 .donut{outline:none;border-radius:50%}
+/* 1.8: a very long recipe name (even with no spaces) wraps instead of widening the phone layout */
+.today li{grid-template-columns:90px minmax(0,1fr) auto}
+.today li > *,.picks li > *,.rd-head > *,details.prepr > summary > *,.note > span{min-width:0}
+.today a,.picks a,.rd-head h2,details.prepr > summary b,.note > span{overflow-wrap:anywhere}
+@media (max-width:720px){.today li{grid-template-columns:minmax(0,1fr)}}
+
+/* Help (2026-10-17b): getting started, then questions grouped by topic */
+.help-h{margin:22px 0 8px;font-size:12px;font-weight:650;letter-spacing:.06em;text-transform:uppercase;color:var(--muted,var(--ink3))}
+.help-start ol{margin:0;padding-left:1.3em}.help-start li{margin:.3em 0}
+.help-faq{padding:0 16px}
+.help-q{border-bottom:1px solid var(--border,var(--line))}
+.help-q:last-child{border-bottom:0}
+.help-q>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;padding:10px 0;cursor:pointer;font-weight:600;color:var(--ink);list-style:none}
+.help-q>summary::-webkit-details-marker{display:none}
+.help-q>summary::after{content:"";flex:none;width:8px;height:8px;margin-right:4px;border-right:2px solid var(--muted,var(--ink3));border-bottom:2px solid var(--muted,var(--ink3));transform:rotate(45deg) translateY(-2px);transition:transform .15s}
+.help-q[open]>summary::after{transform:rotate(-135deg) translateY(-2px);border-color:var(--accent)}
+.help-q>summary:hover{color:var(--accent)}
+.help-q>summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:var(--r-sm)}
+.help-a{padding:0 0 14px;color:var(--ink-2,var(--ink2));overflow-wrap:anywhere}
+.help-a p{margin:0 0 8px}.help-a p:last-child{margin:0}
+.help-links{display:flex;flex-wrap:wrap;gap:8px;padding:12px 0 14px;border-top:1px solid var(--border,var(--line))}
+/* Settings › Install (one wording in every app) */
+.inst-box{display:flex;flex-direction:column;align-items:flex-start;gap:10px;padding:14px 16px}
+.inst-box p{margin:0;color:var(--ink-2,var(--ink2))}
+/* charts (2026-10-17b): accent + ochre + slate, no rainbow. Protein = the accent, carbs = slate grey, fats = ochre */
+:root{--p:var(--accent);--c:#6b7684;--f:#C98A1B}
+:root[data-theme="dark"]{--p:var(--accent);--c:#8a94a1;--f:#d9a24a}
+/* empty screens (MBUI.empty) + their secondary buttons */
+.mb-empty-host{padding:0}
+.empty-more{margin-top:12px;gap:8px;flex-wrap:wrap}
 </style>
 <link rel="stylesheet" href="mb-suite-topbar.css">
 
@@ -1756,13 +1785,13 @@ body.wiz-open{overflow:hidden}
 <body class="mb-shell">
 <a class="skip" href="#view">Skip to content</a>
 <aside class="mb-side" id="side" aria-label="App">
-  <a class="brand" href="#/home" aria-label="Meal Prep (mealprep.mcbflow.com): go to Home"><span class="logo"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><linearGradient id="sb-g" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#e46a58"/><stop offset=".55" stop-color="#E0523D"/><stop offset="1" stop-color="#b34231"/></linearGradient><clipPath id="sb-c"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#sb-c)"><rect width="64" height="64" fill="url(#sb-g)"/><rect x="14.5" y="18.5" width="35" height="27" rx="4" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 33,19 V 45 M 33,32 H 49" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><rect x="16.151796" y="19.755266" width="15.855019" height="24.410162" rx="1.8294252" fill="#ffffff" fill-opacity="0.55" style="stroke-width:1.19065"/></g></svg></span><span class="bt"><b>Meal Prep<i class="tld"><span class="sep" aria-hidden="true">∙</span>mcbflow.com</i></b><span>Official Web App · v1.7</span></span></a>
+  <a class="brand" href="#/home" aria-label="Meal Prep (mealprep.mcbflow.com): go to Home"><span class="logo"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><linearGradient id="sb-g" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#e46a58"/><stop offset=".55" stop-color="#E0523D"/><stop offset="1" stop-color="#b34231"/></linearGradient><clipPath id="sb-c"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#sb-c)"><rect width="64" height="64" fill="url(#sb-g)"/><rect x="14.5" y="18.5" width="35" height="27" rx="4" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 33,19 V 45 M 33,32 H 49" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><rect x="16.151796" y="19.755266" width="15.855019" height="24.410162" rx="1.8294252" fill="#ffffff" fill-opacity="0.55" style="stroke-width:1.19065"/></g></svg></span><span class="bt"><b>Meal Prep<i class="tld"><span class="sep" aria-hidden="true">∙</span>mcbflow.com</i></b><span>Official Web App · v1.9</span></span></a>
   <nav class="side-nav" id="sideNav" aria-label="Sections"></nav>
   <nav class="side-nav side-end" id="sideEnd" aria-label="Settings and help"></nav>
 </aside>
 <div class="mb-main">
 <header class="page-bar" id="pagebar">
-  <a class="brand phone-brand" href="#/home" aria-label="Meal Prep (mealprep.mcbflow.com): go to Home"><span class="logo"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><linearGradient id="pb-g" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#e46a58"/><stop offset=".55" stop-color="#E0523D"/><stop offset="1" stop-color="#b34231"/></linearGradient><clipPath id="pb-c"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#pb-c)"><rect width="64" height="64" fill="url(#pb-g)"/><rect x="14.5" y="18.5" width="35" height="27" rx="4" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 33,19 V 45 M 33,32 H 49" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><rect x="16.151796" y="19.755266" width="15.855019" height="24.410162" rx="1.8294252" fill="#ffffff" fill-opacity="0.55" style="stroke-width:1.19065"/></g></svg></span><span class="bt"><b>Meal Prep<i class="tld"><span class="sep" aria-hidden="true">∙</span>mcbflow.com</i></b><span>Official Web App · v1.7</span></span></a>
+  <a class="brand phone-brand" href="#/home" aria-label="Meal Prep (mealprep.mcbflow.com): go to Home"><span class="logo"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><linearGradient id="pb-g" gradientUnits="userSpaceOnUse" x1="10" y1="0" x2="54" y2="64"><stop offset="0" stop-color="#e46a58"/><stop offset=".55" stop-color="#E0523D"/><stop offset="1" stop-color="#b34231"/></linearGradient><clipPath id="pb-c"><rect width="64" height="64" rx="18"/></clipPath></defs><g clip-path="url(#pb-c)"><rect width="64" height="64" fill="url(#pb-g)"/><rect x="14.5" y="18.5" width="35" height="27" rx="4" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M 33,19 V 45 M 33,32 H 49" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/><rect x="16.151796" y="19.755266" width="15.855019" height="24.410162" rx="1.8294252" fill="#ffffff" fill-opacity="0.55" style="stroke-width:1.19065"/></g></svg></span><span class="bt"><b>Meal Prep<i class="tld"><span class="sep" aria-hidden="true">∙</span>mcbflow.com</i></b><span>Official Web App · v1.9</span></span></a>
   <p class="page-title" id="pageTitle" aria-hidden="true">Home</p>
   <div class="actions bar-actions">
     <button id="searchBtn" type="button" class="tb tb-search" data-act="openSearch" aria-label="Search the site" aria-keyshortcuts="Control+K Meta+K /"></button>
@@ -1782,16 +1811,14 @@ body.wiz-open{overflow:hidden}
 <div id="printSheet" aria-hidden="true"></div>
 <button id="toTop" class="totop" data-act="toTop" aria-label="Back to top" hidden></button>
 <nav id="bnav" class="bnav" aria-label="Sections"></nav>
-<div id="bnSheet" class="bn-sheet" role="region" aria-label="More pages" hidden></div>
 <input type="file" id="impAny" accept=".json,.csv,.tsv,.txt,.zip,application/json,text/csv,application/zip" hidden data-change="impAny">
 <div class="mbw" id="welcome" role="dialog" aria-modal="true" aria-labelledby="mbwTitle" hidden></div>
 <datalist id="ingList"></datalist><datalist id="unitList"></datalist>
 <dialog id="dlg"></dialog>
-<dialog id="searchDlg" class="searchdlg" aria-label="Search"></dialog>
-<div id="toasts" aria-live="polite"></div>
 <div id="tip" role="tooltip" hidden></div>
 <script src="mb-sync.js"></script>
 <script src="mb-files.js"></script>
+<script src="mb-ui.js"></script>
 <script>
 'use strict';
 
@@ -2178,17 +2205,9 @@ const fmtDec = n => (n === null || n === undefined || !Number.isFinite(n)) ? '' 
 /* ---- debounce / toast / download / clipboard ---- */
 function debounce(fn, ms = 250) { let t; const d = (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; d.flush = (...a) => { clearTimeout(t); fn(...a); }; return d; }
 
-function toast(msg, kind = '', act = null) {
-  const box = $('#toasts'); if (!box) return;
-  if (act) $$('#toasts .tundo').forEach(b => b.remove());          // only the latest action can be undone
-  const t = document.createElement('div');
-  t.className = 'toast ' + kind; t.setAttribute('role', 'status');
-  const m = document.createElement('span'); m.textContent = msg; t.appendChild(m);
-  if (act) { const b = document.createElement('button'); b.type = 'button'; b.className = 'tundo'; b.textContent = act.label; b.addEventListener('click', () => { t.remove(); act.fn(); }); t.appendChild(b); }
-  box.appendChild(t);
-  const ms = act ? 9000 : 3200;
-  setTimeout(() => t.classList.add('out'), ms);
-  setTimeout(() => t.remove(), ms + 500);
+function toast(msg, kind = '', act = null) {   // every transient message goes through the shared MBUI.toast (plain text, one action)
+  const tmp = document.createElement('div'); tmp.innerHTML = String(msg == null ? '' : msg);
+  return MBUI.toast(tmp.textContent, act ? { action: { label: act.label, fn: act.fn } } : {});
 }
 function downloadText(filename, text, mime = 'text/csv;charset=utf-8') {
   const blob = new Blob([text], { type: mime });
@@ -3002,7 +3021,8 @@ zip-top bags|box`;
    Reference data: units, sections, days, ingredient library helpers
    ========================================================================== */
 const DEMO_UPDATED = '2026-09-20T12:00:00.000Z';
-const APP = { name: 'mealprep.mcbflow.com', short: 'Meal Prep', formerName: 'The Pantry Partner', version: 'v1.7 · Web app', year: 2026, released: '2026-10-16' };
+const APP = { name: 'mealprep.mcbflow.com', short: 'Meal Prep', formerName: 'The Pantry Partner', version: 'v1.9 · Web app', year: 2026, released: '2026-10-17' };
+const APP_VER = '1.9';
 
 /* Optional support links (leave blank to hide the buttons) */
 const CONFIG = { issueUrl: '', supportUrl: '', siteUrl: '' };
@@ -4094,7 +4114,7 @@ function autoPlan({ rebuild = false, variety = 3, only = 'all', days: daySel = n
   const pools = {}; for (const ty of MEAL_TYPES) pools[ty] = pool(ty);
   const usable = slots.filter(s => pools[slotType(s)].length);
   const missing = slots.filter(s => !pools[slotType(s)].length && s !== 'Snacks');
-  if (!usable.length) return { error: 'Add some recipes first, or load the demo recipes.' };
+  if (!usable.length) return { error: 'Add some recipes first, or load the sample data.' };
   /* cost per serving for recipes you have priced; unpriced ones count as the average so they are not treated as free */
   const cost = new Map(); let csum = 0;
   for (const r of state.recipes) { const c = recipeCost(r); if (c.any) { cost.set(r.id, c.perServ); csum += c.perServ; } }
@@ -4214,6 +4234,7 @@ const MORE_SVG = '<svg class="uic ic" viewBox="0 0 24 24" width="18" height="18"
    sections on top and Settings / Help pinned to the bottom. Phones: bottom bar with Home + 3 main pages
    + More (a sheet with Settings first, then the rest). The current page is marked with aria-current="page" everywhere. */
 const BNAV_ORDER = ['home', 'recipes', 'planner', 'grocery', 'prep', 'goals', 'ingredients'];
+let MORE_ITEMS = [];
 const SIDE_END = ['settings', 'help'];
 function renderHeader() {
   const nav = NAV.filter(n => !n.feat || featureOn(n.feat));
@@ -4226,12 +4247,10 @@ function renderHeader() {
   const prim = BNAV_ORDER.map(id => nav.find(n => n.id === id)).filter(Boolean).slice(0, 4);
   const rest = ['settings'].concat(nav.filter(n => !prim.includes(n) && n.id !== 'settings').map(n => n.id)).map(id => NAV.find(n => n.id === id));
   const moreOn = !prim.some(n => n.id === route.name);
-  const open = document.body.classList.contains('menu-open');
   const bn = $('#bnav');
   if (bn) bn.innerHTML = prim.map(n => `<a href="#/${n.id}"${cur(n.id)}>${navIcon(n.icon)}<span>${n.label}</span></a>`).join('') +
-    `<button type="button" id="bnMore" class="${moreOn ? 'on' : ''}" data-act="menu" aria-expanded="${open}" aria-controls="bnSheet">${MORE_SVG}<span>More</span></button>`;
-  const sh = $('#bnSheet');
-  if (sh) sh.innerHTML = rest.map(n => `<a href="#/${n.id}" class="bn-item${route.name === n.id ? ' on' : ''}"${cur(n.id)}>${navIcon(n.icon)}<span>${n.label}</span></a>`).join('');
+    `<button type="button" id="bnMore" class="${moreOn ? 'on' : ''}" data-act="menu" aria-haspopup="dialog" aria-expanded="false"${moreOn ? ' aria-current="page"' : ''}>${MORE_SVG}<span>More</span></button>`;
+  MORE_ITEMS = rest.filter(n => n.id !== 'help').concat(NAV.filter(n => n.id === 'help'));   // Settings, the other views in sidebar order, Help (What's new is added last)
   renderBackupUI();
 }
 
@@ -4250,7 +4269,7 @@ function restoreFocus(root, key, sel) {
 /* One footer component, last thing in every view except Settings (MB Suite v3.3) */
 function footerHTML() {
   return `<footer class="mb-foot">
-    <p class="mb-foot-main"><b>Meal Prep</b> v1.7 · Free · No account needed</p>
+    <p class="mb-foot-main"><b>Meal Prep</b> v${APP_VER} · Free · No account needed</p>
     <nav class="mb-foot-links" aria-label="About Meal Prep"><button type="button" data-act="whatsNew">What’s new</button><a href="#/privacy">Privacy</a><a href="#/terms">Terms</a><a href="https://mcbflow.com/">More free apps</a></nav>
     <p class="mb-foot-copy">© 2024–2026 Matthew Broyer</p>
     <p class="mb-foot-note">Not medical or nutrition advice.</p></footer>`;
@@ -4265,6 +4284,7 @@ function renderApp(scrollTop) {
   renderHeader();
   const v = VIEWS[route.name];
   view.innerHTML = v.render() + (route.name === 'settings' ? '' : footerHTML());
+  fillEmpties(view);
   if (v.after) v.after();
   MBInstall.render();
   if (scrollTop) window.scrollTo(0, 0); else window.scrollTo(0, y);
@@ -4294,11 +4314,6 @@ document.addEventListener('click', e => {
 });
 document.addEventListener('change', e => { const el = e.target.closest('[data-change]'); if (el && CHANGES[el.dataset.change]) CHANGES[el.dataset.change](el, e); });
 document.addEventListener('input', e => { const el = e.target.closest('[data-input]'); if (el && INPUTS[el.dataset.input]) INPUTS[el.dataset.input](el, e); });
-document.addEventListener('keydown', e => {
-  if (e.key === '/' && !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName) && !$('#dlg').open) {
-    const s = $('[data-search]'); if (s) { e.preventDefault(); s.focus(); }
-  }
-});
 
 /* ---- tooltip (hover/focus) ---- */
 (function tip() {
@@ -4375,7 +4390,10 @@ function fitChip(score) {
   const s = Math.round(score), k = s >= 90 ? 'good' : s >= 80 ? 'ok' : 'low';
   return `<span class="chip fit ${k}" data-tip="How closely this recipe's protein/carb/fat split matches your target split">${icon(k === 'good' ? 'check' : k === 'ok' ? 'target' : 'alert', 'sm')}${s}% fit</span>`;
 }
-function emptyState(title, body, actions = '') { return `<div class="empty"><div class="empty-art">${NA_SEED_SVG}</div><h3>${esc(title)}</h3><p>${body}</p><div class="row center">${actions}</div></div>`; }
+/* Empty screens (MBUI.empty): the view's HTML leaves a placeholder, renderApp() fills it. `more` = extra secondary buttons under it. */
+const EMPTIES = [];
+function emptyState(title, text, action, more = '') { const i = EMPTIES.push({ title, text, action }) - 1; return `<div class="card mb-empty-host" data-empty="${i}"></div>${more ? `<div class="row center empty-more">${more}</div>` : ''}`; }
+function fillEmpties(root) { root.querySelectorAll('[data-empty]').forEach(el => { const o = EMPTIES[+el.dataset.empty]; if (o) MBUI.empty(el, o); }); EMPTIES.length = 0; }
 
 /* Original body-type silhouettes (simple geometric figures) */
 function bodySVG(kind) {
@@ -4566,7 +4584,7 @@ const wic = (n, sz = 16) => `<svg class="uic" viewBox="0 0 24 24" width="${sz}" 
 ui.wiz = { open: false, step: 0, rerun: false, focus: false };
 function openWizard(rerun) {
   ui.wiz = { open: true, step: 0, rerun: !!rerun, focus: true, opener: rerun ? document.activeElement : null };
-  setMenu(false); closeMenus();
+  closeMenus();
 }
 function closeWizard() {
   const op = ui.wiz.opener; ui.wiz = { open: false, step: 0, rerun: false, focus: false };
@@ -4609,14 +4627,14 @@ function wizBody(id) {
       <button type="button" class="mbw-choice" data-act="cookStyle" data-k="batch" aria-pressed="${S.cookStyle === 'batch'}"><span><b>Batch prep</b><small>Cook big batches once or twice a week and eat leftovers. The grocery list rounds up to whole batches.</small></span></button>
       <button type="button" class="mbw-choice" data-act="cookStyle" data-k="fresh" aria-pressed="${S.cookStyle === 'fresh'}"><span><b>Cook fresh</b><small>Cook most meals as you go. The grocery list uses the exact amounts you plan.</small></span></button></div>
     <label class="mbw-field"><span>Your week starts on</span><select data-change="weekStart" data-fid="w-ws">${optionsHTML(DAYS.map(d => [d, d]), S.weekStart)}</select></label>
-    ${state.recipes.length ? '' : `<p class="mbw-q" id="wStartQ">Starter recipes</p><div class="mbw-choices" role="group" aria-labelledby="wStartQ"><button type="button" class="mbw-choice" data-act="starter" data-k="empty" aria-pressed="${ui.starter !== 'demo'}"><span><b>Start with a blank library</b><small>Add your own recipes, or import a backup.</small></span></button>
-      <button type="button" class="mbw-choice" data-act="starter" data-k="demo" aria-pressed="${ui.starter === 'demo'}"><span><b>Add ${DEMO_RECIPES.length} demo recipes</b><small>Try the whole app with demo recipes. Remove them in one click.</small></span></button></div>`}
+    ${state.recipes.length ? '' : `<p class="mbw-q" id="wStartQ">Starter recipes</p><div class="mbw-choices" role="group" aria-labelledby="wStartQ"><button type="button" class="mbw-choice" data-act="starter" data-k="empty" aria-pressed="${ui.starter !== 'demo'}"><span><b>Start empty</b><small>Add your own recipes, or import a backup.</small></span></button>
+      <button type="button" class="mbw-choice" data-act="starter" data-k="demo" aria-pressed="${ui.starter === 'demo'}"><span><b>Start with sample data</b><small>Try the whole app with ${DEMO_RECIPES.length} sample recipes. Remove them in one click.</small></span></button></div>`}
     <details class="mbw-sum"><summary>Review your setup</summary><div id="setupSummary">${setupSummaryHTML()}</div></details>
     <div class="mbw-alt"><span>Moving from another device?</span>${SYNC ? `<button class="mbw-btn sm" type="button" data-act="wizSignIn">${wic('sync')}Sign in to sync</button>` : ''}<button class="mbw-btn sm" type="button" data-act="wizImport">${wic('upload')}Import a backup</button></div>`;
 }
 function renderWizard() {
   const W = $('#welcome'); if (!W) return;
-  const bg = ['#side', '.mb-main', '#bnav', '#bnSheet', '.skip', '#toTop'].map(q => $(q)).filter(Boolean);
+  const bg = ['#side', '.mb-main', '#bnav', '.skip', '#toTop'].map(q => $(q)).filter(Boolean);
   if (!ui.wiz.open) {
     if (!W.hidden || W.innerHTML) { W.hidden = true; W.innerHTML = ''; bg.forEach(e => { e.inert = false; }); document.body.classList.remove('wiz-open'); }
     return;
@@ -4695,7 +4713,6 @@ const plannedCount = () => { let n = 0; for (const d of DAYS) for (const s of ac
 const CU_BANNER_SVG = `<svg class="cu-art" viewBox="0 0 300 160" preserveAspectRatio="xMaxYMax slice" aria-hidden="true" focusable="false"><path class="m" transform="translate(300 160) rotate(-150) scale(1.2)" d="M0 0 C 6 -34 50 -46 72 -4 C 58 34 8 38 0 0Z"/><path class="d" transform="translate(200 156) rotate(-70) scale(0.6)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><path class="m" transform="translate(192 154) rotate(-118) scale(0.5)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="r" cx="290" cy="92" r="26"/><circle class="n" cx="238" cy="118" r="34"/><path class="b" d="M239.9 119.7 L266.1 127.2 A27.2 27.2 0 0 1 250.1 145Z"/><path class="b" d="M237.5 120.5 L244 146.9 A27.2 27.2 0 0 1 220.7 142Z"/><path class="b" d="M235.5 118.8 L216 137.7 A27.2 27.2 0 0 1 208.6 115Z"/><path class="b" d="M236.1 116.3 L209.9 108.8 A27.2 27.2 0 0 1 225.9 91Z"/><path class="b" d="M238.5 115.5 L232 89.1 A27.2 27.2 0 0 1 255.3 94Z"/><path class="b" d="M240.5 117.2 L260 98.3 A27.2 27.2 0 0 1 267.4 121Z"/><circle class="s" cx="238" cy="118" r="4.1"/><circle class="d" cx="286" cy="136" r="20"/><circle class="b" cx="162" cy="142" r="18"/><path class="s" d="M163.3 144.3 L175.2 152.3 A14.4 14.4 0 0 1 164.3 158.6Z"/><path class="s" d="M160.7 144.3 L159.7 158.6 A14.4 14.4 0 0 1 148.8 152.3Z"/><path class="s" d="M159.4 142 L146.5 148.3 A14.4 14.4 0 0 1 146.5 135.7Z"/><path class="s" d="M160.7 139.7 L148.8 131.7 A14.4 14.4 0 0 1 159.7 125.4Z"/><path class="s" d="M163.3 139.7 L164.3 125.4 A14.4 14.4 0 0 1 175.2 131.7Z"/><path class="s" d="M164.6 142 L177.5 135.7 A14.4 14.4 0 0 1 177.5 148.3Z"/><circle class="n" cx="162" cy="142" r="2.2"/><path class="b" transform="translate(140 120) rotate(-30) scale(0.2)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><path class="b" transform="translate(130 108) rotate(-60) scale(0.1)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><path class="b" transform="translate(150 102) rotate(-14) scale(0.1)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="r" cx="120" cy="60" r="5"/><circle class="b" cx="210" cy="50" r="7"/></svg>`;
 /* NA-10 Citrus Wreath: setup welcome. NA-16 Seed Pair: empty states. */
 const NA_WREATH_SVG = `<svg class="cu-art inline cu-p-soft" viewBox="0 0 320 320" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><circle class="n" cx="272" cy="160" r="22"/><path class="b" d="M274.3 161.3 L291.8 162.5 A17.6 17.6 0 0 1 284.1 175.9Z"/><path class="b" d="M272 162.6 L279.7 178.4 A17.6 17.6 0 0 1 264.3 178.4Z"/><path class="b" d="M269.7 161.3 L259.9 175.9 A17.6 17.6 0 0 1 252.2 162.5Z"/><path class="b" d="M269.7 158.7 L252.2 157.5 A17.6 17.6 0 0 1 259.9 144.1Z"/><path class="b" d="M272 157.4 L264.3 141.6 A17.6 17.6 0 0 1 279.7 141.6Z"/><path class="b" d="M274.3 158.7 L284.1 144.1 A17.6 17.6 0 0 1 291.8 157.5Z"/><circle class="s" cx="272" cy="160" r="2.6"/><path class="s" transform="translate(265.2 198.3) rotate(110) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="r" cx="245.8" cy="232" r="15"/><path class="m" transform="translate(216 257) rotate(150) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="d" cx="179.4" cy="270.3" r="12"/><path class="s" transform="translate(140.6 270.3) rotate(190) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="n" cx="104" cy="257" r="22"/><path class="b" d="M101.7 258.3 L91.9 272.9 A17.6 17.6 0 0 1 84.2 259.5Z"/><path class="b" d="M101.7 255.7 L84.2 254.5 A17.6 17.6 0 0 1 91.9 241.1Z"/><path class="b" d="M104 254.4 L96.3 238.6 A17.6 17.6 0 0 1 111.7 238.6Z"/><path class="b" d="M106.3 255.7 L116.1 241.1 A17.6 17.6 0 0 1 123.8 254.5Z"/><path class="b" d="M106.3 258.3 L123.8 259.5 A17.6 17.6 0 0 1 116.1 272.9Z"/><path class="b" d="M104 259.6 L111.7 275.4 A17.6 17.6 0 0 1 96.3 275.4Z"/><circle class="s" cx="104" cy="257" r="2.6"/><path class="m" transform="translate(74.2 232) rotate(230) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="r" cx="54.8" cy="198.3" r="15"/><path class="s" transform="translate(48 160) rotate(270) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="d" cx="54.8" cy="121.7" r="12"/><path class="m" transform="translate(74.2 88) rotate(310) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="n" cx="104" cy="63" r="22"/><path class="b" d="M104 60.4 L96.3 44.6 A17.6 17.6 0 0 1 111.7 44.6Z"/><path class="b" d="M106.3 61.7 L116.1 47.1 A17.6 17.6 0 0 1 123.8 60.5Z"/><path class="b" d="M106.3 64.3 L123.8 65.5 A17.6 17.6 0 0 1 116.1 78.9Z"/><path class="b" d="M104 65.6 L111.7 81.4 A17.6 17.6 0 0 1 96.3 81.4Z"/><path class="b" d="M101.7 64.3 L91.9 78.9 A17.6 17.6 0 0 1 84.2 65.5Z"/><path class="b" d="M101.7 61.7 L84.2 60.5 A17.6 17.6 0 0 1 91.9 47.1Z"/><circle class="s" cx="104" cy="63" r="2.6"/><path class="s" transform="translate(140.6 49.7) rotate(350) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="r" cx="179.4" cy="49.7" r="15"/><path class="m" transform="translate(216 63) rotate(390) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="d" cx="245.8" cy="88" r="12"/><path class="s" transform="translate(265.2 121.7) rotate(430) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/></svg>`;
-const NA_SEED_SVG = `<svg class="cu-art inline sm" viewBox="0 0 160 120" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false"><path class="s" transform="translate(80 98)" d="M-48 2.2 C-48 -15.8 26.4 -16.5 48 -1.5 C49 14.2 -26.4 16.5 -48 2.2Z"/><path class="sd" d="M80 92 C75.6 71.8 83.3 54 80 41.4"/><path class="d" transform="translate(80 41.4) rotate(-38) scale(0.5)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><path class="m" transform="translate(80 52.5) rotate(-150) scale(0.4)" d="M0 0 C 20 -34 66 -40 96 -6 C 70 28 22 34 0 0Z"/><circle class="b" cx="122" cy="40" r="7"/><path class="m" transform="translate(40 104)" d="M-13 0.9 C-13 -6.3 7.2 -6.6 13 -0.6 C13.3 5.7 -7.2 6.6 -13 0.9Z"/></svg>`;
 VIEWS.home = {
   render() {
     const S = state.setup, t = getTargets(), h = t && t.health;
@@ -4721,7 +4738,7 @@ VIEWS.home = {
     /* checklist */
     const steps = [];
     if (featureOn('health')) steps.push({ t: 'Add your stats and pick a body type', done: profileReady(state.profile), a: '<a class="btn sm" href="#/goals">Set my targets</a>' });
-    steps.push({ t: 'Add your recipes', done: state.recipes.length > 0, a: `<button class="btn sm" data-act="newRecipe">${icon('plus')} Add recipe</button> <button class="btn sm" data-act="loadDemo">Load demo recipes</button>` });
+    steps.push({ t: 'Add your recipes', done: state.recipes.length > 0, a: `<button class="btn sm" data-act="newRecipe">${icon('plus')} Add recipe</button> <button class="btn sm" data-act="loadDemo">Load sample data</button>` });
     if (featureOn('planner')) steps.push({ t: 'Plan your week', done: plannedCount() > 0, a: `<a class="btn sm" href="#/planner">Plan my week</a>${t && state.recipes.length ? ` <button class="btn sm" data-act="autoPlan">${icon('wand')} Auto-plan it</button>` : ''}` });
     if (featureOn('grocery')) steps.push({ t: 'Shop from your grocery list', done: plannedCount() > 0 && (auto.length > 0) && Object.keys(state.checked).length > 0, a: '<a class="btn sm" href="#/grocery">See my list</a>' });
     if (!backupInfo().quiet) steps.push({ t: 'Save a backup file', done: !!state.settings.lastExport, a: '<button class="btn sm" data-act="backupNow">Save backup now</button>' });   // signed in and syncing: no backup nudge
@@ -4734,13 +4751,13 @@ VIEWS.home = {
       const best = state.recipes.map(r => ({ r, fit: recipeNutri(r).fit })).filter(x => x.fit !== null).sort((a, b) => b.fit - a.fit).slice(0, 4);
       picks = `<section class="card"><div class="card-head"><h2>Best fits for your macros</h2></div><ul class="picks">${best.map(({ r, fit }) => `<li><a href="#/recipes/${r.id}">${esc(r.name)}</a><span class="muted small">${r.type}</span>${fitChip(fit)}</li>`).join('')}</ul></section>`;
     }
-    return `<section class="cu-banner">${CU_BANNER_SVG}<div class="cu-txt"><p class="mb-greet" id="greet"></p><h1 class="cu-t">Your week of meals</h1><p class="cu-s">${featureOn('planner') ? `${plannedCount()} of ${activeSlots().length * 7} meals planned this week.` : `${state.recipes.length} recipe${state.recipes.length === 1 ? '' : 's'} saved.`}</p></div></section>
+    return `${state.recipes.some(isDemo) ? '<div id="sampleNote"></div>' : ''}<section class="cu-banner">${CU_BANNER_SVG}<div class="cu-txt"><p class="mb-greet" id="greet"></p><h1 class="cu-t">Your week of meals</h1><p class="cu-s">${MBUI.dateLine()} · ${featureOn('planner') ? `${plannedCount()} of ${activeSlots().length * 7} meals planned` : `${state.recipes.length} recipe${state.recipes.length === 1 ? '' : 's'} saved`}</p></div></section>
       ${backupDue() ? `<div class="note warn bk-note">${icon('shield')}<span>Your data lives in this browser. ${state.settings.lastExport ? 'It has been over a week since your last backup.' : 'You have not made a backup yet.'}</span><button class="btn sm" data-act="backupNow">${icon('save')} Save backup now</button></div>` : ''}
       <div class="tiles">${tiles.join('')}</div>
       <div class="grid-2">${plannedCount() === 0 && list ? list + todayCard : todayCard + list}${picks}</div>`;
   },
   /* greeting line (mb-sync 1.1): "Good morning, Matthew": the account's screen name when signed in, else the name from setup */
-  after() { const g = $('#greet'); if (!g) return; if (SYNC) SYNC.greet(g, { name: () => state.setup.name }); else g.hidden = true; }
+  after() { const sn = $('#sampleNote'); if (sn) MBUI.sample(sn, { onRemove: () => ACTIONS.removeDemo() }); const g = $('#greet'); if (!g) return; if (SYNC) SYNC.greet(g, { name: () => state.setup.name }); else g.hidden = true; }
 };
 
 /* ==========================================================================
@@ -4808,7 +4825,7 @@ function filteredRecipes() {
    3) meal type · Meal prep · Demo ...... last updated */
 function recipeItemHTML(r, sel) {
   const n = recipeNutri(r), health = featureOn('health'), d = fmtDate(r.updated), rc = recipeCost(r);
-  const meta = [`<span>${esc(r.type)}</span>`, r.prep ? `<span class="rprep">${icon('layers', 'sm')}Meal prep</span>` : '', r.mins ? `<span>${r.mins} min</span>` : '', rc.any ? `<span>${money(rc.perServ)} / serving</span>` : '', r.rate === 'down' ? '<span class="rskip">Skipped</span>' : '', isDemo(r) ? '<span class="rdemo">Demo</span>' : ''].filter(Boolean).join('<span class="sep" aria-hidden="true">·</span>');
+  const meta = [`<span>${esc(r.type)}</span>`, r.prep ? `<span class="rprep">${icon('layers', 'sm')}Meal prep</span>` : '', r.mins ? `<span>${r.mins} min</span>` : '', rc.any ? `<span>${money(rc.perServ)} / serving</span>` : '', r.rate === 'down' ? '<span class="rskip">Skipped</span>' : '', isDemo(r) ? '<span class="rdemo">Sample</span>' : ''].filter(Boolean).join('<span class="sep" aria-hidden="true">·</span>');
   return `<a href="#/recipes/${r.id}" class="ritem${sel === r.id ? ' on' : ''}"${sel === r.id ? ' aria-current="true"' : ''}>
     <div class="rt"><b>${r.fav ? `<span class="fav" role="img" aria-label="Favorite">${icon('star', 'sm fill')}</span>` : ''}${r.rate === 'up' ? `<span class="fav" role="img" aria-label="Thumbs-up">${icon('thumbup', 'sm fill')}</span>` : ''}${esc(r.name)}</b>${health ? fitChip(n.fit) : ''}</div>
     <div class="rn"><span class="rk"><b>${fmtInt(r.cal)}</b> kcal</span><span><i class="dot m-p"></i><b>${round(r.p)}</b>g P</span><span><i class="dot m-c"></i><b>${round(r.c)}</b>g C</span><span><i class="dot m-f"></i><b>${round(r.f)}</b>g F</span></div>
@@ -4828,14 +4845,14 @@ function currentRecipeId() {
 VIEWS.recipes = {
   render() {
     const f = ui.recipes, health = featureOn('health');
-    if (!state.recipes.length) return `<div class="page-head"><h1 class="ph-dup">Recipes</h1></div>${emptyState('No recipes yet', 'Add one, load the demo set, or import your CSV.', `<button class="btn primary" data-act="newRecipe">${icon('plus')} Add a recipe</button><button class="btn" data-act="loadDemo">Load demo recipes</button><button class="btn" data-act="importBackup">Import a backup</button>`)}`;
+    if (!state.recipes.length) return `<div class="page-head"><h1 class="ph-dup">Recipes</h1></div>${emptyState('No recipes yet', 'Recipes are what your week is built from. Add your first one, or try the app with sample data.', { label: 'Add recipe', fn: () => ACTIONS.newRecipe() }, '<button class="btn" data-act="loadDemo">Load sample data</button><button class="btn" data-act="importBackup">Import a backup</button>')}`;
     const sel = currentRecipeId(), r = getRecipe(sel);
     const types = [['all', 'All'], ...MEAL_TYPES.map(t => [t, t])];
     return `<div class="page-head has-tools"><h1 class="ph-dup">Recipes</h1><p><span id="rcount">${filteredRecipes().length}</span> of ${state.recipes.length} shown</p>
       <div class="page-tools noprint" role="toolbar" aria-label="Recipe actions"><button class="btn primary" data-act="newRecipe">${icon('plus')}<span>New recipe</span></button></div></div>
       <div class="rv${route.arg && r ? ' has-detail' : ''}">
         <aside class="rlist-wrap"><div class="rfilters">
-          <label class="search">${icon('search')}<input type="search" placeholder="Search recipes or ingredients  ( / )" value="${esc(f.q)}" data-input="rq" data-search data-fid="f-rq" aria-label="Search recipes"></label>
+          <label class="search">${icon('search')}<input type="search" placeholder="Filter recipes or ingredients" value="${esc(f.q)}" data-input="rq" data-search data-fid="f-rq" aria-label="Search recipes"></label>
           <div class="chips">${types.map(([v, l]) => `<button class="chipbtn${f.type === v ? ' on' : ''}" data-act="rtype" data-k="${esc(v)}" aria-pressed="${f.type === v}">${esc(l)}</button>`).join('')}
 </div>
           <details class="fine rmore" data-keep="rmore"${ui.open.rmore || f.fav || f.prep || f.sort !== 'name' ? ' open' : ''}><summary>Sort and more filters</summary><div class="chips">
@@ -4864,8 +4881,8 @@ function recipeDetailHTML(r) {
   const delta = (k) => t && n.pct ? n.pct[k] - t.pct[k] : null;
   return `<article class="rdetail">
     <button class="btn ghost backbtn" data-act="backToList">${icon('left')} All recipes</button>
-    ${isDemo(r) ? `<div class="note demo noprint">${icon('layers')}<span><b>Demo recipe.</b> Nutrition is approximate. Check ingredients for allergens yourself. Save it to keep it when you remove demo data.</span><button class="btn primary sm" data-act="saveDemo" data-id="${r.id}">${icon('check', 'sm')} Save to my recipes</button></div>` : ''}
-    <header class="rd-head"><div><h2>${esc(r.name)}</h2><div class="chips"><span class="chip type">${esc(r.type)}</span>${isDemo(r) ? '<span class="chip demo">Demo recipe</span>' : ''}<span class="chip">${icon('users', 'sm')}${fmtQty(r.servings)} ${r.servings === 1 ? 'serving' : 'servings'}</span>${r.prep ? `<span class="chip prep">${icon('layers', 'sm')}Meal-prep friendly</span>` : ''}${r.mins ? `<span class="chip">${icon('clock', 'sm')}${r.mins} min</span>` : ''}${rc.any ? `<span class="chip">${icon('dollar', 'sm')}${money(rc.perServ)} / serving${rc.complete ? '' : ' (partial)'}</span>` : ''}${r.rate === 'down' ? '<span class="chip warn">Skipped by auto-plan</span>' : ''}${health ? fitChip(n.fit) : ''}</div><p class="upd-line">${updatedHTML(r.updated, 'Last updated')}</p></div>
+    ${isDemo(r) ? `<div class="note demo noprint">${icon('layers')}<span><b>Sample recipe.</b> Nutrition is approximate. Check ingredients for allergens yourself. Save it to keep it when you remove the sample data.</span><button class="btn primary sm" data-act="saveDemo" data-id="${r.id}">${icon('check', 'sm')} Save to my recipes</button></div>` : ''}
+    <header class="rd-head"><div><h2>${esc(r.name)}</h2><div class="chips"><span class="chip type">${esc(r.type)}</span>${isDemo(r) ? '<span class="chip demo">Sample</span>' : ''}<span class="chip">${icon('users', 'sm')}${fmtQty(r.servings)} ${r.servings === 1 ? 'serving' : 'servings'}</span>${r.prep ? `<span class="chip prep">${icon('layers', 'sm')}Meal-prep friendly</span>` : ''}${r.mins ? `<span class="chip">${icon('clock', 'sm')}${r.mins} min</span>` : ''}${rc.any ? `<span class="chip">${icon('dollar', 'sm')}${money(rc.perServ)} / serving${rc.complete ? '' : ' (partial)'}</span>` : ''}${r.rate === 'down' ? '<span class="chip warn">Skipped by auto-plan</span>' : ''}${health ? fitChip(n.fit) : ''}</div><p class="upd-line">${updatedHTML(r.updated, 'Last updated')}</p></div>
       <div class="rd-actions"><button class="btn icon${r.rate === 'up' ? ' on' : ''}" data-act="rateRecipe" data-k="up" data-id="${r.id}" aria-label="${r.rate === 'up' ? 'Remove thumbs-up' : 'Thumbs-up: plan this more often'}" aria-pressed="${r.rate === 'up'}" data-tip="Plan this more often">${icon('thumbup', r.rate === 'up' ? 'fill' : '')}</button><button class="btn icon${r.rate === 'down' ? ' on' : ''}" data-act="rateRecipe" data-k="down" data-id="${r.id}" aria-label="${r.rate === 'down' ? 'Remove thumbs-down' : 'Thumbs-down: leave this out of auto-plans'}" aria-pressed="${r.rate === 'down'}" data-tip="Leave out of auto-plans">${icon('thumbdown', r.rate === 'down' ? 'fill' : '')}</button>
         <button class="btn icon${r.fav ? ' on' : ''}" data-act="favRecipe" data-id="${r.id}" aria-label="${r.fav ? 'Remove from favorites' : 'Add to favorites'}" aria-pressed="${!!r.fav}">${icon('star', r.fav ? 'fill' : '')}</button>
         <button class="btn" data-act="editRecipe" data-id="${r.id}">${icon('edit')} Edit</button>
@@ -4897,12 +4914,11 @@ function adoptDemo(r) {
   if (ui.mult[old] !== undefined) { ui.mult[id] = ui.mult[old]; delete ui.mult[old]; }
   return r;
 }
-ACTIONS.saveDemo = el => { const r = getRecipe(el.dataset.id); if (!r || !isDemo(r)) return; adoptDemo(r); saveSoon(); toast('Saved to your recipes. It stays when you remove demo data.', 'ok'); go('#/recipes/' + r.id); };
+ACTIONS.saveDemo = el => { const r = getRecipe(el.dataset.id); if (!r || !isDemo(r)) return; adoptDemo(r); saveSoon(); toast('Recipe saved', 'ok'); go('#/recipes/' + r.id); };
 ACTIONS.dupRecipe = el => { const r = getRecipe(el.dataset.id), c = JSON.parse(JSON.stringify(r)); c.id = uid('r'); c.name = r.name + ' (copy)'; stamp(c); state.recipes.push(c); saveSoon(); toast('Duplicated'); go('#/recipes/' + c.id); };
-ACTIONS.delRecipe = async el => {
-  const r = getRecipe(el.dataset.id); const inPlan = plannedServings().has(r.id);
-  if (!await confirmDialog(`Delete "${r.name}"?${inPlan ? ' It is also in your meal plan and will be removed from there.' : ''} This cannot be undone.`, { ok: 'Delete recipe', danger: true })) return;
-  undoable(`Deleted "${r.name}"`, () => { state.recipes = state.recipes.filter(x => x.id !== r.id); cleanPlan(); saveSoon(); }, { after: () => go('#/recipes/' + r.id) }); go('#/recipes');
+ACTIONS.delRecipe = el => {   // straight away (also out of the plan), Undo puts both back
+  const r = getRecipe(el.dataset.id); if (!r) return;
+  undoable('Recipe deleted', () => { state.recipes = state.recipes.filter(x => x.id !== r.id); cleanPlan(); saveSoon(); }, { after: () => go('#/recipes/' + r.id) }); go('#/recipes');
 };
 ACTIONS.planRecipe = el => {
   const r = getRecipe(el.dataset.id), defSlot = r.type === 'Breakfast' ? 'Breakfast' : r.type === 'Snacks' ? 'Snacks' : 'Dinner';
@@ -5042,7 +5058,7 @@ function weekChart(per, t) {
 VIEWS.planner = {
   render() {
     const t = getTargets(), slots = activeSlots(), mt = mealTargets(t), ws = weekSummary(), eaten = state.settings.nutritionMode === 'eaten';
-    if (!state.recipes.length) return `<div class="page-head"><h1 class="ph-dup">Planner</h1></div>${emptyState('Add recipes to start planning', 'Your week is built from your recipes. Add one to begin.', `<button class="btn primary" data-act="newRecipe">${icon('plus')} Add a recipe</button><button class="btn" data-act="loadDemo">Load demo recipes</button>`)}`;
+    if (!state.recipes.length) return `<div class="page-head"><h1 class="ph-dup">Planner</h1></div>${emptyState('No recipes yet', 'Your week is built from your recipes. Add one to begin.', { label: 'Add recipe', fn: () => ACTIONS.newRecipe() }, '<button class="btn" data-act="loadDemo">Load sample data</button>')}`;
     const days = orderedDays();
     const head = `<div class="prow phead"><div>Day</div>${slots.map(s => `<div>${s}${mt && mt[s] && mt[s].kcal ? `<small>target ≈ ${fmtInt(mt[s].kcal)} kcal</small>` : ''}</div>`).join('')}<div>Daily total</div></div>`;
     const rows = days.map((d, di) => {
@@ -5094,15 +5110,15 @@ ACTIONS.shareWeek = () => {
     title: 'Share your week', kicker: n >= total ? 'Week planned' : 'Planning progress',
     headline: n >= total ? 'My week of meals is planned' : `${n} meals planned this week`,
     sub: `${rids.size} ${rids.size === 1 ? 'recipe' : 'recipes'}, ${activeSlots().length} meals a day`,
-    stats, art: art.content.firstElementChild, fileName: 'mealprep-week.png',
+    stats, art: art.content.firstElementChild, fileName: MBUI.fileName('mealprep', 'week', 'png'),
     date: new Date().toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
   });
 };
 CHANGES.planPick = el => { const d = el.dataset.day, s = el.dataset.slot, cur = state.plan[d] && state.plan[d][s]; setSlot(d, s, el.value || null, cur ? cur.servings : 1); saveSoon(); rerender(); };
 CHANGES.planServ = el => { const e = getSlot(el.dataset.day, el.dataset.slot); if (e) { e.servings = clamp(num(el.value) || 1, 0.25, 99); saveSoon(); rerender(); } };
 ACTIONS.nutMode = el => { state.settings.nutritionMode = el.dataset.k; saveSoon(); rerender(); };
-ACTIONS.clearDay = async el => { const d = el.dataset.day; if (!await confirmDialog(`Clear every meal from ${d}? Your recipes are not affected.`, { ok: `Clear ${d}`, danger: true })) return; undoable(`${d} cleared`, () => { delete state.plan[d]; saveSoon(); rerender(); }); };
-ACTIONS.clearWeek = async () => { if (!await confirmDialog('Clear every meal from this week’s plan? Your recipes are not affected.', { ok: 'Clear week', danger: true })) return; undoable('Week cleared', () => { state.plan = {}; saveSoon(); rerender(); }); };
+ACTIONS.clearDay = el => { const d = el.dataset.day; undoable(`${d}’s meals deleted`, () => { delete state.plan[d]; saveSoon(); rerender(); }); };
+ACTIONS.clearWeek = () => { undoable('This week’s meals deleted', () => { state.plan = {}; saveSoon(); rerender(); }); };
 ACTIONS.copyDay = el => {
   const from = el.dataset.day;
   openDialog(`<form method="dialog" class="dlg-body"><h3>Copy ${from} to&hellip;</h3><p class="muted">Copies all meals and servings. Existing meals on those days are replaced.</p>
@@ -5198,9 +5214,8 @@ ACTIONS.useWeek = async el => {
   let miss = 0; undoable(fmtWeek(h.date) + ' loaded', () => { miss = loadWeek(h); saveSoon(); rerender(); });
   if (miss) toast(`${miss} meal${miss === 1 ? ' was' : 's were'} skipped because that recipe no longer exists.`, 'err');
 };
-ACTIONS.delWeek = async el => {
+ACTIONS.delWeek = el => {
   const h = state.history.find(x => x.date === el.dataset.date); if (!h) return;
-  if (!await confirmDialog('Delete ' + fmtWeek(h.date) + ' from Past weeks?', { ok: 'Delete', danger: true })) return;
   closeDialog(); undoable('Past week deleted', () => { state.history = state.history.filter(x => x.date !== h.date); saveSoon(); rerender(); });
 };
 
@@ -5246,8 +5261,8 @@ VIEWS.prep = {
   render() {
     const head = `<div class="page-head has-tools"><h1>Prep day</h1><p>Your week as one cooking session: what to cook, how many containers, and what goes in the fridge or freezer.</p>
       <div class="page-tools noprint" role="toolbar" aria-label="Prep actions"><label class="tool-sel"><span>Prep day</span><select data-change="prepDay" data-fid="prepDay" aria-label="Prep day">${optionsHTML(DAYS.map(d => [d, d]), state.setup.prepDay)}</select></label><button class="btn" data-act="printPage" aria-label="Print prep page">${icon('printer')}<span>Print</span></button></div></div>`;
-    if (!state.recipes.length) return `<div class="page-head"><h1>Prep day</h1></div>${emptyState('Add recipes to start', 'The Prep page turns your meal plan into one cooking session.', `<button class="btn primary" data-act="newRecipe">${icon('plus')} Add a recipe</button><button class="btn" data-act="loadDemo">Load demo recipes</button>`)}`;
-    if (!plannedCount()) return `${head}${emptyState('Plan your week first', 'Once meals are in the planner, this page shows what to cook, how many containers you need and where each portion goes.', '<a class="btn primary" href="#/planner">Open planner</a>')}${leftoversCardHTML()}`;
+    if (!state.recipes.length) return `<div class="page-head"><h1>Prep day</h1></div>${emptyState('No recipes yet', 'The Prep page turns your meal plan into one cooking session.', { label: 'Add recipe', fn: () => ACTIONS.newRecipe() }, '<button class="btn" data-act="loadDemo">Load sample data</button>')}`;
+    if (!plannedCount()) return `${head}${emptyState('No meals planned yet', 'Once meals are in the planner, this page shows what to cook, how many containers you need and where each portion goes.', { label: 'Open planner', fn: () => go('#/planner') })}${leftoversCardHTML()}`;
     const rows = prepModel(), cooking = rows.filter(x => x.batches > 0);
     const tot = k => rows.reduce((a, x) => a + x[k], 0), nCook = cooking.length;
     const frz = round(tot('freezer'), 1), fri = round(tot('fridge'), 1), boxes = tot('containers');
@@ -5285,7 +5300,7 @@ document.addEventListener('submit', e => {
 });
 ACTIONS.stockUse = el => { useStock(el.dataset.id, 1); saveSoon(); rerender(); };
 ACTIONS.stockMove = el => { const x = state.stock.find(y => y.id === el.dataset.id); if (!x) return; x.loc = x.loc === 'fridge' ? 'freezer' : 'fridge'; if (x.loc === 'freezer') { /* frozen food keeps its made date, but the fridge clock no longer applies */ } saveSoon(); rerender(); };
-ACTIONS.stockDel = el => { const x = state.stock.find(y => y.id === el.dataset.id); if (!x) return; undoable('Leftovers removed', () => { state.stock = state.stock.filter(y => y.id !== x.id); saveSoon(); rerender(); }); };
+ACTIONS.stockDel = el => { const x = state.stock.find(y => y.id === el.dataset.id); if (!x) return; undoable('Leftovers deleted', () => { state.stock = state.stock.filter(y => y.id !== x.id); saveSoon(); rerender(); }); };
 ACTIONS.stockExtra = el => { addStock(el.dataset.id, num(el.dataset.n), 'fridge', true); saveSoon(); rerender(); toast('Added to your leftovers', 'ok'); };
 
 /* ==========================================================================
@@ -5326,7 +5341,7 @@ VIEWS.grocery = {
           <div class="stepper"><span class="muted small">Cooking for</span><button class="btn icon" data-act="gHH" data-d="-1" aria-label="Fewer people">−</button><output>${hh}</output><button class="btn icon" data-act="gHH" data-d="1" aria-label="More people">+</button></div></div></details></div>
       ${costLine}
       ${active.length ? `<div class="gprog${done === active.length ? ' complete' : ''}"><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}" aria-label="Shopping progress: ${done} of ${active.length} in the cart" tabindex="0" data-ctip="${pct}%|In the cart|${done} of ${active.length} items"><span style="width:${pct}%"></span></div><span>${done === active.length ? `Everything is in the cart (${done} of ${active.length})` : `${done} of ${active.length} in the cart`}</span><span class="row noprint"><button class="btn sm ghost" data-act="gReset">Uncheck all</button>${state.manual.some(m => m.done) ? '<button class="btn sm ghost" data-act="gClearDone">Remove checked extras</button>' : ''}</span></div>` : ''}
-      ${active.length ? `<div class="gcols">${secHTML}</div>` : emptyState(planned ? 'Nothing left to buy' : 'Your list is empty', planned ? 'Everything is checked off or marked as already in your pantry.' : 'Add meals in the planner and every ingredient lands here, merged and sorted by store section.', featureOn('planner') ? '<a class="btn primary" href="#/planner">Open planner</a>' : '')}
+      ${active.length ? `<div class="gcols">${secHTML}</div>` : emptyState(planned ? 'Nothing left to buy' : 'No grocery items yet', planned ? 'Everything is checked off or marked as already in your pantry.' : 'Add meals in the planner and every ingredient lands here, merged and sorted by store section.', !planned && featureOn('planner') ? { label: 'Open planner', fn: () => go('#/planner') } : undefined)}
       ${have.length ? `<details class="card noprint have" ${ui.groceryShowHave ? 'open' : ''}><summary>Already in my pantry (${have.length})</summary><ul class="glist">${have.map(groceryItemHTML).join('')}</ul></details>` : ''}
       <p class="muted small noprint">Store walk order can be changed on the <a href="#/ingredients">Ingredients</a> tab.</p>`;
   }
@@ -5340,10 +5355,10 @@ ACTIONS.gAdd = () => {
 };
 CHANGES.gCheck = el => { if (el.dataset.id) { const m = state.manual.find(x => x.id === el.dataset.id); if (m) m.done = el.checked; } else state.checked[el.dataset.key] = el.checked; saveSoon(); rerender(); if (el.checked) { const l = fullGroceryList().filter(i => !gHave(i)); if (l.length && l.every(gDone)) toast('Everything on your list is in the cart.', 'ok'); } };
 ACTIONS.gHave = el => { const k = el.dataset.key; state.have[k] = !state.have[k]; if (!state.have[k]) delete state.have[k]; ui.groceryShowHave = true; saveSoon(); rerender(); };
-ACTIONS.gDel = async el => { const m = state.manual.find(x => x.id === el.dataset.id); if (!m) return; if (!await confirmDialog(`Remove "${m.item}" from your grocery list?`, { ok: 'Remove item', danger: true })) return; undoable(`Removed "${m.item}"`, () => { state.manual = state.manual.filter(x => x.id !== el.dataset.id); saveSoon(); rerender(); }); };
+ACTIONS.gDel = el => { const m = state.manual.find(x => x.id === el.dataset.id); if (!m) return; undoable('Grocery item deleted', () => { state.manual = state.manual.filter(x => x.id !== el.dataset.id); saveSoon(); rerender(); }); };
 ACTIONS.gCopy = async () => toast(await copyText(groceryText()) ? 'Grocery list copied. Paste it into Notes or a message.' : 'Could not copy. Try Print instead.', 'ok');
 ACTIONS.gReset = async () => { if (!await confirmDialog('Uncheck every item on your grocery list? Your list itself is kept.', { ok: 'Uncheck all', danger: true, title: 'Start the list over?' })) return; undoable('List unchecked', () => { state.checked = {}; state.manual.forEach(m => m.done = false); saveSoon(); rerender(); }); };
-ACTIONS.gClearDone = async () => { const n = state.manual.filter(m => m.done).length; if (!n) return; if (!await confirmDialog(`Remove the ${n} checked item${n === 1 ? '' : 's'} you added yourself?`, { ok: 'Remove checked', danger: true })) return; undoable(`Removed ${n} checked item${n === 1 ? '' : 's'}`, () => { state.manual = state.manual.filter(m => !m.done); saveSoon(); rerender(); }); };
+ACTIONS.gClearDone = () => { const n = state.manual.filter(m => m.done).length; if (!n) return; undoable(`${n} checked item${n === 1 ? '' : 's'} deleted`, () => { state.manual = state.manual.filter(m => !m.done); saveSoon(); rerender(); }); };
 ACTIONS.gMode = el => { state.settings.groceryMode = el.dataset.k; saveSoon(); rerender(); };
 ACTIONS.gHH = el => { state.setup.household = clamp(state.setup.household + parseInt(el.dataset.d, 10), 1, 20); saveSoon(); rerender(); };
 
@@ -5439,7 +5454,7 @@ ACTIONS.ingSecFilter = el => { ui.ingSec = el.dataset.k; ui.ingLimit = 40; reren
 ACTIONS.ingMore = () => { ui.ingLimit += 100; rerender(); };
 CHANGES.ingUnit = el => { setIngredient(el.dataset.name, { unit: el.value }); rerender(); };
 CHANGES.ingSec = el => { setIngredient(el.dataset.name, { section: el.value }); rerender(); };
-ACTIONS.ingDel = async el => { if (!await confirmDialog(`Delete your custom ingredient "${el.dataset.name}"? Recipes that use it keep working; it will be re-added automatically if they need it.`, { ok: 'Delete ingredient', danger: true })) return; undoable(`Deleted "${el.dataset.name}"`, () => { removeIngredientOverride(el.dataset.name); refreshIngLists(); rerender(); }); };
+ACTIONS.ingDel = el => { undoable('Ingredient deleted', () => { removeIngredientOverride(el.dataset.name); refreshIngLists(); rerender(); }); };
 ACTIONS.ingRevert = async el => { if (!await confirmDialog(`Undo your changes to "${el.dataset.name}" and go back to the built-in unit and store section?`, { ok: 'Revert to built-in', danger: true, title: 'Revert this ingredient?' })) return; undoable('Reverted to built-in', () => { removeIngredientOverride(el.dataset.name); rerender(); }); };
 ACTIONS.secMove = el => { const i = +el.dataset.i, d = +el.dataset.d, o = state.settings.sectionOrder, j = i + d; if (j < 0 || j >= o.length) return; [o[i], o[j]] = [o[j], o[i]]; saveSoon(); rerender(); };
 document.addEventListener('submit', e => {
@@ -5453,6 +5468,8 @@ document.addEventListener('submit', e => {
    Release notes + license text
    ========================================================================== */
 const RELEASES = [
+  { v: 'v1.9', date: 'October 17, 2026', tag: 'Same everywhere', notes: ["The More menu on phones lists Settings, the other pages, Help and What’s new, in the same order as every mcbflow.com app.", "What’s new opens in one small window from the footer, Settings › About, More and Search. It replaces the long release history on the Help page.", "Help is reorganised: Getting started in four steps, then short answers grouped by topic, ending with Install the app and Your data & privacy. The full license moved to the Terms page.", "Search finds your recipes first (picking one opens it), then your plan, grocery list, ingredients, pages and help. Press / or Ctrl+K, or tap Search. The / key no longer jumps into the recipe filter.", "Demo recipes are now called Sample data. A short note at the top of Home has one button to remove it, with Undo. The welcome screen offers Start empty or Start with sample data.", "Deleting a recipe, a grocery item, a custom ingredient, leftovers, a past week or a day’s meals happens right away, with Undo in the message at the bottom. No more “Are you sure?” boxes.", "Clearer file names: mealprep-backup-2026-10-17.json, mealprep-recipes-2026-10-17.csv, mealprep-backup-2026-10-17.zip.", "Settings says “Changes save as you make them.” and has the same Install section as the other apps.", "Home banner: “Your week of meals”, with today’s date and how many meals are planned.", "Empty Recipes, Planner, Prep and Grocery pages say what to do next.", "Your recipes, plans, settings and backups are unchanged."] },
+  { v: 'v1.8', date: 'October 17, 2026', tag: 'Tidy-up', notes: ["Clear all data now asks you to type DELETE, the same in every mcbflow.com app. The same box offers Save a backup first.", "Home: the Daily target, Recipes, This week and Grocery list tiles no longer show underlined text. They are still links: hover or tab to one to see it highlight.", "A very long recipe or grocery name no longer makes Home, a recipe page or Prep day scroll sideways on phones; it wraps instead.", "Account pop-up spacing fixed.", "The welcome banner art is no longer cut off on phones, and the banner keeps one height."] },
   { v: 'v1.7', date: 'October 16, 2026', tag: 'One suite', notes: [
     'New Settings page (gear icon at the bottom of the sidebar, or More on phones): Appearance, Account & sync, your Meal Prep settings (name, what you use the app for, meals, household, cooking style, week start, prep day, units, budget, print ink), Backup & data, Install and About, in the same order as every mcbflow.com app. It replaces the Data page, the About card and the Setup button; “Run setup again” is in Settings, and the old About page is now Help.',
     'Account button in the top bar: Sign in, or your profile picture with a sync dot. New “Keep me signed in on this device” choice (turn it off on a shared computer). Pick a screen name and one of 28 profile pictures with Edit profile; every mcbflow.com app shows the same ones.',
@@ -5518,7 +5535,7 @@ const RELEASES = [
     'New setup wizard tailors the app to your goals, meals, household size and cooking style.',
     'Health tools: pick a body type (protein / carbs / fats: Ectomorph 25/55/20, Mesomorph 30/40/30, Endomorph 35/25/40), then get your BMR, maintenance calories and daily grams per macro. Includes a 4-question quiz and safety warnings.',
     'Planner checks every day against your targets, with Auto-plan, copy-a-day and a cook list. Every recipe gets a Macro Fit score. Servings default to "portions I eat".',
-    `Grocery list merges units, groups by store section and scales to your household. The built-in library has ${SEED.length} ingredients, and removing demo data never touches it.`,
+    `Grocery list merges units, groups by store section and scales to your household. The built-in library has ${SEED.length} ingredients, and removing sample data never touches it.`,
     `${DEMO_RECIPES.length} optional demo recipes, and a one-page print or PDF for the kitchen in black and white or color.`,
     'Site-wide search (Ctrl/Cmd+K or "/"), a sticky header and mobile menu, dark mode, a last-updated date on every recipe, and a confirmation before anything is deleted.',
     'Easier flows: step-by-step progress in setup, a finish screen, Undo after deletes, clears and imports, larger touch targets, and less clutter on each screen.',
@@ -5545,7 +5562,7 @@ const LICENSE = {
     ['4. Permitted Uses', ['You may use the Work, and export, print, copy and back up Your Content, as often as you like. You may share a CSV of your own recipes and plans with anyone you choose.']],
     ['5. Restrictions', ['You shall not copy, host, mirror, sell, sublicense, or distribute the Work or any modified or derivative version of it, whether for payment or free of charge.', 'You shall not use the Work to provide services to third parties for compensation (for example, a paid coaching, dietitian or meal-planning service for clients) without Licensor’s prior written permission.', 'You shall not remove copyright or attribution notices, extract the built-in ingredient library as a standalone dataset, reverse engineer the Work except as permitted by law, or use scripts or bots to overload or scrape it.']],
     ['6. Attribution', ['If you share screenshots or descriptions of the Work, you must credit ' + APP.name + ' and Licensor, and must not suggest that Licensor endorses you or your use of the Work.']],
-    ['7. Health and Nutrition Disclaimer', ['The Work is an organizational and educational tool. It is not medical, dietetic or professional advice and does not diagnose, treat or prevent any condition. Calorie and macro figures are estimates based on general formulas (Mifflin-St Jeor and Katch-McArdle), popular body-type heuristics and the values you enter. Individual needs vary.', 'Nutrition information on recipes is entered by users and is not verified. Demo recipes are approximate samples. You are responsible for checking ingredients for allergens and dietary restrictions.', 'Consult a qualified professional before changing your diet or exercise, especially if you are pregnant or nursing, under 18, have a medical condition, or have a history of disordered eating.']],
+    ['7. Health and Nutrition Disclaimer', ['The Work is an organizational and educational tool. It is not medical, dietetic or professional advice and does not diagnose, treat or prevent any condition. Calorie and macro figures are estimates based on general formulas (Mifflin-St Jeor and Katch-McArdle), popular body-type heuristics and the values you enter. Individual needs vary.', 'Nutrition information on recipes is entered by users and is not verified. Sample recipes are approximate. You are responsible for checking ingredients for allergens and dietary restrictions.', 'Consult a qualified professional before changing your diet or exercise, especially if you are pregnant or nursing, under 18, have a medical condition, or have a history of disordered eating.']],
     ['8. Third-Party Content', ['You are responsible for ensuring you have the right to store and use any recipes or text you import from other people or sources.']],
     ['9. Termination', ['This license is effective until terminated by either party. Licensor may terminate the license at any time if you fail to comply with any term of this Agreement. Upon termination you must cease all use of the Work and delete any copies you hold.']],
     ['10. No Warranty', ['The Work is provided "as is," without warranty of any kind, express or implied. Licensor does not warrant that the Work will meet your requirements, that calculations will be error-free, or that its operation will be uninterrupted or error-free.']],
@@ -5580,7 +5597,7 @@ const PRIVACY = {
       'It does not require an account, set cookies, use analytics or advertising, or load fonts, scripts or images from other sites. Unless you sign in to sync (below), it sends your data nowhere: the page carries a browser security rule that only lets it connect to the mcbflow.com account service.',
       'It does not collect your location, contacts or identity.']],
     ['Optional sync', [
-      'If you sign in with a free mcbflow.com account (Sign in in the top bar, or Settings → Account & sync), your recipes, meal plan, past weeks, grocery items, leftovers, prices, ingredient edits, setup answers, settings and health profile (age, sex, height, weight, activity and goals, if you entered them) are copied to your account so your other devices match. Your theme and last-backup time stay on each device, and demo recipes are never synced.',
+      'If you sign in with a free mcbflow.com account (Sign in in the top bar, or Settings → Account & sync), your recipes, meal plan, past weeks, grocery items, leftovers, prices, ingredient edits, setup answers, settings and health profile (age, sex, height, weight, activity and goals, if you entered them) are copied to your account so your other devices match. Your theme and last-backup time stay on each device, and sample recipes are never synced.',
       'The account database is run by Supabase (servers in the eastern United States); only your account can read your records. Signing out stops syncing and keeps the data on this device. Export or delete synced data, or delete your account, on the mcbflow.com account page (mcbflow.com/account.html). The mcbflow.com privacy policy has the details.',
       'If you pick a screen name and a profile picture (Edit profile), they are saved on your mcbflow.com account so every mcbflow.com app shows the same ones. The pictures are built into the app; nothing is uploaded from your device.',
       'While you are signed in, this site keeps a sign-in token (sb-…-auth-token) and a sync record (mealprep.sync) in local storage, and your “Keep me signed in” choice (mealprep.keepSignedIn). With Keep me signed in turned off, the token is kept in session storage instead and is gone when the browser closes.']],
@@ -5595,7 +5612,7 @@ const PRIVACY = {
       'Anyone who can use your browser profile on this device can open the app and see what is saved. On a shared or public computer, erase your data when you finish or use a private window. Private windows normally discard saved data when they close.',
       'Your backup files (JSON or CSV) contain everything above, including any health details you entered. Store them where you would store any personal file.']],
     ['Your choices: export, erase, back up', [
-      'Data menu, Save backup now or Export All: get a copy of everything. Data menu, Clear all data: removes your recipes, plan, profile, settings and custom ingredients from this browser and returns the app to its starting state. A confirmation comes first. Undo is available only until you close or reload the page.',
+      'Data menu, Save backup now or Export All: get a copy of everything. Data menu, Clear all data: removes your recipes, plan, profile, settings and custom ingredients from this browser and returns the app to its starting state. You type DELETE to confirm first. Undo is available only until you close or reload the page.',
       'To remove every trace, including the notice setting, clear this site’s data in your browser settings.',
       'Because the app keeps no copy anywhere else, nobody else can restore, view or delete your data for you. Save a backup now and then.']],
     ['Children', [
@@ -5608,10 +5625,10 @@ const TERMS = {
   short: ['Free to use for yourself. Not medical advice. Provided as is, in beta.'],
   sections: [
     ['Using the app', [
-      'mealprep.mcbflow.com is a free meal planning tool for adults 18 and over. Use it for your own meals and household. The software license in About (License) also applies, including its limits on copying, hosting and reselling the app.']],
+      'mealprep.mcbflow.com is a free meal planning tool for adults 18 and over. Use it for your own meals and household. The software license below also applies, including its limits on copying, hosting and reselling the app.']],
     ['Not medical or dietary advice', [
       'Calories, macros and targets are estimates from general formulas and the numbers you enter. They are not medical, nutrition or professional advice and cannot diagnose or treat anything. Talk with a doctor or registered dietitian before changing how you eat or exercise, especially if you are under 18, pregnant or nursing, have a medical condition, or have a history of disordered eating. Stop and get help if a plan makes you feel unwell.',
-      'Recipe nutrition is whatever was entered, and demo recipes are approximate. Always check ingredient labels yourself for allergens and dietary needs.']],
+      'Recipe nutrition is whatever was entered, and sample recipes are approximate. Always check ingredient labels yourself for allergens and dietary needs.']],
     ['Your content and backups', [
       'Your recipes and data are yours and stay on your device (see the Privacy Policy). Because they are stored only there, they can be lost if you clear your browser, switch devices or your browser removes them. Download a CSV backup regularly. An installed copy of the app may keep its data separately from your browser, so export before moving between them.',
       'Only import recipes and text you have the right to use. Do not enter passwords, financial numbers or other people’s private information.']],
@@ -5631,7 +5648,13 @@ function legalPage(kind, title, blurb, data) {
       <p class="row noprint"><a class="btn" href="#/settings">Go to Settings (back up or erase)</a><a class="btn ghost" href="#/${kind === 'privacy' ? 'terms' : 'privacy'}">${kind === 'privacy' ? 'Terms of Use' : 'Privacy Policy'}</a><a class="btn ghost" href="#/help">Release notes &amp; license</a></p></section>`;
 }
 VIEWS.privacy = { render: () => legalPage('privacy', 'Privacy Policy', 'What this app stores, and what it never sends.', PRIVACY) };
-VIEWS.terms = { render: () => legalPage('terms', 'Terms of Use', 'The short version, in plain language.', TERMS) };
+VIEWS.terms = { render: () => legalPage('terms', 'Terms of Use', 'The short version, in plain language.', TERMS) + licenseHTML() };
+/* The software license and the icon notice (moved here from Help in 1.9) */
+function licenseHTML() {
+  return `<section class="card prose legal" id="license"><h2>${esc(LICENSE.title)}</h2><p class="muted small">Last updated ${esc(LICENSE.updated)}</p>
+    ${LICENSE.sections.map(([h, ps], i) => `<h3 id="lic-${i}">${esc(h)}</h3>${ps.map(x => `<p>${esc(x)}</p>`).join('')}`).join('')}
+    <h3 id="credits">${esc(THIRD_PARTY.title)}</h3><p class="muted small">Some interface icons follow the Feather Icons style. The app loads no fonts, scripts or images from other sites.</p><p class="small" style="white-space:pre-line">${esc(THIRD_PARTY.text)}</p></section>`;
+}
 
 /* Third-party notice shown in About > License. Keep in sync with ATTRIBUTIONS.md. */
 const THIRD_PARTY = { title: 'Icon notice (Feather Icons, MIT)', text: "Copyright (c) 2013-2017 Cole Bemis\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE." };
@@ -5647,14 +5670,13 @@ function loadDemo(silent) {
     state.recipes.push({ id: d.id, name: d.name, type: d.type, servings: d.servings, cal: d.cal, p: d.p, c: d.c, f: d.f, prep: d.prep, fav: d.fav, ingredients: d.ingredients.map(([item, qty, unit]) => ({ item, qty, unit })), steps: d.steps.slice(), notes: d.tip || '', updated: DEMO_UPDATED });
     added++;
   }
-  saveSoon(); if (!silent) { toast(added ? `Added ${added} demo recipes` : 'Demo recipes are already loaded', added ? 'ok' : ''); rerender(); }
+  saveSoon(); if (!silent) { toast(added ? `Sample data added: ${added} recipes` : 'Sample data is already loaded', added ? 'ok' : ''); rerender(); }
   return added;
 }
 ACTIONS.loadDemo = () => loadDemo(false);
-ACTIONS.removeDemo = async () => {
+ACTIONS.removeDemo = () => {   // sample recipes out of the library and the plan, straight away, with Undo
   const n = state.recipes.filter(isDemo).length; if (!n) return;
-  if (!await confirmDialog(`Remove the ${n} demo recipes? They also come out of your meal plan. Your own recipes and ingredient library stay.`, { ok: 'Remove demo recipes', danger: true })) return;
-  undoable('Demo recipes removed', () => { state.recipes = state.recipes.filter(r => !isDemo(r)); cleanPlan(); saveSoon(); rerender(); });
+  undoable('Sample data removed', () => { state.recipes = state.recipes.filter(r => !isDemo(r)); cleanPlan(); saveSoon(); rerender(); });
 };
 
 /* ==========================================================================
@@ -5842,25 +5864,25 @@ async function canWrite(h) {
   try { const o = { mode: 'readwrite' }; if ((await h.queryPermission(o)) === 'granted') return true; return (await h.requestPermission(o)) === 'granted'; }
   catch (e) { return false; }
 }
-async function pickSaveFile(kind) {
+async function pickSaveFile(kind, name) {
   const json = kind === 'json';
-  const opts = { suggestedName: (backupFile[kind] && backupFile[kind].name) || (json ? 'mealprep-backup.json' : 'mealprep-backup.csv'),
+  const opts = { suggestedName: name || (backupFile[kind] && backupFile[kind].name) || (json ? 'mealprep-backup.json' : MBUI.fileName('mealprep', 'recipes', 'csv')),
     types: [json ? { description: 'JSON backup', accept: { 'application/json': ['.json'] } } : { description: 'CSV spreadsheet', accept: { 'text/csv': ['.csv'] } }],
     startIn: backupFile[kind] || backupFile.json || backupFile.csv || 'documents' };
   try { return await window.showSaveFilePicker(opts); }
   catch (e) { if (e && e.name === 'AbortError') return null; delete opts.startIn; return await window.showSaveFilePicker(opts); }   // saved folder may be gone
 }
-async function exportTo(kind) {
+async function exportTo(kind, dated) {   // dated: Export All (a new dated file); otherwise the rolling mealprep-backup.json. Empty exports work too.
   closeMenus();
-  const json = kind === 'json', text = json ? backupJSON() : exportCSV(), what = json ? 'Backup' : 'CSV';
-  if (!FS_OK) { downloadText(json ? `mealprep-backup-${today()}.json` : `mealprep-${today()}.csv`, text, json ? 'application/json' : 'text/csv;charset=utf-8'); markBackedUp(); toast(`${what} downloaded to your Downloads folder`, 'ok'); return; }
+  const json = kind === 'json', text = json ? backupJSON() : exportCSV(), what = json ? 'Backup' : 'CSV', name = json ? MBUI.fileName('mealprep', 'backup', 'json') : MBUI.fileName('mealprep', 'recipes', 'csv');
+  if (!FS_OK) { downloadText(name, text, json ? 'application/json' : 'text/csv;charset=utf-8'); markBackedUp(); toast(`${what} downloaded · ${name}`, 'ok'); return; }
   try {
-    const h = await pickSaveFile(kind); if (!h) return;
-    await writeHandle(h, text); backupFile[kind] = h; handleSet(kind, h); markBackedUp(); toast(`${what} saved to ${h.name}`, 'ok');
+    const h = await pickSaveFile(kind, dated || !json ? name : ''); if (!h) return;
+    await writeHandle(h, text); backupFile[kind] = h; handleSet(kind, h); markBackedUp(); toast(`${what} saved · ${h.name}`, 'ok');
   } catch (e) { toast(`Could not save the ${what.toLowerCase()}. Try again or pick another folder.`, 'err'); }
 }
-ACTIONS.exportJson = () => exportTo('json');
-ACTIONS.exportCsv = () => exportTo('csv');
+ACTIONS.exportJson = () => exportTo('json', true);
+ACTIONS.exportCsv = () => exportTo('csv', true);
 /* Export All (ZIP): the JSON backup (exactly the Export All JSON text), the full CSV (imports back), one spreadsheet per kind of record, and a README */
 function zipSheets() {
   const yn = b => b ? 'Yes' : 'No', st = state;
@@ -5886,13 +5908,13 @@ ACTIONS.exportZip = async el => {
       `\r\n\r\nThe files contain everything you entered, including any health details. Keep them somewhere private.\r\n`;
     const blob = await MBFiles.zip([{ name: 'mealprep-backup.json', data: backupJSON() }, { name: 'mealprep-all.csv', data: exportCSV() }]
       .concat(sheets.map(([n, rows]) => ({ name: `mealprep-${n}.csv`, data: MBFiles.csv(rows) })), [{ name: 'README.txt', data: readme }]));
-    const name = `mealprep-backup-${today()}.zip`;
+    const name = MBUI.fileName('mealprep', 'backup', 'zip');
     if (FS_OK) {
       let h = null;
       try { h = await window.showSaveFilePicker({ suggestedName: name, types: [{ description: 'ZIP archive', accept: { 'application/zip': ['.zip'] } }], startIn: backupFile.json || 'documents' }); }
       catch (e) { if (e && e.name === 'AbortError') return; h = await window.showSaveFilePicker({ suggestedName: name }); }
-      await writeHandle(h, blob); markBackedUp(); toast(`ZIP saved to ${h.name}`, 'ok');
-    } else { MBFiles.download(blob, name); markBackedUp(); toast('ZIP downloaded to your Downloads folder', 'ok'); }
+      await writeHandle(h, blob); markBackedUp(); toast(`ZIP saved · ${h.name}`, 'ok');
+    } else { MBFiles.download(blob, name); markBackedUp(); toast(`ZIP downloaded · ${name}`, 'ok'); }
   } catch (e) { toast('Could not make the ZIP. Try Export All (JSON) instead.', 'err'); }
   finally { setBusy(el, false); }
 };
@@ -5903,7 +5925,7 @@ ACTIONS.backupNow = async () => {
   if (!FS_OK || !h) return exportTo('json');                       // first time: ask where (or download)
   try {
     if (!(await canWrite(h))) { toast('Save needs permission to update your backup file.', '', { label: 'Choose file', fn: () => exportTo('json') }); return; }
-    await writeHandle(h, backupJSON()); markBackedUp(); toast(`Backup saved to ${h.name}`, 'ok');
+    await writeHandle(h, backupJSON()); markBackedUp(); toast(`Backup saved · ${h.name}`, 'ok');
   } catch (e) { toast(`Could not update ${h.name}. It may have been moved or deleted.`, 'err', { label: 'Choose location', fn: () => exportTo('json') }); }
 };
 document.addEventListener('keydown', e => {                          // Ctrl/Cmd+S = Save backup now
@@ -5959,7 +5981,7 @@ VIEWS.settings = {
     const row = (label, desc, ctl, cls = '') => `<div class="mb-set-row${cls}"><div class="mb-set-l"><b>${label}</b>${desc ? `<small>${desc}</small>` : ''}</div><div class="mb-set-c">${ctl}</div></div>`;
     const seg = (label, act, cur, opts) => `<div class="mb-seg" role="group" aria-label="${label}">${opts.map(([k, l]) => `<button type="button" data-act="${act}" data-k="${k}" aria-pressed="${cur === k}">${l}</button>`).join('')}</div>`;
     const sel = (label, chg, fid, list, cur) => `<select data-change="${chg}" data-fid="${fid}" aria-label="${label}">${optionsHTML(list.map(d => [d, d]), cur)}</select>`;
-    return `<div class="page-head"><h1 class="ph-dup">Settings</h1></div>
+    return `<div class="page-head"><h1 class="ph-dup">Settings</h1><p>Changes save as you make them.</p></div>
     <div class="mb-set">
       <section class="mb-set-sec" aria-labelledby="setA"><h2 class="mb-set-h" id="setA">Appearance</h2>
         <div class="mb-set-card">${row('Theme', 'Light or dark. Saved on this device.', `<div class="mb-seg" role="group" aria-label="Theme"><button type="button" data-act="setTheme" data-theme-set="light" aria-pressed="${!dark}">${wic('sun')}Light</button><button type="button" data-act="setTheme" data-theme-set="dark" aria-pressed="${dark}">${wic('moon')}Dark</button></div>`)}</div></section>
@@ -5991,7 +6013,7 @@ VIEWS.settings = {
           <div id="impPreview"></div></div>
         <div class="mb-set-card">
           ${row('Where backups go', backupWhereHTML(), '')}
-          ${row('Demo recipes', `${DEMO_RECIPES.length} demo recipes to try the app with.${nDemo ? ` <b>${nDemo}</b> loaded now.` : ''} Removing them never touches your ingredient library.`, `<button class="btn sm" type="button" data-act="loadDemo">Load</button><button class="btn sm" type="button" data-act="removeDemo" ${nDemo ? '' : 'disabled'}>Remove</button>`)}
+          ${row('Sample data', `${DEMO_RECIPES.length} sample recipes to try the app with.${nDemo ? ` <b>${nDemo}</b> loaded now.` : ''} Removing them never touches your ingredient library.`, `<button class="btn sm" type="button" data-act="loadDemo">Load sample data</button><button class="btn sm" type="button" data-act="removeDemo" ${nDemo ? '' : 'disabled'}>Remove sample data</button>`)}
           ${row('Spreadsheet tools', 'Copy everything as CSV, or get a blank template to fill in.', `<button class="btn sm" type="button" data-act="copyCsv">${icon('copy', 'sm')} Copy CSV</button><button class="btn sm" type="button" data-act="templateCsv">Blank template</button>`)}
           ${row('Storage', storageOK ? 'Changes save automatically in this browser.' : 'This browser is blocking storage, so changes will be lost when you close the page. Save a backup to keep your work.', storageOK ? `<span class="chip">${icon('check', 'sm')}Saving</span>` : '<span class="chip warn">Storage off</span>')}
           ${row('Erase recipes &amp; plans', 'Recipes, plans, past weeks, leftovers and grocery items. Keeps your profile, settings, prices and ingredient library.', '<button class="btn sm danger-o" type="button" data-act="resetRecipes">Erase…</button>', ' danger')}
@@ -6000,18 +6022,17 @@ VIEWS.settings = {
           <div class="tablewrap"><table class="table"><thead><tr><th>record</th><th>What it holds</th><th>Columns used</th></tr></thead><tbody>${CSV_FORMAT_ROWS.map(r => `<tr><td><code>${esc(r[0])}</code></td><td>${esc(r[1])}</td><td>${esc(r[2])}</td></tr>`).join('')}</tbody></table></div>
           <p class="muted small">All columns: <code>${CSV_COLS.join(', ')}</code></p></details></section>
       <section class="mb-set-sec" aria-labelledby="setI"><h2 class="mb-set-h" id="setI">Install</h2>
-        <div data-mb-install data-app-name="Meal Prep" data-note="Opens in its own window with its own icon. Works offline after the first visit." data-ios-note="The installed app keeps its own saved data, separate from Safari. Save a backup here first, then import it in the installed app." hidden></div>
-        <p class="mb-set-card pad inst-note">In Chrome or Edge, use Install in the address bar or the browser menu. On iPhone or iPad, tap Share, then Add to Home Screen. It opens in its own window and works offline after the first visit.</p></section>
+        <div class="mb-set-card inst-box" id="installSlot"></div></section>
       <section class="mb-set-sec" aria-labelledby="setAb"><h2 class="mb-set-h" id="setAb">About</h2>
         <div class="mb-about" role="group" aria-label="About this app">
           <svg class="uic" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
-          <div><b>mealprep.mcbflow.com™</b><p>Version 1.7 · Oct 16, 2026</p>
+          <div><b>mealprep.mcbflow.com™</b><p>Version ${APP_VER} · ${MBUI.shortDate(APP.released)}</p>
             <p class="mb-about-links"><button type="button" data-act="whatsNew">What’s new</button><a href="#/privacy">Privacy</a><a href="#/terms">Terms</a><a href="#/help">Help</a><a href="https://mcbflow.com/">More free apps at mcbflow.com</a></p>
             <p class="mb-about-copy">© 2024–2026 Matthew Broyer. All rights reserved.</p></div></div></section>
     </div>`;
   },
   after() {
-    $('#setDataList')._html = ''; renderBackupUI();
+    $('#setDataList')._html = ''; renderBackupUI(); paintInstall();
     if (SYNC) SYNC.card($('#syncCard'));
     const drop = $('#drop'); if (!drop) return;
     ['dragenter', 'dragover'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('over'); }));
@@ -6020,10 +6041,19 @@ VIEWS.settings = {
     applyPendingImport();
   }
 };
+/* Settings › Install: the same words in every mcbflow.com app */
+function paintInstall() {
+  const box = $('#installSlot'); if (!box) return;
+  const ios = /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  box.innerHTML = '<p>Add Meal Prep to your home screen or dock. It opens in its own window and works offline.</p>' +
+    (MBInstall.isInstalled() ? '<span class="chip">Installed</span>' : MBInstall.canInstall() ? '<button type="button" class="btn primary" data-act="installApp">Install</button>' : `<p>${ios ? 'iPhone/iPad: tap Share, then Add to Home Screen.' : 'Use your browser’s menu: Install app / Add to Home screen.'}</p>`);
+}
+ACTIONS.installApp = () => MBInstall.install().then(paintInstall, paintInstall);
+window.addEventListener('beforeinstallprompt', () => setTimeout(paintInstall, 0)); window.addEventListener('appinstalled', () => setTimeout(paintInstall, 0));
 CHANGES.budget = el => { const v = numOrNull(el.value); state.settings.budget = v > 0 ? clamp(v, 1, 100000) : null; saveSoon(); };
 ACTIONS.printMode = el => { state.settings.printMode = el.dataset.k === 'color' ? 'color' : 'bw'; saveSoon(); rerender(); };
 ACTIONS.copyCsv = async () => { const ok = await copyText(exportCSV()); if (ok) { state.settings.lastExport = new Date().toISOString(); saveSoon(); renderBackupUI(); } toast(ok ? 'CSV copied to clipboard' : 'Could not copy. Use Export All (CSV) instead.', ok ? 'ok' : 'err'); };
-ACTIONS.templateCsv = () => downloadText('mealprep-template.csv', templateCSV());
+ACTIONS.templateCsv = () => { const n = MBUI.fileName('mealprep', 'csv-template', 'csv'); downloadText(n, templateCSV()); toast(`Template downloaded · ${n}`, 'ok'); };
 function readImportFile(f) {
   if (f.size > 20 * 1024 * 1024) { toast('That file is too large.', 'err'); return; }
   if (/\.zip$/i.test(f.name || '') || /zip/.test(f.type || '')) {      // a ZIP from Export All (ZIP): its JSON backup goes through the normal import
@@ -6063,28 +6093,53 @@ ACTIONS.resetRecipes = async () => {
   undoable('Recipes and plans erased', () => { state.recipes = []; state.plan = {}; state.manual = []; state.checked = {}; state.have = {}; state.stock = []; state.history = []; state.prepDone = {}; saveSoon(); rerender(); });
 };
 ACTIONS.resetAll = async () => {
-  if (!await confirmDialog('Erase everything, including your profile, settings and custom ingredients? Save a backup first if you might want it back.' + syncEraseNote(), { ok: 'Erase everything', danger: true })) return;
+  const signed = !!(SYNC && SYNC.status().signedIn);   // "Clear all data…": the shared dialog (type DELETE), same in every mcbflow.com app
+  const ok = await MBFiles.confirmClear({
+    what: 'your recipes, meal plans, grocery list, leftovers, prices, profile, settings and custom ingredients',
+    synced: signed ? 'You’re signed in, so the synced copy on your account is deleted too.' : '',
+    note: signed ? 'To clear only this device, sign out first (Settings → Account & sync).' : '',
+    onBackup: async () => { const t0 = state.settings.lastExport; await ACTIONS.backupNow(); if (state.settings.lastExport === t0) throw new Error('backup not saved'); }
+  });
+  if (!ok) return;
   undoable('Everything erased', () => { state = defaultState(); invalidatePantry(); saveNow(); applyTheme(); refreshIngLists(); openWizard(false); go('#/home'); rerender(); }, { after: () => { if (ui.wiz.open && !ui.wiz.rerun) closeWizard(); go('#/home'); rerender(); } });
 };
 
-/* ---- Help (was About): how it works, install, privacy, release notes and license ---- */
+/* ---- Help (2026-10-17b, one structure in every app): intro · Getting started · questions by topic · Install the app · Your data & privacy.
+   Release notes live in What’s new; the license is on the Terms page. ---- */
+const HELP_GROUPS = [
+  { id: 'hg-plan', t: 'Recipes and planning', qs: [
+    ['How do I add recipes?', ['On Recipes, choose Add a recipe. You can paste a whole ingredient list at once and the app reads the amounts and units. You can also import recipes from a CSV or a backup in Settings, under Backup & data.', 'Star your favorites and give recipes a thumbs-up or thumbs-down. Auto-plan uses your thumbs-ups and skips thumbs-down recipes.']],
+    ['How does Auto-plan work?', ['On the Planner, Auto-plan picks the recipes closest to your daily calorie target and your protein, carb and fat split. You choose the days, how many different recipes per meal, favorites or meal-prep friendly recipes first, a longest cooking time and an optional grocery budget. Undo is in the message right after.', 'Swap changes one meal for the next best fit. Start a new week files this week under Past weeks, then repeats it, re-plans or starts empty.']],
+    ['What does “Servings mean” change?', ['In Settings, under Meal Prep settings. Portions I eat multiplies nutrition by the servings you plan. Portions I cook counts one portion per meal, and servings only drive the grocery list.']],
+    ['How are my daily calories and macros set?', ['Your body type sets the protein, carb and fat split, and your stats, activity and goal set your daily calories. Change them on the Goals page, or take the 4-question quiz if you are not sure of your body type.', 'These are estimates for adults 18 and over, not medical or nutrition advice.']]] },
+  { id: 'hg-shop', t: 'Shopping and prep', qs: [
+    ['How is the grocery list made?', ['Every ingredient from the meals you planned is merged and sorted by store section, in the walk order you set on the Ingredients page. Tick items as you shop, mark what is already in your pantry, add your own items, then copy or print the list.']],
+    ['How do prices and the budget work?', ['Enter what you pay for ingredients on the Grocery page or in a recipe’s Cost box. Recipes, the week and the grocery list then show estimated costs, and Auto-plan can aim for your weekly budget. Costs are only as good as the prices you type in.']],
+    ['What does the Prep page do?', ['It turns the week into one cooking session: what to cook and pack, ingredients to prep together, cooking steps, and which portions go in the fridge or the freezer, counted from your prep day. Log leftovers and freezer portions there so you know what is on hand.']]] },
+  { id: 'hg-data', t: 'Backups and sync', qs: [
+    ['How do I back up or move my data?', ['Use the Data menu in the top bar: Save backup now (' + SAVE_KEYS + ') updates one backup file, Export All saves JSON, CSV or a ZIP of both, and Import Backup restores any of them.', 'To keep your phone and computer the same, sign in with a free mcbflow.com account (Sign in in the top bar).']],
+    ['Keyboard shortcuts', ['Press / or ' + (IS_MAC ? '⌘K' : 'Ctrl+K') + ' to search. ' + SAVE_KEYS + ' saves a backup. In Search, the arrow keys move and Enter opens.']]] },
+  { id: 'hg-install', t: 'Install the app', qs: [
+    ['Can I install it like an app?', ['Yes. On Chrome, Edge and Android, use Install in Settings (or the install icon in the address bar). On iPhone and iPad, tap Share, then Add to Home Screen. It opens in its own window and works with no signal once it has loaded.', 'On iPhone, the installed app keeps its own saved data, separate from Safari, so save a backup in one and import it in the other to move your data.']]] },
+  { id: 'hg-privacy', t: 'Your data & privacy', links: true, qs: [
+    ['Where is my data kept?', ['In this browser, on this device, and in the backup files you save. No account is needed. Nothing is sent anywhere unless you sign in to sync.']],
+    ['How do I delete my data?', ['Data menu, then Clear all data. Type DELETE to confirm. You can save a backup first in the same box.']]] }
+];
 VIEWS.help = {
   render() {
-    return `<div class="page-head"><h1 class="about-h">${logo(40)} Help</h1><p>How ${esc(APP.name)} works, what’s new, and the license.</p></div>
-      <div class="chips noprint"><button class="chipbtn" data-act="scrollTo" data-t="ab-about">How it works</button><button class="chipbtn" data-act="scrollTo" data-t="ab-notes">Release notes</button><button class="chipbtn" data-act="scrollTo" data-t="ab-license">License</button></div>
-      <section class="card prose" id="ab-about"><h2>About</h2>
-        <p>${esc(APP.name)} plans your week of meals, hits your macro targets and builds a grocery list you can shop from. It started in 2024 as a spreadsheet called The Pantry Partner and was used for years before becoming this web app.</p>
-        <h3>The method</h3><ol><li><b>Pick your body type.</b> It sets your target protein, carb and fat split.</li><li><b>Get your numbers.</b> Your stats and goal become daily calories and grams of each macro.</li><li><b>Plan to hit them.</b> The planner checks every day against your targets, and the grocery list builds itself.</li><li><b>Prep it once.</b> The Prep page turns the week into one cooking session, and your leftovers, prices and past weeks make next week faster.</li></ol>
-        <h3>Install it like an app</h3><p>On Chrome, Edge and Android, use the Install button on the <a href="#/settings">Settings page</a> (or the install icon in the address bar). On iPhone and iPad, tap Share, then Add to Home Screen. It opens full screen and works with no signal once it has loaded. On iPhone, the installed app keeps its own saved data, separate from Safari, so export a backup in one and import it in the other to move your data.</p>
-        <h3>Back up and sync</h3><p>Use the Data menu in the top bar: Save backup now (${esc(SAVE_KEYS)}) updates one backup file, Export All saves JSON, CSV or a ZIP of both, and Import Backup restores any of them. To keep your phone and computer the same, sign in with a free mcbflow.com account (the Sign in button in the top bar). All your settings are on the <a href="#/settings">Settings page</a>.</p>
-        <h3>Privacy</h3><p>No account is needed. Your recipes, plan and health details stay in your browser and in the backup files you save, unless you sign in to sync. <a href="#/privacy">Read the Privacy Policy</a> · <a href="#/terms">Terms of Use</a></p></section>
-      <section class="card prose" id="ab-notes"><h2>Release notes</h2>${RELEASES.map((r, i) => `<details class="release" id="rel-${i}" data-keep="rel-${i}"${i === 0 || ui.open['rel-' + i] ? ' open' : ''}><summary><h3>${esc(r.name || APP.name)} © ${esc(r.date.slice(-4))} · ${esc(r.v)} · ${esc(r.date)}${r.tag ? ` <span class="chip">${esc(r.tag)}</span>` : ''}</h3></summary><ul>${r.notes.map(n => `<li>${esc(n)}</li>`).join('')}</ul></details>`).join('')}</section>
-      <section class="card prose" id="ab-license"><h2>License</h2><h3>${esc(LICENSE.title)}</h3><p class="muted small">Last updated ${esc(LICENSE.updated)}</p><details class="licbox" data-keep="lic"${ui.open.lic ? ' open' : ''}><summary>Read the full license (${LICENSE.sections.length} sections)</summary>${LICENSE.sections.map(([h, ps], i) => `<h4 id="lic-${i}">${esc(h)}</h4>${ps.map(p => `<p>${esc(p)}</p>`).join('')}`).join('')}</details>
-        <details class="licbox" data-keep="tp"${ui.open.tp ? ' open' : ''}><summary>${esc(THIRD_PARTY.title)}</summary><p class="muted small">Some interface icons follow the Feather Icons style. The app loads no fonts, scripts or images from other sites.</p><p class="small" style="white-space:pre-line">${esc(THIRD_PARTY.text)}</p></details></section>`;
+    const steps = ['Set your targets on Goals: body type, stats and goal.', 'Add your recipes, or start with the sample recipes.', 'Plan your week on the Planner, by hand or with Auto-plan.', 'Shop from the Grocery list, then cook it all on the Prep page.'];
+    return `<div class="page-head"><h1 class="ph-dup">Help</h1><p>Short answers about Meal Prep. Can’t find something? Press / to search.</p></div>
+      <h2 class="help-h" id="hg-start">Getting started</h2>
+      <section class="card help-start"><ol>${steps.map(s => `<li>${esc(s)}</li>`).join('')}</ol></section>
+      ${HELP_GROUPS.map(g => `<h2 class="help-h" id="${g.id}">${esc(g.t)}</h2><section class="card help-faq">${g.qs.map(([q, a]) => `<details class="help-q"><summary>${esc(q)}</summary><div class="help-a">${a.map(x => `<p>${esc(x)}</p>`).join('')}</div></details>`).join('')}${g.links ? '<div class="help-links"><a class="btn sm" href="#/privacy">Privacy Policy</a><a class="btn sm ghost" href="#/terms">Terms of Use</a></div>' : ''}</section>`).join('')}`;
   }
 };
-ACTIONS.scrollTo = el => revealAndScroll(el.dataset.t);
-ACTIONS.whatsNew = () => aboutJump('rel-0');   // "What’s new" (footer and Settings › About): the newest release notes on the Help page
+/* What’s new: the one shared dialog, built from RELEASES (newest first). Every entry point calls this. */
+ACTIONS.whatsNew = () => MBUI.whatsNew({ app: 'Meal Prep', releases: RELEASES.map(r => {
+  const yearOnly = /^\d{4}$/.test(r.date);
+  return { version: r.v.replace(/^v(?=\d)/, '').replace(/ · Web app$/, ''), date: yearOnly ? '' : r.date, items: r.notes,
+    title: [r.tag, r.name ? 'Released as ' + r.name + (yearOnly ? ' in ' + r.date : '') : ''].filter(Boolean).join(' · ') };
+}) });
 
 /* ==========================================================================
    Site chrome: mobile menu, scroll progress, back-to-top, site search,
@@ -6092,25 +6147,12 @@ ACTIONS.whatsNew = () => aboutJump('rel-0');   // "What’s new" (footer and Set
    ========================================================================== */
 const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ---------- mobile menu ---------- */
-/* ---------- mobile bottom nav: the "More" sheet ---------- */
-const MOBILE_MQ = '(max-width: 767px)';
-function setMenu(open) {
-  open = !!open && matchMedia(MOBILE_MQ).matches;
-  document.body.classList.toggle('menu-open', open);
-  const sh = $('#bnSheet'); if (sh) sh.hidden = !open;
-  const b = $('#bnMore'); if (b) b.setAttribute('aria-expanded', String(open));
-}
-ACTIONS.menu = () => setMenu(!document.body.classList.contains('menu-open'));
-document.addEventListener('click', e => {
-  if (!document.body.classList.contains('menu-open')) return;
-  if (!e.target.isConnected) return;                                                   // the click re-rendered its own target
-  if (e.target.closest('#bnSheet a, #bnSheet button')) { setMenu(false); return; } // picked something
-  if (!e.target.closest('#bnSheet, #bnMore')) setMenu(false);                       // tapped outside
-});
-document.addEventListener('keydown', e => { if (e.key === 'Escape' && document.body.classList.contains('menu-open')) { setMenu(false); const b = $('#bnMore'); b && b.focus(); } });
-matchMedia(MOBILE_MQ).addEventListener('change', () => setMenu(false));
-window.addEventListener('hashchange', () => { setMenu(false); $$('details.moremenu[open]').forEach(d => { d.open = false; }); });
+/* ---------- phone bottom bar: More opens the shared sheet (MBUI.sheet) ---------- */
+const WN_ICON = '<svg class="uic ic" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5l1.9 5.1 5.1 1.9-5.1 1.9L12 17.5l-1.9-5.1L5 10.5l5.1-1.9z"/><path d="M18.5 15.5v4M16.5 17.5h4"/></svg>';
+ACTIONS.menu = el => MBUI.sheet({ title: 'More', opener: el,
+  items: MORE_ITEMS.map(n => ({ label: n.label, icon: navIcon(n.icon), current: route.name === n.id, onClick: () => go('#/' + n.id) }))
+    .concat([{ label: 'What’s new', sub: 'Version ' + APP_VER, icon: WN_ICON, onClick: () => ACTIONS.whatsNew() }]) });
+window.addEventListener('hashchange', () => { $$('details.moremenu[open]').forEach(d => { d.open = false; }); });
 
 /* ---------- scroll progress + back to top + header shadow ---------- */
 let scrollTick = false;
@@ -6151,7 +6193,6 @@ function revealAndScroll(id) {
   const t = document.getElementById(id); if (!t) return;
   for (let d = t.closest('details'); d; d = d.parentElement && d.parentElement.closest('details')) d.open = true;
   if (t.matches('details')) t.open = true;
-  if (id === 'ab-license') { const l = t.querySelector('details.licbox'); if (l) l.open = true; }
   t.scrollIntoView({ behavior: reducedMotion() ? 'auto' : 'smooth', block: 'start' });
 }
 document.addEventListener('toggle', e => { const d = e.target; if (d && d.dataset && d.dataset.keep) ui.open[d.dataset.keep] = d.open; }, true);
@@ -6175,20 +6216,8 @@ const noticeSet = () => { noticeSeen = true; try { localStorage.setItem(NOTICE_K
 const norm = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
 const PAGE_HINTS = {
   home: 'dashboard today overview', goals: 'body type macros calories bmr tdee target ectomorph mesomorph endomorph weight goal health', recipes: 'recipe library meals cookbook',
-  planner: 'meal plan week calendar auto-plan swap new week repeat last week budget', prep: 'prep day batch cooking containers freezer fridge leftovers storage steps cook', grocery: 'shopping list store groceries', ingredients: 'ingredient library store sections aisles units', settings: 'settings preferences theme dark light account sync install app home screen offline csv zip import export backup demo reset erase units budget household meals', help: 'help about how it works release notes what’s new license version'
+  planner: 'meal plan week calendar auto-plan swap new week repeat last week budget', prep: 'prep day batch cooking containers freezer fridge leftovers storage steps cook', grocery: 'shopping list store groceries', ingredients: 'ingredient library store sections aisles units', settings: 'settings preferences theme dark light account sync install app home screen offline csv zip import export backup sample demo reset erase units budget household meals', help: 'help faq questions getting started install about how it works release notes what’s new license version'
 };
-function hl(text, terms) {
-  const t = String(text); if (!terms.length) return esc(t);
-  const re = new RegExp('(' + terms.map(x => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|') + ')', 'ig');
-  return t.split(re).map((part, i) => i % 2 ? `<mark>${esc(part)}</mark>` : esc(part)).join('');
-}
-function snippet(text, terms, len = 120) {
-  const t = String(text), n = norm(t); let at = -1;
-  for (const x of terms) { const i = n.indexOf(x); if (i >= 0 && (at < 0 || i < at)) at = i; }
-  if (at < 0) return t.slice(0, len);
-  const start = Math.max(0, at - 36), end = Math.min(t.length, start + len);
-  return (start > 0 ? '…' : '') + t.slice(start, end) + (end < t.length ? '…' : '');
-}
 function searchDocs() {
   const docs = [];
   for (const n of NAV.filter(n => !n.feat || featureOn(n.feat))) docs.push({ g: 'Pages', title: n.label, sub: 'Page', hay: norm(n.label + ' ' + (PAGE_HINTS[n.id] || '')), icon: n.icon, run: () => go('#/' + n.id) });
@@ -6207,93 +6236,41 @@ function searchDocs() {
   docs.push({ g: 'Actions', title: 'Switch light / dark theme', sub: 'Appearance', hay: norm('theme dark light mode appearance'), icon: 'moon', run: () => ACTIONS.theme() });
   for (const r of state.recipes) {
     const ing = r.ingredients.map(g => g.item).join(' ');
-    docs.push({ g: 'Recipes', title: r.name, sub: `${r.type} · ${fmtInt(r.cal)} kcal${isDemo(r) ? ' · Demo recipe' : ''}`, hay: norm(r.name + ' ' + r.type), body: norm(ing + ' ' + r.steps.join(' ') + ' ' + (r.notes || '')), raw: { ing, steps: r.steps.join(' '), notes: r.notes || '' }, upd: r.updated, icon: 'book', run: () => go('#/recipes/' + r.id) });
+    docs.push({ g: 'Recipes', title: r.name, sub: `${r.type} · ${fmtInt(r.cal)} kcal${isDemo(r) ? ' · Sample recipe' : ''}`, hay: norm(r.name + ' ' + r.type), body: norm(ing + ' ' + r.steps.join(' ') + ' ' + (r.notes || '')), icon: 'book', run: () => go('#/recipes/' + r.id) });
   }
   if (featureOn('planner')) for (const d of DAYS) for (const s of SLOTS) { const e = getSlot(d, s); if (e) { const r = getRecipe(e.rid); docs.push({ g: 'Meal plan', title: r.name, sub: `${d} · ${s}`, hay: norm(r.name + ' ' + d + ' ' + s), icon: 'calendar', run: () => go('#/planner') }); } }
   if (featureOn('grocery')) for (const i of fullGroceryList()) docs.push({ g: 'Grocery list', title: cap(i.name), sub: `${i.section}${i.manual ? ' · added by you' : ''}`, hay: norm(i.name + ' ' + i.section), icon: 'cart', run: () => go('#/grocery') });
   for (const i of allIngredients()) docs.push({ g: 'Ingredients', title: cap(i.name), sub: `${i.section} · ${i.unit}`, hay: norm(i.name + ' ' + i.section), icon: 'list', run: () => { ui.ingQ = i.name; ui.ingSec = 'all'; go('#/ingredients'); } });
-  RELEASES.forEach((r, i) => docs.push({ g: 'Help & info', title: `Release notes · ${r.v}`, sub: r.date, hay: norm(r.v + ' ' + r.date), body: norm(r.notes.join(' ')), raw: { notes: r.notes.join(' ') }, icon: 'info', run: () => aboutJump('rel-' + i) }));
-  LICENSE.sections.forEach(([h, ps], i) => docs.push({ g: 'Help & info', title: `License · ${h}`, sub: 'License', hay: norm(h), body: norm(ps.join(' ')), raw: { notes: ps.join(' ') }, icon: 'shield', run: () => aboutJump('lic-' + i) }));
-  docs.push({ g: 'Help & info', title: 'Privacy Policy', sub: 'What the app stores and what it never sends', hay: norm('privacy policy data cookies tracking storage delete erase'), body: norm(PRIVACY.sections.map(x => x[0] + ' ' + x[1].join(' ')).join(' ')), raw: { notes: PRIVACY.sections.map(x => x[1].join(' ')).join(' ') }, icon: 'shield', run: () => go('#/privacy') });
-  docs.push({ g: 'Help & info', title: 'Terms of Use', sub: 'Plain-language terms', hay: norm('terms of use disclaimer medical advice warranty'), body: norm(TERMS.sections.map(x => x[0] + ' ' + x[1].join(' ')).join(' ')), raw: { notes: TERMS.sections.map(x => x[1].join(' ')).join(' ') }, icon: 'info', run: () => go('#/terms') });
+  RELEASES.forEach(r => docs.push({ g: 'Help & info', title: `What’s new · ${r.v}`, sub: r.date, hay: norm(r.v + ' ' + r.date), body: norm(r.notes.join(' ')), icon: 'info', run: () => ACTIONS.whatsNew() }));
+  for (const g of HELP_GROUPS) for (const [q, a] of g.qs) docs.push({ g: 'Help & info', title: q, sub: 'Help · ' + g.t, hay: norm(q), body: norm(a.join(' ')), icon: 'help', run: () => { go('#/help'); setTimeout(() => { const d = [...$$('#view details.help-q')].find(x => x.querySelector('summary').textContent === q); if (d) { d.open = true; d.scrollIntoView({ block: 'center' }); } }, 80); } });
+  LICENSE.sections.forEach(([h, ps], i) => docs.push({ g: 'Help & info', title: `License · ${h}`, sub: 'Terms of Use', hay: norm(h), body: norm(ps.join(' ')), icon: 'shield', run: () => { go('#/terms'); setTimeout(() => revealAndScroll('lic-' + i), 80); } }));
+  docs.push({ g: 'Help & info', title: 'Privacy Policy', sub: 'What the app stores and what it never sends', hay: norm('privacy policy data cookies tracking storage delete erase'), body: norm(PRIVACY.sections.map(x => x[0] + ' ' + x[1].join(' ')).join(' ')), icon: 'shield', run: () => go('#/privacy') });
+  docs.push({ g: 'Help & info', title: 'Terms of Use', sub: 'Plain-language terms', hay: norm('terms of use disclaimer medical advice warranty'), body: norm(TERMS.sections.map(x => x[0] + ' ' + x[1].join(' ')).join(' ')), icon: 'info', run: () => go('#/terms') });
   return docs;
 }
-function aboutJump(id) { go('#/help'); setTimeout(() => revealAndScroll(id), 80); }
-const GROUP_ORDER = ['Recipes', 'Pages', 'Actions', 'Meal plan', 'Grocery list', 'Ingredients', 'Help & info'], GROUP_CAP = { Recipes: 8, Pages: 8, Actions: 5, 'Meal plan': 4, 'Grocery list': 5, Ingredients: 6, 'Help & info': 5 };
+const GROUP_ORDER = ['Recipes', 'Meal plan', 'Grocery list', 'Ingredients', 'Pages', 'Actions', 'Help & info'], GROUP_CAP = { Recipes: 10, 'Meal plan': 4, 'Grocery list': 5, Ingredients: 6, Pages: 6, Actions: 5, 'Help & info': 6 };
+const GROUP_TAG = { Recipes: 'Recipe', 'Meal plan': 'Meal', 'Grocery list': 'Grocery', Ingredients: 'Ingredient', Pages: 'Page', Actions: 'Action', 'Help & info': 'Help' };
 function runSearch(q, docs) {
   const terms = norm(q).split(/\s+/).filter(Boolean);
   if (!terms.length) return docs.filter(d => d.g === 'Pages' || d.g === 'Actions').map(d => ({ d, score: 0, terms }));
   const out = [];
   for (const d of docs) {
-    const title = norm(d.title); let score = 0, ok = true, inBody = false;
+    const title = norm(d.title); let score = 0, ok = true;
     for (const t of terms) {
       if (title === t) score += 100; else if (title.startsWith(t)) score += 60; else if (title.split(/[\s&/,-]+/).some(w => w.startsWith(t))) score += 40; else if (title.includes(t)) score += 25;
-      else if (d.hay.includes(t)) score += 12; else if (d.body && d.body.includes(t)) { score += 5; inBody = true; } else { ok = false; break; }
+      else if (d.hay.includes(t)) score += 12; else if (d.body && d.body.includes(t)) score += 5; else { ok = false; break; }
     }
-    if (ok) out.push({ d, score, terms, inBody });
+    if (ok) out.push({ d, score, terms });
   }
   return out.sort((a, b) => b.score - a.score || a.d.title.localeCompare(b.d.title));
 }
-const searchUI = { items: [], active: 0, docs: null };
-function renderSearchResults() {
-  const q = $('#sInput').value, res = runSearch(q, searchUI.docs), box = $('#sResults');
-  const groups = {}; for (const r of res) (groups[r.d.g] = groups[r.d.g] || []).push(r);
-  searchUI.items = []; let html = '', n = 0;
-  for (const g of GROUP_ORDER) {
-    const list = (groups[g] || []).slice(0, GROUP_CAP[g]); if (!list.length) continue;
-    const more = (groups[g] || []).length - list.length;
-    html += `<div class="sgroup" role="presentation">${esc(g)}${more > 0 ? ` <span class="muted">+${more} more, keep typing</span>` : ''}</div>`;
-    for (const r of list) {
-      const d = r.d; let sub = esc(d.sub), extra = '';
-      if (r.inBody && d.raw) { const src = ['ing', 'steps', 'notes'].map(k => d.raw[k]).find(t => t && r.terms.some(x => norm(t).includes(x))); if (src) extra = `<span class="sm">${hl(snippet(src, r.terms), r.terms)}</span>`; }
-      html += `<button type="button" class="sitem" role="option" id="so${n}" data-idx="${n}" aria-selected="false">${icon(d.icon, 'sm')}<span class="st"><b>${hl(d.title, r.terms)}</b><span class="ss">${sub}${d.upd ? ' · ' + updatedHTML(d.upd) : ''}</span>${extra}</span></button>`;
-      searchUI.items.push(d); n++;
-    }
-  }
-  box.innerHTML = html || `<div class="sempty"><b>No results for “${esc(q.trim())}”</b><span>Try a shorter word, or check the spelling. You can search recipes, ingredients, your plan, your grocery list, pages and release notes.</span></div>`;
-  $('#sCount').textContent = q.trim() ? `${searchUI.items.length} result${searchUI.items.length === 1 ? '' : 's'}` : '';
-  setSearchActive(0);
+/* Search (shared MBUI.search, "/" and Ctrl/Cmd+K): your recipes first, then the plan, grocery list and ingredients, then pages, actions and help */
+function searchRun(q) {
+  const g = {}; for (const r of runSearch(q, searchDocs())) (g[r.d.g] = g[r.d.g] || []).push(r.d);
+  const out = []; for (const k of GROUP_ORDER) (g[k] || []).slice(0, GROUP_CAP[k]).forEach(d => out.push({ title: d.title, sub: d.sub, tag: GROUP_TAG[k], onSelect: d.run }));
+  return out;
 }
-function setSearchActive(i) {
-  const n = searchUI.items.length; if (!n) { $('#sInput').removeAttribute('aria-activedescendant'); return; }
-  i = (i + n) % n; searchUI.active = i;
-  $$('#sResults .sitem').forEach((b, k) => { b.classList.toggle('on', k === i); b.setAttribute('aria-selected', String(k === i)); });
-  const el = $('#so' + i); if (el) { $('#sInput').setAttribute('aria-activedescendant', 'so' + i); el.scrollIntoView({ block: 'nearest' }); }
-}
-function chooseSearch(i) { const d = searchUI.items[i]; if (!d) return; $('#searchDlg').close(); setTimeout(() => d.run(), 0); }
-function openSearch() {
-  const dlg = $('#searchDlg'); if (dlg.open) { $('#sInput').select(); return; }
-  const other = $('#dlg'); if (other && other.open) return;
-  setMenu(false);
-  searchUI.docs = searchDocs();
-  dlg.innerHTML = `<div class="sbox"><div class="sbar">${icon('search')}<input id="sInput" type="search" role="combobox" aria-expanded="true" aria-controls="sResults" aria-autocomplete="list" placeholder="Search recipes, ingredients, pages…" autocomplete="off" spellcheck="false" aria-label="Search the site"><span id="sCount" class="muted small" aria-live="polite"></span><button type="button" class="btn icon ghost sm" data-act="closeSearch" aria-label="Close search">${icon('x')}</button></div>
-    <div id="sResults" class="sresults" role="listbox" aria-label="Search results"></div><div class="shint"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span><kbd>Esc</kbd> close</span></div></div>`;
-  dlg.showModal(); renderSearchResults(); $('#sInput').focus();
-}
-ACTIONS.openSearch = openSearch;
-ACTIONS.closeSearch = () => $('#searchDlg').close();
-document.addEventListener('input', e => { if (e.target.id === 'sInput') renderSearchResults(); });
-document.addEventListener('click', e => {
-  const it = e.target.closest('#sResults .sitem'); if (it) { chooseSearch(+it.dataset.idx); return; }
-  const dlg = $('#searchDlg'); if (dlg.open && e.target === dlg) dlg.close();          // click on the backdrop
-});
-document.addEventListener('mousemove', e => { const it = e.target.closest && e.target.closest('#sResults .sitem'); if (it && +it.dataset.idx !== searchUI.active) setSearchActive(+it.dataset.idx); });
-document.addEventListener('keydown', e => {
-  const dlg = $('#searchDlg');
-  if (dlg.open) {
-    if (e.key === 'Escape') { e.preventDefault(); dlg.close(); }
-    else if (e.key === 'ArrowDown') { e.preventDefault(); setSearchActive(searchUI.active + 1); }
-    else if (e.key === 'ArrowUp') { e.preventDefault(); setSearchActive(searchUI.active - 1); }
-    else if (e.key === 'Home' && e.target.id !== 'sInput') { e.preventDefault(); setSearchActive(0); }
-    else if (e.key === 'Enter' && e.target.id === 'sInput') { e.preventDefault(); chooseSearch(searchUI.active); }
-    else if (e.key === 'k' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); dlg.close(); }
-    return;
-  }
-  const typing = /^(input|textarea|select)$/i.test(e.target.tagName) || e.target.isContentEditable;
-  if ((e.key === 'k' || e.key === 'K') && (e.ctrlKey || e.metaKey)) { e.preventDefault(); openSearch(); }
-  else if (e.key === '/' && !typing && !e.ctrlKey && !e.metaKey && !e.altKey) { e.preventDefault(); openSearch(); }
-});
-$('#searchDlg').addEventListener('close', () => { $('#searchDlg').innerHTML = ''; });
+ACTIONS.openSearch = el => MBUI.search.open('', el);
 
 /* ==========================================================================
    Print a recipe (kitchen sheet) / save as PDF through the browser print dialog
@@ -6307,7 +6284,7 @@ function recipeSheetHTML(r, opts, mult) {
   const nutri = opts.nutrition ? `<div class="ps-nutri"><span class="k">Per serving</span><b>${fmtInt(r.cal)}</b> kcal<span class="sep">·</span><i class="d d-p"></i>Protein <b>${round(r.p, 1)} g</b><span class="sep">·</span><i class="d d-c"></i>Carbs <b>${round(r.c, 1)} g</b><span class="sep">·</span><i class="d d-f"></i>Fat <b>${round(r.f, 1)} g</b>${n.pct ? `<span class="sep">·</span><span class="split">${Math.round(n.pct.p)}P / ${Math.round(n.pct.c)}C / ${Math.round(n.pct.f)}F %</span>` : ''}</div>` : '';
   const yields = `Makes ${fmtQty(r.servings * m)} ${r.servings * m === 1 ? 'serving' : 'servings'}${m !== 1 ? ` (recipe × ${fmtQty(m)})` : ''}`;
   return `<article class="ps ${mode}${opts.large ? ' lg' : ''}">
-    <header><h1>${esc(r.name)}</h1><p class="ps-meta">${esc(r.type)} · ${yields}${r.prep ? ' · Meal-prep friendly' : ''}${isDemo(r) ? ' · Demo recipe' : ''}</p></header>
+    <header><h1>${esc(r.name)}</h1><p class="ps-meta">${esc(r.type)} · ${yields}${r.prep ? ' · Meal-prep friendly' : ''}${isDemo(r) ? ' · Sample recipe' : ''}</p></header>
     ${nutri}
     <div class="ps-cols"><section class="ps-ing"><h2>Ingredients</h2>${ing ? `<ul>${ing}</ul>` : '<p>No ingredients listed.</p>'}</section>
       <section class="ps-steps"><h2>Instructions</h2>${r.steps.length ? `<ol>${r.steps.map(s => `<li>${esc(s)}</li>`).join('')}</ol>` : '<p>No steps listed.</p>'}</section></div>
@@ -6376,12 +6353,12 @@ function boot() {
   state = loadState();
   invalidatePantry(); applyTheme(); refreshIngLists();
   matchMedia('(prefers-color-scheme: dark)').addEventListener && matchMedia('(prefers-color-scheme: dark)').addEventListener('change', applyTheme);
+  MBUI.search.setup({ placeholder: 'Search recipes…', run: searchRun, limit: 40 });
   const sr = $('#searchBtn'); if (sr) sr.innerHTML = icon('search') + '<span class="tb-lbl">Search…</span><kbd>/</kbd>';
   const tt = $('#toTop'); if (tt) tt.innerHTML = icon('up');
   const fu = $('#ftUpdated'); if (fu) { fu.textContent = new Date(APP.released + 'T12:00:00Z').toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }); fu.dateTime = APP.released; }
   loadBackupHandles();
   setInterval(renderBackupUI, 60000);                                   // keep "Backed up 5 min ago" current
-  setMenu(false);
   /* first visit: the welcome screen (not when this browser already holds a sign-in: the account brings the setup along) */
   if (!state.setup.done && !(window.MBSync && MBSync.hasSavedSignIn())) openWizard(false);
   parseRoute(); renderApp(true);
@@ -6398,7 +6375,7 @@ function showFatal() {
 /* ---- Install as app (PWA): MB Suite v3 install card (MBInstall, inlined above) fills [data-mb-install] on the Settings page ---- */
 MBInstall.registerSW('sw.js');
 
-ACTIONS.fatalDownload = () => { let raw = ''; try { raw = localStorage.getItem(LS_KEY) || ''; } catch (e) { } downloadText('mealprep-saved-data.json', raw, 'application/json'); };
+ACTIONS.fatalDownload = () => { let raw = ''; try { raw = localStorage.getItem(LS_KEY) || ''; } catch (e) { } downloadText(MBUI.fileName('mealprep', 'saved-data', 'json'), raw, 'application/json'); };
 ACTIONS.fatalReset = () => { try { state = defaultState(); saveNow(); } catch (e) { } location.reload(); };
 let errToastAt = 0;
 const softFail = () => { const t = Date.now(); if (t - errToastAt > 5000) { errToastAt = t; try { toast('Something went wrong. Reload the page. Your data is saved in this browser.', 'err'); } catch (e) { } } };

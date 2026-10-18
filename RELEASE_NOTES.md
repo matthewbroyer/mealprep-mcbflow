@@ -1,6 +1,27 @@
 # Release notes: mealprep.mcbflow.com
 
-Newest first. The same notes appear in the app under Help > Release notes.
+Newest first. The same notes appear in the app under What’s new (footer, Settings › About, More).
+
+## 1.9 · 2026-10-17
+- The More menu on phones lists Settings, the other pages, Help and What’s new, in the same order as every mcbflow.com app.
+- What’s new opens in one small window from the footer, Settings › About, More and Search. It replaces the long release history on the Help page.
+- Help is reorganised: Getting started in four steps, then short answers grouped by topic, ending with Install the app and Your data & privacy. The full license moved to the Terms page.
+- Search finds your recipes first (picking one opens it), then your plan, grocery list, ingredients, pages and help. Press / or Ctrl+K, or tap Search. The / key no longer jumps into the recipe filter.
+- Demo recipes are now called Sample data. A short note at the top of Home has one button to remove it, with Undo. The welcome screen offers Start empty or Start with sample data.
+- Deleting a recipe, a grocery item, a custom ingredient, leftovers, a past week or a day’s meals happens right away, with Undo in the message at the bottom. No more “Are you sure?” boxes.
+- Clearer file names: mealprep-backup-2026-10-17.json, mealprep-recipes-2026-10-17.csv, mealprep-backup-2026-10-17.zip.
+- Settings says “Changes save as you make them.” and has the same Install section as the other apps.
+- Home banner: “Your week of meals”, with today’s date and how many meals are planned.
+- Empty Recipes, Planner, Prep and Grocery pages say what to do next.
+- Your recipes, plans, settings and backups are unchanged.
+
+## 1.8 · 2026-10-17
+- Clear all data now asks you to type DELETE, the same in every mcbflow.com app. The same box offers Save a backup first.
+- Home: the Daily target, Recipes, This week and Grocery list tiles no longer show underlined text. They are still links: hover or tab to one to see it highlight.
+- A very long recipe or grocery name no longer makes Home, a recipe page or Prep day scroll sideways on phones; it wraps instead.
+- Account pop-up spacing fixed.
+- The welcome banner art is no longer cut off on phones, and the banner keeps one height.
+- Your recipes, plans, settings and backups are unchanged.
 
 ## 1.7 · 2026-10-16
 - New Settings page (the gear at the bottom of the sidebar; on phones, More > Settings), in the same order as every mcbflow.com app: Appearance, Account & sync, Meal Prep settings (name, what you use the app for, meals, household, cooking style, servings, week start, prep day, units, budget, print ink), Backup & data, Install, About. It replaces the Data page, the About card and the sidebar's Setup button. "Run setup again" is in Settings, and the old About page is now Help. Old links (#/data, #/about, #/setup) still work.
